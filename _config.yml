@@ -4,13 +4,16 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
+title: williamdunstanmorris::DevBlog
 subtitle:
 description:
-author: John Doe
+author: Will Morris
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
+
+social:
+  Github: https://github.com/williamdunstanmorris
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
@@ -118,12 +121,12 @@ index_with_subtitle: false
 menu:
   home: /
   #categories: /categories/
-  #about: /about/
+  about: /about/
+  code: /code/
   archives: /archives/
   tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
-
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -141,6 +144,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
+  code: home
 
 
 
@@ -539,7 +543,7 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
@@ -550,7 +554,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto

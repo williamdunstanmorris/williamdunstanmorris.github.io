@@ -7,6 +7,7 @@ title:
   categories: Categories
   tags: Tags
   about: About
+  code: Code
 
 author: Author
 
@@ -20,6 +21,7 @@ menu:
   schedule: Schedule
   sitemap: Sitemap
   commonweal: Commonweal 404
+  code: Code
 
 sidebar:
   overview: Overview
