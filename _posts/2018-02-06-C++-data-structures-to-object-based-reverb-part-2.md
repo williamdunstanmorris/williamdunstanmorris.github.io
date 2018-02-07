@@ -13,17 +13,30 @@ The following may be useful as a rough template for how to design the ReverbMana
 class ReverbProcessor {
 
   // Is db2lin and lin2dB necessary as opposed to SampleType?
-  void processObjectVector ( SampleType &earlyLevelAdjust, SampleType &preDelayAdjust, SampleType &preDelayAdjustLate, SampleType &latelevelAdjust, SampleType &lateDecayAdjust)
+  void processObjectVector (ObjectVector &rVector, SampleType &earlyLevelAdjust, SampleType &preDelayAdjust, SampleType &preDelayAdjustLate, SampleType &latelevelAdjust, SampleType &lateDecayAdjust)
   {
     // Iterate over every object in the ObjectVector rVector.
-    for (vector<PointSouceWithReverb>::iterator i = rVector.begin(); i != rVector.end(); ++i)
+    for (const auto& rObject: rVector)
     {
-      if (ob.ObjectTypeId.getString.equals("point_source"))
+      // Use a pointer for reflection index access for fast-loop iteration.
+      const int numRef = rObject.numberOfDiscreteReflections();
+      const int* ptr = (numRef > 0) ? rObject.numberOfDiscreteReflections() : nullptr;
+
+      for (int i = 0; i < numRef; i++)
       {
-        if(isInEditObjectList)
-        {
-          //Create an iterator of the object you are iterating through
-          std::list<ob.mDis>::iterator it;
+        // Set the delay of (in seconds) for the DiscreteReflection
+        rObject.discreteReflection(i).setDelay((delay += preDelayAdjust));
+        //
+      }
+      // Iterate through the mDiscreteReflections using the numberOfDiscreteReflections() as the terminating condition for the loop
+
+      for(size_t = rObject::numberOfDiscreteReflections();  )
+      {
+
+      }
+
+
+
 
         // Iterate through each index of the discrete reflection object. vector with a reference?
           for (vector<DiscreteReflection>::iterator it = mDiscreteReflections.begin() ; it != mDiscreteReflections.end() ; ++mDiscreteReflections)
