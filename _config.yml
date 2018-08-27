@@ -10,12 +10,12 @@ permalink:        pretty
 title:            William Morris
 tagline:          'A Jekyll theme'
 description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
-url:              http://hyde.getpoole.com
+# url:              http://hyde.getpoole.com
 baseurl:          /
 
 author:
   name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  # url:            https://twitter.com/mdo
 
 paginate:         5
 
@@ -28,3 +28,6 @@ github:
 plugins:
   - jekyll-gist
   - jekyll-paginate
+
+  # Assets configuration
+include: _assets
