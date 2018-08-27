@@ -1,21 +1,15 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
+  <body class="layout-reverse">
 
-<div class="container">
-  {% include header.html %}
+    {% include sidebar.html %}
 
+    <div class="content container">
+      {{ content }}
+    </div>
 
-
-
-  <div class="posts-wrapper">
-    {{ content }}
-  </div>
-  {% include footer.html %}
-</div>
-
-</body>
+  </body>
 </html>

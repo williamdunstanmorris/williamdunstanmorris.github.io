@@ -1,26 +1,30 @@
-# Site Build Settings
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-# jekyll-paginate configuration
-# paginate:            nil
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
 
-# Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           none
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+# Setup
+title:            William Morris
+tagline:          'A Jekyll theme'
+description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
+url:              http://hyde.getpoole.com
+baseurl:          /
 
-sass:
-  sass_dir: assets/css
-  style: :nested
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
 
-javscript:
-  javscript_dir:assets/js
+paginate:         5
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "% WilliamMorris:: --developer --artist"
-description:	       "a Jekyll theme for running a blog or publication"
-author:              "Paul Le"
+# Custom vars
+version:          2.1.0
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+github:
+  repo:           https://github.com/poole/hyde
+
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
