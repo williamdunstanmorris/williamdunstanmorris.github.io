@@ -2,6 +2,7 @@
 layout: page
 title: Blog
 ---
+
 {% for post in site.posts %}
 <div class="row">
 	<div class="small-12 columns">
