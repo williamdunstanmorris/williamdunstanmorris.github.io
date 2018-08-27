@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Creating a Repo: Demystification"
+title:  "Git Gud && Git is Like an Airport"
 date:   2018-02-07 12:31:01 +0000
 published: true
 categories: sample
