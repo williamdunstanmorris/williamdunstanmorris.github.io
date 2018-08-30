@@ -1,15 +1,43 @@
 ---
 layout: post
-title:  "Git Gud && Git is Like an Airport"
+title:  "Git Like an Airport"
 date:   2018-02-07 12:31:01 +0000
+cover: assets/img/git-airport-cover.jpg
 published: true
-categories: sample
-tags: [git]
+categories: tutorial
 author: "William Morris"
 
 ---
 
-> A good starting point for tutorials is over ----------> [here](https://docs.gitlab.com/ee/gitlab-basics/README.html)
+- Git is an open-source technology that keeps records of your changes
+- Allows for collaborative development
+- Allows you to know what changes you made and when
+- Allows you to revert changes you made
+
+## How does it work?
+
+Its quite simple conceptually - you have local machines you and other each work on, and everyone stores and retrieves their work through revision control - by 'committing', 'pushing' and 'pulling' work.
+
+<!-- [git-remote-server]({{images}}/git-remote-server.png) -->
+
+![git-remote-server]({{ "/assets/img/git-remote-server.png" | absolute_url }})
+
+> A good starting point for tutorials is [here](https://docs.gitlab.com/ee/gitlab-basics/README.html)
+
+## How does your day-to-day workflow change?
+
+If you're a frequent flyer, then git should be pretty easy to grasp - because it's not too dissimilar to the hassle of an airport. Forget all the time wasting you do in an airport because once you grasp git, it only takes a few commands to get going. The golden rule is though - **keep. git. simple.**
+
+![git-airport]({{ "/assets/img/git-airport.png" | absolute_url }})
+
+## Specific, Advanced Usage of Git
+
+- Can automate your documentation, building, testing and compilation through continuous integration
+- Can help collect your deployment through containerisation (i.e. Docker)
+- Can be used in conjunction with Jekyll and Github pages, to produce static websites and blogs
+- Create efficient, productive workflow for small or large teams
+
+
 
 Starting a new repo can be quite tricky sometimes, and there are a number of ways you can get yourself into a mess. I'll try to explain what I can about how it works, and how you can dig yourself out.
 

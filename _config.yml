@@ -1,33 +1,56 @@
-# Dependencies
+# dependencies
 markdown:         redcarpet
 highlighter:      pygments
+language: 'en-uk'
 
-# Permalinks
-permalink:        pretty
-# relative_permalinks: true
+# baseurl for personal page instead of a project page . Append this if a project.
+baseurl: /
 
-# Setup
+# website info
 title:            William Morris
-tagline:          'A Jekyll theme'
 description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
+favicon: assets/img/favicon.png
+image: assets/img
+elogo: assets/img/email.png
+glogo: assets/img/github.png
+slogo: assets/img/soundcloud.png
+# social info
+navigation: true # show the navbar links
+subscribers: true # you need to connect an external service for this to work.
 # url:              http://hyde.getpoole.com
-baseurl:          /
+# baseurl:          /
 
 author:
-  name:           'Mark Otto'
+  name:           'William Morris'
   # url:            https://twitter.com/mdo
 
-paginate:         5
+paginate:         4
 
 # Custom vars
 # version:          2.1.0
 
 github:
   repo:           https://github.com/poole/hyde
+  # username:       williamdunstanmorris
+
+# Permalinks
+permalink:        pretty
+# relative_permalinks: true
+
 
 plugins:
   - jekyll-gist
   - jekyll-paginate
 
-  # Assets configuration
-include: assets
+  # Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+defaults:
+  post:
+    fill: false
+    title-colour: 'black'
+    categories: blog

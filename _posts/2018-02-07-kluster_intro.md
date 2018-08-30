@@ -1,12 +1,17 @@
 ---
 layout: post
+current: post
+class: post-template
+cover:  assets/img/klusterlogo.png
+fill: false
 title:  "Kluster"
 date:   2018-02-07 12:31:01 +0000
-categories: max/msp
+categories: project
 published: true
+author: williamdunstanmorris
 ---
 
-Kluster is a collection of midi-responsive OpenGL abstractions in Max/MSP that provide user-interfaces for easier OpenGL rendering. Install the package and open up FpWorld.maxpat to begin.  
+Kluster is a Max Package including midi-responsive OpenGL abstractions in Max/MSP that provide user-interfaces for easier OpenGL rendering.
 
 ## Abstract
 

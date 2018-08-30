@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "The inspiration behind Kluster"
+cover: assets/img/crazy-me.jpg
 date:   2018-02-07 12:31:01 +0000
-categories: max/msp
+categories: blog
 published: true
 ---
 

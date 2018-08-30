@@ -101,6 +101,40 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
+.icon-row {
+  text-align:center;
+}
+
+.icon-row{
+  display:inline-block;
+  width:60px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.media-icons
+{
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+  height: 2rem;
+  width: 2rem;
+}
+
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -124,8 +158,12 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    2.9rem;
   padding-bottom: 4rem;
+}
+
+.main-wrapper{
+
 }
 
 @media (min-width: 48em) {
@@ -154,16 +192,17 @@ a.sidebar-nav-item:focus {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
+    width: 20em;
   }
   .layout-reverse .content {
     margin-left: 2rem;
-    margin-right: 20rem;
+    margin-right: 22rem;
   }
 }
 
 @media (min-width: 64em) {
   .layout-reverse .content {
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
     margin-right: 22rem;
   }
 }

@@ -31,6 +31,30 @@
       <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
     </nav>
 
+    <!-- {% if site.github_username %}
+    <li>
+      <a href="https://github.com/{{ site.github_username }}">
+        <i class="fa fa-github"></i> GitHub
+      </a>
+    </li>
+    {% endif %}
+ -->
+
+    <div class="row">
+    <div class="column">
+      <a href="mailto:williamdunstanmorris@gmail.com" target="new" title="Email">
+        <img class="media-icons" src="{{ site.baseurl}}{{site.elogo}}" height="50" width="50"> </a>
+    </div>
+    <div class="column">
+      <a href="https://github.com/williamdunstanmorris" target="new" title="Github">
+        <img class="media-icons" src="{{ site.baseurl}}{{site.glogo}}" height="50" width="50"> </a>
+    </div>
+    <div class="column">
+      <a href="https://soundcloud.com/iamartwrk/" target="new" title="Soundcloud">
+        <img class="media-icons" src="{{ site.baseurl}}{{site.slogo}}" height="50" width="50"> </a>
+    </div>
+    </div>
+
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>

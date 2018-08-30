@@ -2,6 +2,10 @@
 layout: page
 title: Blog
 ---
+<div class="post-feed">
+    <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+    {%  include post-card.html %}
+</div>
 
 {% for post in site.posts %}
 <div class="row">
