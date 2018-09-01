@@ -1,0 +1,45 @@
+<nav>
+  <div class="row">
+    <div class="nav-column-left">
+      <a class="logo-left" href="{{ site.baseurl }}">
+        <span class="site-title">{{ site.title }}</span>
+      </a>
+    </div>
+    <div class="nav-column-right">
+      <ul class="nav-right">
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+        <li>
+          <!-- <a class="filter" data-filter="urbanisme" data-archive="https://a-rr.ch/categorie-de-projet/urbanisme/" href="https://a-rr.ch/#urbanisme">
+            <span>urbanisme</span>
+          </a> -->
+          <a class="filter" href="{{ node.title }}">
+            <span>{{ node.title }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="menu-trigger">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+    </div>
+    <div class="mobile-links">
+      <div class="mobile-links-inner-wrapper">
+        <ul>
+          <li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://a-rr.ch/contact-us/">contact</a></li>
+          <li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="/equipe/">équipe</a></li>
+          <li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="/carrieres/">carrières</a></li>
+          <li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/clients/">clients</a></li>
+          <li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://a-rr.ch/bureau/">bureau</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+</nav>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog
+title: work
 ---
 <div class="post-feed">
     <!-- The tag below includes the markup for each post - partials/post-card.hbs -->

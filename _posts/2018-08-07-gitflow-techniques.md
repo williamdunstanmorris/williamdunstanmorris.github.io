@@ -6,6 +6,7 @@ cover: assets/img/git-airport-cover.jpg
 published: true
 categories: tutorial
 author: "William Morris"
+tags: another tag is cool what is up
 
 ---
 

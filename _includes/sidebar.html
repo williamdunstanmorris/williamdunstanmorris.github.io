@@ -1,60 +1,33 @@
-<div class="sidebar">
-  <!-- <img src="{{site.baseurl}}/assets/me.JPG"> -->
-  <div class="container">
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ site.baseurl }}">
-          {{ site.title }}
-        </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
-    </div>
+<div class="sidebar-wrapper">
+  <div class="filters-mobile-link">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="row">
+    <div class="sidebar">
+      <ul>
+        <!-- {% if site.tags != "" %}
+          {% include sort-tags.html %}
+        {% endif %} -->
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
+        {% for tag in site.tags %}
+        {% if forloop.last == false %}
+        <li>
+          <a class="filter" data-filter="concours" data-archive="https://a-rr.ch/tag-de-projet/concours/" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        </li>
+        {% else %}
+        <li class="last-filter">
+          <a class="filter" data-filter="concours" data-archive="https://a-rr.ch/tag-de-projet/concours/" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        </li>
         {% endif %}
-      {% endfor %}
+        {% endfor %}
 
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-      <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
-    </nav>
-
-    <!-- {% if site.github_username %}
-    <li>
-      <a href="https://github.com/{{ site.github_username }}">
-        <i class="fa fa-github"></i> GitHub
-      </a>
-    </li>
-    {% endif %}
- -->
-
-    <div class="row">
-    <div class="column">
-      <a href="mailto:williamdunstanmorris@gmail.com" target="new" title="Email">
-        <img class="media-icons" src="{{ site.baseurl}}{{site.elogo}}" height="50" width="50"> </a>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://a-rr.ch/contact-us/">contact</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="/equipe/">équipe</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="/carrieres/">carrières</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/clients/">clients</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://a-rr.ch/bureau/">bureau</a></li>
+      </ul>
     </div>
-    <div class="column">
-      <a href="https://github.com/williamdunstanmorris" target="new" title="Github">
-        <img class="media-icons" src="{{ site.baseurl}}{{site.glogo}}" height="50" width="50"> </a>
-    </div>
-    <div class="column">
-      <a href="https://soundcloud.com/iamartwrk/" target="new" title="Soundcloud">
-        <img class="media-icons" src="{{ site.baseurl}}{{site.slogo}}" height="50" width="50"> </a>
-    </div>
-    </div>
-
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>

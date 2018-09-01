@@ -1,0 +1,30 @@
+<div class="container row">
+  <div class="container-inner-wrapper">
+    <div class="projects-grid" style="position: relative; height: 4162.5px;">
+
+      {% for post in paginator.posts %}
+
+      <a href="{{site.baseurl}}{{ post[0] }}" title="quartier de l’étang – îlot f" class="project-item urbanisme architecture commerces administratif etudes" style="position: absolute; left: 0px; top: 0px;">
+        <div class="inner-wrapper">
+          {% if post.cover %}
+          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;">
+          <!-- {% else %} -->
+          <!-- <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;"> -->
+          {% endif %}
+          <span class="project-name">{{post.title}}</span>
+        </div>
+      </a>
+
+      {% endfor %}
+
+            <!-- {% if forloop.last == false %}
+            {% else %}
+            <a href="https://a-rr.ch/projets/" class="project-item archives-link" style="position: absolute; left: 277px; top: 3885px;">
+              <div class="inner-wrapper"></div>
+            </a>
+            {% endif %} -->
+
+
+    </div>
+  </div>
+</div>

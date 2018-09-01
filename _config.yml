@@ -7,7 +7,7 @@ language: 'en-uk'
 baseurl: /
 
 # website info
-title:            William Morris
+title:            williammorris
 description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
 favicon: assets/img/favicon.png
 image: assets/img
@@ -41,6 +41,7 @@ permalink:        pretty
 plugins:
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-sitemap
 
   # Disqus
 disqus: False
