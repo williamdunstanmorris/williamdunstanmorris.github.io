@@ -4,12 +4,12 @@
 
       {% for post in paginator.posts %}
 
-      <a href="{{site.baseurl}}{{ post[0] }}" title="quartier de l’étang – îlot f" class="project-item urbanisme architecture commerces administratif etudes" style="position: absolute; left: 0px; top: 0px;">
+      <a href="{{site.baseurl}}{{ post[0] }}" title="{{ post.title }}" class="project-item urbanisme architecture commerces administratif etudes" style="position: absolute; left: 0px; top: 0px;">
         <div class="inner-wrapper">
           {% if post.cover %}
           <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;">
-          <!-- {% else %} -->
-          <!-- <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;"> -->
+          {% else %}
+          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;">
           {% endif %}
           <span class="project-name">{{post.title}}</span>
         </div>
