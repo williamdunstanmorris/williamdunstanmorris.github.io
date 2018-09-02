@@ -7,7 +7,7 @@ language: 'en-uk'
 baseurl: /
 
 # website info
-title:            williammorris
+title:            williammorris_
 description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
 favicon: assets/img/favicon.png
 image: assets/img
@@ -54,6 +54,7 @@ defaults:
   post:
     fill: false
     title-colour: 'black'
-    categories: blog
     published: false
     class: nil
+    categories: speak
+    excerpt_separator: <!--more-->

@@ -2,8 +2,8 @@
 layout: post
 title:  "C++ data structure approaches to object-based reverb"
 date:   2018-01-26 12:31:01 +0000
-categories: reverb
 published: true
+tags: c/c++ object-orientatation 
 ---
 
 Following discussions based on the architecture of the reverb plugin, I finally with a class UML design of the ReverberatorProcessor and the ReverbEditor. They follow a similar approach to an MVC architecture. I think the majority of trouble about designing this falls under the following:

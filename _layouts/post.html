@@ -2,24 +2,36 @@
 layout: default
 ---
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
+<div class="container project-container">
+  <div class="project-description-container">
+    <div class="container-inner-wrapper row" style="transform: translateY(0px);">
+      <div class="small-12 medium-6 large-5 column">
+        <div class="text-content">
+          <h2>{{page.categories}}</h2>
+          <h1>{{page.title}}</h1>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
+
+          <div class="excerpt">
+            {{page.excerpt}}
+          </div>
+
+          <div class="additional-text">
+            <div class="inner-wrapper">
+            </div>
+            <a target="_blank" class="download-link" href="https://a-rr.ch/wp-content/uploads/2018/07/ambassade-suisse-beijing-fiche-projet.pdf">fiche projet</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-inner-wrapper photos-container row">
+    <div class="small-12 medium-6 large-7 medium-offset-6 large-offset-5 column">
+      <div class="gallery-wrapper" data-pswp-uid="1">
+        <div class="image-wrapper text-content">
+          {{page.content}}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

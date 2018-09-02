@@ -4,7 +4,15 @@
 
       {% for post in site.posts %}
         {% if post.published %}
-      <a href="{{site.url}}{{ post.url }}" class="project-item {{ post.categories | array_to_sentence_string | remove: "," }} {{ post.tags | array_to_sentence_string | remove: "," }}" title="{{ post.title }}">
+
+        {% comment %}
+        {{ assign categories_ = post.categories | array_to_sentence_string | remove: "," | prepend: " "}}
+        {{ assign tags_ = post.tags | array_to_sentence_string | remove: "," | prepend: " "}}
+
+        {% endcomment %}
+
+
+      <a href="{{ post.url }}" class="project-item" title="{{ post.title }}">
         <div class="inner-wrapper">
           {% if post.cover %}
           <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.url }}/{{ post.cover }}/" style="display: block;">

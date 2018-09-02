@@ -6,9 +6,8 @@ cover: assets/img/gitting-started.png
 fill: true
 published: true
 class: vertical
-categories: tutorial
 author: "William Morris"
-tags:
+tags: git version-control unix
 ---
 
 Starting a new repo can be quite tricky sometimes, and there are a number of ways you can get yourself into a mess. I'll try to explain what I can about how it works, and how you can dig yourself out.
@@ -18,6 +17,9 @@ Starting a new repo can be quite tricky sometimes, and there are a number of way
 > For the source tutorial on Github, go [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/). On Gitlab, go [here](https://docs.gitlab.com/ee/gitlab-basics/create-project.html).
 
 Probably the most common way of starting off with Git is to create a repository online, and then do an initial commit and push inside your local area.
+
+<!--more-->
+
 
 1. Create a new repository on GitHub. To avoid errors, **do not initialize the new repository with README, license, or gitignore files.** You can add these files after your project has been pushed to GitHub.
 

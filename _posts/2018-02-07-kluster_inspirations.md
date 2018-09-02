@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "The inspiration behind Kluster"
-cover: assets/img/crazy-me.jpg
+title:  "the inspiration behind Kluster"
+cover: assets/img/piano-me.jpg
 date:   2018-02-07 12:31:01 +0000
-categories: blog
+categories: speak
 published: true
+tags: max-msp opengl midi graphics research
 ---
 
 ## introduction

@@ -3,7 +3,16 @@ html,body {
     height: 100%;
     font-size: calc(10px + 0.4vw);
     background: #fff;
-    font-family: 'Neutraface', Arial, Helvetica, sans-serif
+    color: #515151;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Neutraface', Arial, Helvetica, sans-serif */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-style: italic; */
+/* font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif; */
 }
 
 .container.row,.container {
@@ -243,13 +252,16 @@ html,body {
     height: 100%
 }
 
-.splash-overlay img {
+.splash-overlay span {
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 15.625em
+    width: 15.625em;
+    text-align: center;
+    font-size: 6em;
+
 }
 
 @media screen and (max-width: 640px) {
@@ -380,7 +392,7 @@ html,body {
 }
 
 .gallery-wrapper {
-    margin: -1.25em
+    margin: -1.25em;
 }
 
 .gallery-wrapper .image-wrapper {
@@ -396,7 +408,6 @@ html,body {
 
 .gallery-wrapper .image-wrapper img {
     width: 100%;
-    opacity: 0;
     -ms-transform: translateY(20px);
     transform: translateY(20px);
     transition: 0.5s;
@@ -922,8 +933,8 @@ body.windows-os .nav-right:after {
 
 .nav-right:after {
     content: "";
-    height: 4px;
-    background: #000;
+    height: 3px;
+    background: #515151;
     position: absolute;
     width: 1000px;
     top: 50%;
@@ -965,7 +976,6 @@ body.windows-os .nav-right:after {
     background: #fff;
     padding-left: .38462em;
     padding-right: .38462em;
-    color: #515151;
 }
 
 .nav-right.filtered-on-hover:after {
@@ -1071,9 +1081,9 @@ body.windows-os .nav-right:after {
     align-self: flex-end
 }
 
-*, :after, :before {
+/* *, :after, :before {
     box-sizing: inherit;
-}
+} */
 
 .menu-trigger {
     display: none;

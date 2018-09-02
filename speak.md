@@ -1,6 +1,7 @@
 ---
 layout: page
 title: speak
+categories: speak
 ---
 <div class="post-feed">
     <!-- The tag below includes the markup for each post - partials/post-card.hbs -->

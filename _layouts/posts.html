@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  {% include head.html %}
-  <body>
-      {% include topbar.html %}
-      {% include sidebar.html %}
-      <!-- your _layouts contents will go here -->
-      {% include container.html %}
-  </body>
+{% include head.html %}
+<body class="home blog">
+
+
+  {% include topbar.html %}{% include mobile-filter.html %}{% include sidebar.html %}
+  <div class="splash-overlay" >
+    <span>{{ site.title }}</span>
+  </div>
+  {% include container.html %}
+
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/isotope.min.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/gallery.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/outdatedbrowser.min.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/project.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/site.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/menu.js"></script>
+
+</body>
+
 </html>
