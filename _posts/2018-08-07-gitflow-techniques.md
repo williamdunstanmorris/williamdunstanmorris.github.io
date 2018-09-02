@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Git Like an Airport"
+title:  "git like an airport"
 date:   2018-02-07 12:31:01 +0000
 cover: assets/img/git-airport-cover.jpg
 published: true
 categories: tutorial
 author: "William Morris"
-tags: another tag is cool what is up
+tags: version-control git
 
 ---
 

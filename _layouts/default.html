@@ -1,9 +1,69 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  {% include head.html %}
-  <body>
-      {% include topbar.html %}
-      <!-- your _layouts contents will go here -->
-      {% include sidebar.html %}
-  </body>
+{% include head.html %}
+
+<body class="home blog">
+
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-5902397-1');
+	</script>
+
+  <script>
+    var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+    if( !isMac ){
+      document.querySelector('body').classList.add('windows-os');
+    }
+  </script>
+
+  {% include topbar.html %}
+  {% include mobile-filter.html %}
+
+  <!-- your _layouts contents will go here -->
+  {% include sidebar.html %}
+  {% include container.html %}
+
+  <script>
+
+    function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = func;
+      } else {
+        window.onload = function() {
+          if (oldonload) {
+            oldonload();
+          }
+          func();
+        }
+      }
+    }
+    addLoadEvent(function() {
+      outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform',
+        languagePath: 'assets/outdatedbrowser/lang/fr.html'
+      })
+    });
+  </script>
+
+
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/isotope.min.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/gallery.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/outdatedbrowser.min.js"></script>
+
+
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/project.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/site.js"></script>
+
+
+    <script type="text/javascript" src="{{ site.github.url }}/assets/js/menu.js"></script>
+
+</body>
+
 </html>

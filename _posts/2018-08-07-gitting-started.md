@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Gitting Started"
+title:  "gitting started"
 date:   2016-02-07 12:31:01 +0000
 cover: assets/img/gitting-started.png
 fill: true
 published: true
+class: vertical
 categories: tutorial
 author: "William Morris"
 tags:

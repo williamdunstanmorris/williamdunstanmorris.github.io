@@ -9,7 +9,7 @@ date:   2018-02-07 12:31:01 +0000
 categories: project
 published: true
 author: williamdunstanmorris
-tags: max hello awesome whatsup
+tags: max-msp audio midi graphics
 ---
 
 Kluster is a Max Package including midi-responsive OpenGL abstractions in Max/MSP that provide user-interfaces for easier OpenGL rendering.

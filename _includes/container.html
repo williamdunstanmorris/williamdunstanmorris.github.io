@@ -2,29 +2,23 @@
   <div class="container-inner-wrapper">
     <div class="projects-grid" style="position: relative; height: 4162.5px;">
 
-      {% for post in paginator.posts %}
-
-      <a href="{{site.baseurl}}{{ post[0] }}" title="{{ post.title }}" class="project-item urbanisme architecture commerces administratif etudes" style="position: absolute; left: 0px; top: 0px;">
+      {% for post in site.posts %}
+        {% if post.published %}
+      <a href="{{site.url}}{{ post.url }}" class="project-item {{ post.categories | array_to_sentence_string | remove: "," }} {{ post.tags | array_to_sentence_string | remove: "," }}" title="{{ post.title }}">
         <div class="inner-wrapper">
           {% if post.cover %}
-          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;">
+          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.url }}/{{ post.cover }}/" style="display: block;">
           {% else %}
-          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.baseurl }}/{{ post.cover }}/" style="display: block;">
+          <div class="lazy loaded" style="background-color:#f8f8ff;width:100%;height:85%;border:1px solid #000;"></div>
           {% endif %}
-          <span class="project-name">{{post.title}}</span>
+          <span class="project-name {% if post.class == 'vertical' %}vertical-image {% endif %}">{{post.title}}</span>
         </div>
-      </a>
-
+       </a>
+        {% endif %}
       {% endfor %}
-
-            <!-- {% if forloop.last == false %}
-            {% else %}
-            <a href="https://a-rr.ch/projets/" class="project-item archives-link" style="position: absolute; left: 277px; top: 3885px;">
-              <div class="inner-wrapper"></div>
-            </a>
-            {% endif %} -->
-
-
+      <a href="https://a-rr.ch/projets/" class="project-item archives-link" style="position: absolute; left: 285px; top: 3993px;">
+				<div class="inner-wrapper"></div>
+			</a>
     </div>
   </div>
 </div>
