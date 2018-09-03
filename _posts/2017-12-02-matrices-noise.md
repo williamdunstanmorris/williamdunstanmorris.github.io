@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "software for object-based audio"
-cover: assets/img/vislab-sphere.jpg
-date:   2018-02-07 12:31:01 +0000
+title:  "noisy matrices in opengl"
+cover: assets/img/glitch-shot.png
+date:   2018-01-07 12:31:01 +0000
 categories: speak
 published: true
-tags: max-msp opengl midi graphics research
+tags: max-msp opengl graphics noise
 ---
 
 When I joined the funded epsrc project 'S3A' as a developer back in September 2017,

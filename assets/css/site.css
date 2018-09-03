@@ -320,6 +320,19 @@ font-family: 'Montserrat', sans-serif; */
     padding-top: 11.5625em
 }
 
+
+.highlight pre {
+
+  /* margin-top: 52px; */
+  /* font-family: Menlo,Monaco,"Courier New",Courier,monospace; */
+  color: #eceff1;
+  font-size: 14px;
+  background: #263238;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+
 .project-container .text-content {
   font-size: 1.05em;
   line-height: 1.5em;
