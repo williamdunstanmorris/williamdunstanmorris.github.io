@@ -9,11 +9,11 @@
         {% for tag in site.tags %}
         {% if forloop.last == false %}
         <li>
-          <a class="filter" data-filter="{{tag[0]}}" data-archive="https://a-rr.ch/tag-de-projet/concours/" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/tag-de-projet/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
         </li>
         {% else %}
         <li class="last-filter">
-          <a class="filter" data-filter="{{tag[0]}}" data-archive="https://a-rr.ch/tag-de-projet/concours/" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/tag-de-projet/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
         </li>
         {% endif %}
         {% endfor %}

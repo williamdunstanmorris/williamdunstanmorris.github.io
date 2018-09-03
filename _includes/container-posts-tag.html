@@ -1,0 +1,47 @@
+<div class="container archives-container row">
+  <div class="container-inner-wrapper row">
+
+    <div class="small-12 medium-6 large-7 medium-offset-6 large-offset-5 column">
+
+      {% comment %}
+
+      1. make _layout post-archive-all
+
+      sort posts by year
+
+      2. make _layout post-archive-by-tag
+
+      check to make sure href is changing from the sidebar right filter - it should be set to the first tag [site.tags[0]]
+      assign url_tag to site.tag
+      select posts by tag (tag should be the assigned variable of the end url)
+      sort posts by year
+
+      {% endcomment %}
+
+
+    {% for post in site.posts  %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+      <div class="year-wrapper">
+        <span class="year" id="{{ this_year }}-ref">{{this_year}}</span>
+    {% endif %}
+      <a href="{{site.url}}/{{post.url}}" class="archive-item">
+          <h3>ENTRETIEN DU PATRIMOINE BÂTI DE L’ÉTAT DE VAUD</h3>
+          <h2>{{page.title}}</h2>
+      </a>
+    {% if forloop.last %}
+      </div>
+    {% else %}
+        {% if this_year != next_year %}
+      </ul>
+      <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+      <ul>
+      {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    </div>
+  </div>
+</div>

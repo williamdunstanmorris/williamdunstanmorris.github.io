@@ -416,8 +416,6 @@ font-family: 'Montserrat', sans-serif; */
     text-decoration: none;
     width: 100%;
     margin: 0;
-    cursor: zoom-in;
-    -webkit-cursor: zoom-in
 }
 
 .gallery-wrapper .image-wrapper img {
@@ -1001,8 +999,7 @@ body.windows-os .nav-right:after {
 }
 
 .sidebar {
-    padding-top: 5.5em;
-    padding-top: 11.0625em;
+    padding-top: 9.0625em;   
     padding-bottom: 1.875em;
     width: 15%;
     position: absolute;

@@ -8,19 +8,19 @@ published: true
 tags: max-msp opengl graphics glsl shaders
 ---
 
-When I joined the funded epsrc project 'S3A' as a developer back in September 2017,
+```c++
 
-From operating these labs, I knew I had to absorb myself in the realm of audio signal processing in order to become a valued developer on the project.
+const float PI = 3.14159;
+const float two_pi_ = PI * 2.0f;
 
-It was reverberation that landed me here.
+varying vec2 texcoord0;
+varying vec2 texcoord1;
+varying vec3 lightPositions[2];
+varying vec3 lightColors[2];
+varying vec3 color;
 
-I walked into some beautiful labs that boasted large speaker array setups.
+void main
+{
 
-![surrey-vislab]({{ "/assets/img/vislab-sphere.jpg" | absolute_url }})
-
-
-
-
-##
-## What is object-based audio anyway?
-## What was my contribution?
+}
+```

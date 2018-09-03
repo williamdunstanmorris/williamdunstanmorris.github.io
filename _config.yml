@@ -1,7 +1,7 @@
-# dependencies
-markdown:         redcarpet
-highlighter:      pygments
-language: 'en-uk'
+# # dependencies
+# markdown:         redcarpet
+# highlighter:      pygments
+# language: 'en-uk'
 
 # baseurl for personal page instead of a project page . Append this if a project.
 baseurl: /
@@ -34,8 +34,22 @@ github:
   # username:       williamdunstanmorris
 
 # Permalinks
-permalink:        pretty
+# permalink:        pretty
 # relative_permalinks: true
+permalink: /:title:output_ext
+
+
+# Code Highlighter
+## 'pygments' is unsupported on GitHub Pages now.
+highlighter: rouge
+highlight:
+  line_number: true
+
+#### Markdown Processors
+## 'redcarpet' is unsupported on GitHub Pages now.
+markdown: kramdown
+kramdown:
+    input: GFM
 
 
 plugins:
@@ -52,6 +66,7 @@ google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 defaults:
   post:
+    permalink: /:title:output_ext
     fill: false
     title-colour: 'black'
     published: false
