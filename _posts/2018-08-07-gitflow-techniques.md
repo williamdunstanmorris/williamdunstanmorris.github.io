@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "git like an airport"
+title:  "rookie-git: it's like an airport"
 date:   2018-02-07 12:31:01 +0000
 cover: assets/img/git-airport-cover.jpg
 published: true
 categories: speak
 author: "William Morris"
-tags: version-control git
+tags: version-control git philosophy
 ---
 
 - Git is an open-source technology that keeps records of your changes
@@ -19,8 +19,6 @@ tags: version-control git
 Its quite simple conceptually - you have local machines you and other each work on, and everyone stores and retrieves their work through revision control - by 'committing', 'pushing' and 'pulling' work.
 
 <!--more-->
-
-<!-- [git-remote-server]({{images}}/git-remote-server.png) -->
 
 ![git-remote-server]({{ "/assets/img/git-remote-server.png" | absolute_url }})
 

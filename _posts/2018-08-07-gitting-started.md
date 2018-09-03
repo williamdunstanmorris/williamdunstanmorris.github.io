@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "gitting started"
+title:  "rookie git: gitting started"
 date:   2016-02-07 12:31:01 +0000
 cover: assets/img/gitting-started.png
 fill: true

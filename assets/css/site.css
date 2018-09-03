@@ -244,6 +244,7 @@ font-family: 'Montserrat', sans-serif; */
 
 .splash-overlay {
     background: #fff;
+    /* color:white; */
     position: fixed;
     z-index: 50;
     left: 0;
@@ -320,9 +321,9 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .project-container .text-content {
-    font-size: 1.125em;
-    line-height: 1.05556em;
-    padding-right: 25%
+  font-size: 1.05em;
+  line-height: 1.5em;
+  padding-right: 25%;
 }
 
 .project-container .text-content h2 {
@@ -1169,7 +1170,7 @@ body.windows-os .nav-right:after {
     }
 
     nav .nav-column-right {
-        width: 80%
+        width: 65%
     }
 
     .sidebar {

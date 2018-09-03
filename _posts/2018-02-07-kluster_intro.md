@@ -4,11 +4,11 @@ current: post
 class: post-template
 cover:  assets/img/klusterlogo.png
 fill: false
-title:  "Kluster"
+title:  "kluster: an audio-graphics package for max"
 date:   2018-02-07 12:31:01 +0000
 published: true
 author: williamdunstanmorris
-tags: max-msp audio midi graphics
+tags: max-msp audio midi graphics framework
 
 ---
 
