@@ -1,0 +1,30 @@
+<div class="sidebar-wrapper">
+  <div class="filters-mobile-link">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="row">
+    <div class="sidebar">
+      <ul>
+        {% for tag in site.tags %}
+        {% if forloop.last == false %}
+        <li>
+          {%- comment %}
+          	When the sidebar or navbar is clicked, the data-archive address replaces the current archives-link href address as a result. 
+          {% endcomment -%}
+          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/archive-tag/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% else %}
+        <li class="last-filter">
+          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/archive-tag/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://a-rr.ch/contact-us/">contact</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="/equipe/">équipe</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="/carrieres/">carrières</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="/clients/">clients</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://a-rr.ch/bureau/">bureau</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

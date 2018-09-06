@@ -1,6 +1,32 @@
 ---
-layout: misc
-title: About
+layout: navbar-sidebar-posts-container
+title: about
+categories: about
+show-in-navbar: false
 ---
 
-Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused publishing platform for your publication site or blog. You can find everything you need to get started under documentation. For more information on how to install and use this theme, check out [the documentation]({{ site.github.url }}{% post_url 2016-10-10-getting-started %}).
+<p class="message">
+  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+</p>
+
+In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+
+There are currently two themes built on Poole:
+
+* [Hyde](http://hyde.getpoole.com)
+* [Lanyon](http://lanyon.getpoole.com)
+
+Learn more and contribute on [GitHub](https://github.com/poole).
+
+## Setup
+
+Some fun facts about the setup of this project include:
+
+* Built for [Jekyll](http://jekyllrb.com)
+* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
+* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
+* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+
+Thanks for reading!

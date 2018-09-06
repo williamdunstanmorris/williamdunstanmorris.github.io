@@ -2,8 +2,9 @@
 layout: post
 title:  "Cool tricks with CMake"
 date:   2018-02-07 12:31:01 +0000
-categories: reverb
-published: true
+categories: blog
+published: false
+tags: hello, what, this, cool
 ---
 
 * CMake is an open-source system that manages the build process in an operating system and in a compiler-independent manner.

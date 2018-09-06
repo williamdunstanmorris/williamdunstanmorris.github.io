@@ -1,26 +1,78 @@
-# Site Build Settings
+# # dependencies
+# markdown:         redcarpet
+# highlighter:      pygments
+# language: 'en-uk'
 
-# jekyll-paginate configuration
-# paginate:            nil
+# baseurl for personal page instead of a project page . Append this if a project.
+baseurl: /
 
-# Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           none
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+# website info
+title:            williammorris_
+description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
+favicon: assets/img/favicon.png
+image: assets/img
+elogo: assets/img/email.png
+glogo: assets/img/github.png
+slogo: assets/img/soundcloud.png
+# social info
+navigation: true # show the navbar links
+subscribers: true # you need to connect an external service for this to work.
+# url:              http://hyde.getpoole.com
+# baseurl:          /
 
-sass:
-  sass_dir: assets/css
-  style: :nested
+author:
+  name:           'William Morris'
+  # url:            https://twitter.com/mdo
 
-javscript:
-  javscript_dir:assets/js
+# paginate:         4
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "% WilliamMorris:: --developer --artist"
-description:	       "a Jekyll theme for running a blog or publication"
-author:              "Paul Le"
+# Custom vars
+# version:          2.1.0
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+github:
+  repo:           https://github.com/poole/hyde
+  # username:       williamdunstanmorris
+
+# Permalinks
+# permalink:        pretty
+# relative_permalinks: true
+permalink: /:title:output_ext
+
+
+# Code Highlighter
+## 'pygments' is unsupported on GitHub Pages now.
+highlighter: rouge
+highlight:
+  line_number: true
+
+#### Markdown Processors
+## 'redcarpet' is unsupported on GitHub Pages now.
+markdown: kramdown
+kramdown:
+    input: GFM
+
+
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+
+  # Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+defaults:
+  post:
+    layout: navbar-post
+    permalink: /:title:output_ext
+    show-in-navbar: false
+    fill: false
+    title-colour: 'black'
+    published: false
+    class: nil
+    categories: speak
+    excerpt_separator: <!--more-->
+    pdfdownload: null

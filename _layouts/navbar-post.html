@@ -1,0 +1,36 @@
+---
+layout: navbar-page
+---
+
+<div class="container project-container">
+  <div class="project-description-container">
+    <div class="container-inner-wrapper row" style="transform: translateY(0px);">
+      <div class="small-12 medium-6 large-5 column">
+        <div class="text-content">
+          <h2>{{page.categories}}</h2>
+          <h1>{{page.title}}</h1>
+          <div class="excerpt">
+            {{page.excerpt}}
+          </div>
+          {% if page.pdfdownload != 'null' %}
+          <div class="additional-text">
+            <div class="inner-wrapper">
+            </div>
+            <a target="_blank" class="download-link" href="{{site.url}}/{{page.pdfdownload}}">download pdf</a><br>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-inner-wrapper photos-container row">
+    <div class="small-12 medium-6 large-7 medium-offset-6 large-offset-5 column">
+      <div class="gallery-wrapper" data-pswp-uid="1">
+        <div class="image-wrapper text-content">
+          {{page.content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

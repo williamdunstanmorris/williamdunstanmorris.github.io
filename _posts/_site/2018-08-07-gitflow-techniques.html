@@ -1,0 +1,214 @@
+<blockquote>
+  <p>A good starting point for tutorials is over ———-&gt; <a href="https://docs.gitlab.com/ee/gitlab-basics/README.html">here</a></p>
+</blockquote>
+
+<p>Starting a new repo can be quite tricky sometimes, and there are a number of ways you can get yourself into a mess. I’ll try to explain what I can about how it works, and how you can dig yourself out.</p>
+
+<h2 id="manually-creating-one">Manually creating one</h2>
+
+<blockquote>
+  <p>For the source tutorial on Github, go <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>. On Gitlab, go <a href="https://docs.gitlab.com/ee/gitlab-basics/create-project.html">here</a>.</p>
+</blockquote>
+
+<p>Probably the most common way of starting off with Git is to create a repository online, and then do an initial commit and push inside your local area.</p>
+
+<ol>
+  <li>
+    <p>Create a new repository on GitHub. To avoid errors, <strong>do not initialize the new repository with README, license, or gitignore files.</strong> You can add these files after your project has been pushed to GitHub.</p>
+  </li>
+  <li>
+    <p>Open Terminal.</p>
+  </li>
+  <li>
+    <p>Change the current working directory to your local project.</p>
+  </li>
+  <li>
+    <p>Initialize the local directory as a Git repository.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% git init
+</code></pre></div></div>
+
+<ol>
+  <li>Add the files in your new local repository. This stages them for the first commit.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% git add .
+# Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+</code></pre></div></div>
+
+<ol>
+  <li>Commit the files that you’ve staged in your local repository.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% git commit -m "First commit"
+# Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>At the top of your GitHub/Gitlab repository’s Quick Setup page, click  to copy the remote repository URL.</p>
+  </li>
+  <li>
+    <p>In Terminal, add the URL for the remote repository where your local repository will be pushed.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% git remote add origin &lt;remote repository URL&gt;
+# Sets the new remote
+% git remote -v
+# Verifies the new remote URL
+</code></pre></div></div>
+
+<ol>
+  <li>Push the changes in your local repository to GitHub/Gitlab</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+</code></pre></div></div>
+
+<p>You will also see this around, too , which does the same.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push --set-upstream origin master
+</code></pre></div></div>
+
+<h2 id="push-to-create-a-project">Push to create a project</h2>
+
+<blockquote>
+  <p>Introduced in Gitlab 10.5</p>
+</blockquote>
+
+<p>This is actually a way neater way of creating a project locally and pushing it without leaving your terminal, and doesn’t require you to create a project locally and remotely, and sync them.</p>
+
+<p>You can just do either</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Git push using SSH
+% git push --set-upstream git@gitlab.example.com:uname/nonexistent-project.git master
+
+% git push --set-upstream git@gitlab.eps.surrey.ac.uk:wm0014/my-poem-for-cvssp.git master
+
+## Git push using HTTP
+% git push --set-upstream https://gitlab.example.com/namespace/nonexistent-project.git master
+</code></pre></div></div>
+
+<p>At this point, you can now drink beer</p>
+
+<h1 id="the-head-in-git">The HEAD in Git</h1>
+
+<p>The <code class="highlighter-rouge">HEAD</code> is a reference to the last commit in the currently checked-out branch.</p>
+
+<p>You can think of the HEAD as the “current branch”. When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.</p>
+
+<p>You can actually see what the head is doing in your local repo by running <code class="highlighter-rouge">cat .git/HEAD</code>, which will output the refs/heads/master. It is possible for HEAD to refer to a specific revision that is not associated with a branch name. This situation is called a detached HEAD.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>»  ~/Development/Poem-for-Git/Poem-for-Git git branch -a
+* master
+ remotes/origin/HEAD -&gt; origin/master
+ remotes/origin/master
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin &lt;myproject.git&gt;
+</code></pre></div></div>
+
+<p>You can prove this has been added by doing <code class="highlighter-rouge">git remote -v</code> and removing it by doing <code class="highlighter-rouge">git remote rm origin</code>. You can rename the remote to anything you want - like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote rename origin banana
+</code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">git push --set-upstream </code></li>
+</ul>
+
+<p>sets the default remote branch for the current local branch.</p>
+
+<p>One way to avoid having to explicitly do –set-upstream is
+to use the shorthand flag -u along-with the very first git push as follows</p>
+
+<ul>
+  <li><code class="highlighter-rouge">git push -u origin name/of/what/to/push</code></li>
+</ul>
+
+<p>Any future git pull command (with the current local branch checked-out),
+will attempt to bring in commits from the <remote-branch> into the current local branch.</remote-branch></p>
+
+<p>Initial Steps:</p>
+<ul>
+  <li>Creating a new Repository</li>
+  <li>Cloning an existing Repository</li>
+  <li>You start a new repo inside the repository you want with the <code class="highlighter-rouge">git init</code> command.</li>
+  <li>Write some code</li>
+  <li>Type <code class="highlighter-rouge">git add</code> to add the files
+*</li>
+</ul>
+
+<p>List all branches with <code class="highlighter-rouge">git branch -a</code></p>
+
+<p>When checking out in git, there are two options.</p>
+
+<p>Create and track a local branch in your working tree by running <code class="highlighter-rouge">git branch &lt;branch&gt;</code>, and then running a <code class="highlighter-rouge">git checkout &lt;branch&gt;</code>. Another way to do this in one command is to add the -b option in <code class="highlighter-rouge">git checkout -b &lt;feature-branch/new-feature&gt;</code></p>
+
+<p>I can push this with  <code class="highlighter-rouge">git push origin &lt;branch&gt;</code></p>
+
+<p>what is -u?</p>
+
+<p>Another similar situation however, is what if another user or developer had created a branch and you wanted to track and modify this ?</p>
+
+<p>You would first run <code class="highlighter-rouge">git fetch</code>, similar to git pull, but <code class="highlighter-rouge">git pull</code> is only related to branches that you currently track.</p>
+
+<p>This will update files in the working tree to match the version in the index or the specified tree. Git checkout will also update the <code class="highlighter-rouge">HEAD</code> too.</p>
+
+<p>When it comes to merging, you must checkout to the branch you want to merge to. Remember to commit the change first. You can also do this without adding, by doing <code class="highlighter-rouge">git commit -am "type some funky message here"</code></p>
+
+<p>Sometimes the nature of our work and our branch changes, so we need to make sure we are making everyone else informed of that too. We can rename our branch using <code class="highlighter-rouge">git branch -m &lt;name_of_branch&gt; &lt;renamed_this_whatever&gt;</code></p>
+
+<p>We can actually see the difference between our branches by doing calling git diff</p>
+
+<p>a cool command you might not know about is <code class="highlighter-rouge">git diff &lt;name_of_branch&gt;..&lt;branch_to_compare&gt;</code></p>
+
+<p>The best gitflow procedure I thought made the most sense was from this website:</p>
+
+<p>https://nvie.com/posts/a-successful-git-branching-model/?</p>
+
+<p>The specifies</p>
+
+<p>The different types of branches we may use are:</p>
+
+<p>Feature branches
+Release branches
+Hotfix branches</p>
+
+<p>When starting work on a new feature, branch off from the develop branch.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout -b myfeature develop
+
+Switched to a new branch "myfeature"
+</code></pre></div></div>
+
+<h1 id="incorporating-a-finished-feature-on-develop">Incorporating a finished feature on develop</h1>
+
+<p>Finished features may be merged into the develop branch to definitely add them to the upcoming release:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout develop
+Switched to branch 'develop'
+$ git merge --no-ff myfeature
+Updating ea1b82a..05e9557
+(Summary of changes)
+$ git branch -d myfeature
+Deleted branch myfeature (was 05e9557).
+$ git push origin develop
+</code></pre></div></div>
+
+<p>The –no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.</p>
+
+<p>Some Get Out Jail Free Commands in Git</p>
+
+<ul>
+  <li>Please be aware of these commands</li>
+  <li>
+    <p>Don’t go throwing them around, you can do some</p>
+  </li>
+  <li>You can checkout specific files using <code class="highlighter-rouge">git checkout -commit#id --path-to-file</code></li>
+  <li><code class="highlighter-rouge">git revert</code></li>
+  <li><code class="highlighter-rouge">git reset --hard HEAD</code></li>
+</ul>
