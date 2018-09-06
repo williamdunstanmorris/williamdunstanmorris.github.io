@@ -5,6 +5,7 @@
 
 # baseurl for personal page instead of a project page . Append this if a project.
 baseurl: /
+url: https://williamdunstanmorris.github.io/
 
 # website info
 title:            williammorris_
