@@ -8,7 +8,7 @@
       <a href="{{site.url}}{{page.url}}" class="project-item {{post.categories}} {{post.tags | array_to_sentence_string | remove: "," | remove: "and"}}" title="{{ post.title }}">
         <div class="inner-wrapper">
           {% if post.cover %}
-          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.url }}{{ post.cover }}/" style="display: block;">
+          <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.url }}{{ post.cover }}" style="display: block;">
           {% else %}
           <div class="lazy loaded" style="background-color:#f8f8ff;width:100%;height:85%;border:1px solid #000;"></div>
           {% endif %}
