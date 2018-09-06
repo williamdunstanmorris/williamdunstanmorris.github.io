@@ -31,13 +31,12 @@ if(sliderThatWasMoved == onsetDelaySlider)
 
 ```c++
 
-class ReverbProcessor {
-
-
+class ReverbProcessor
+{
 
   // Should this function return an object vector, or change the existing vector in this class?
 
-  void ReverbProcessor::processObjectVector (SampleType &levelAdjust, SampleType &delayAdjust, SampleType &lateDelayAdjust, SampleType &lateLevelAdjust, SampleType &lateDecayAdjust)
+  void ReverbProcessor::processObjectVector (SampleType &refLevelAdjust, SampleType &delayAdjust, SampleType &lateDelayAdjust, SampleType &lateLevelAdjust, SampleType &lateDecayAdjust)
   {
     // Iterate over every object in the ObjectVector rVector.
     for (const auto& rObject: rVector)
@@ -52,7 +51,7 @@ class ReverbProcessor {
         if(delay < 0)
         {
           // Set the level (linear gain) of the DiscreteReflection
-          rObject.discreteReflection(i).setLevel((level += levelAdjust));
+          rObject.discreteReflection(i).setLevel((level += refLevelAdjust));
           // Set the delay (in seconds) for the DiscreteReflection
           rObject.discreteReflection(i).setDelay((delay += delayAdjust));
         }
