@@ -904,7 +904,7 @@ nav .overlay {
 
 nav .mobile-links.open+.overlay {
     left: 0;
-    opacity: 0.7;
+    opacity: 1;
     transition: all 0s 0s, opacity 0.3s
 }
 
@@ -922,7 +922,8 @@ body.windows-os .nav-right:after {
 }
 
 .sidebar-wrapper .row {
-    position: relative
+    position: relative;
+    top: 20px;
 }
 
 .filters-mobile {
@@ -1290,15 +1291,15 @@ body.windows-os .nav-right:after {
 
     .filters-mobile {
         display: block;
-        padding-top: 4.375em
+        padding-top: 5.8em
     }
 
     .filters-mobile-link {
-        width: 19px;
-        height: 12px;
-        left: 1.25em;
-        top: 20px;
-        position: absolute
+      width: 30px;
+      height: 20px;
+      left: 1.25em;
+      top: 30px;
+      position: absolute;
     }
 
     .filters-mobile-link .line {
@@ -1362,7 +1363,8 @@ body.windows-os .nav-right:after {
     .sidebar.open {
         -ms-transform: translateY(0px);
         transform: translateY(0px);
-        opacity: 1
+        opacity: 1;
+        font-size: 0.8em;
     }
 }
 
