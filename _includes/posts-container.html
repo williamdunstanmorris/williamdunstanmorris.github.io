@@ -5,7 +5,7 @@
       {% for post in site.posts %}
         {% if post.published %}
 
-      <a href="{{page.url}}" class="project-item {{post.categories}} {{post.tags | array_to_sentence_string | remove: "," | remove: "and"}}" title="{{ post.title }}">
+      <a href="{{site.url}}{{page.url}}" class="project-item {{post.categories}} {{post.tags | array_to_sentence_string | remove: "," | remove: "and"}}" title="{{ post.title }}">
         <div class="inner-wrapper">
           {% if post.cover %}
           <img class="lazy loaded" title="" alt="{{post.title}}" src="{{ site.url }}/{{ post.cover }}/" style="display: block;">
@@ -17,9 +17,13 @@
        </a>
         {% endif %}
       {% endfor %}
-      <a href="https://a-rr.ch/projets/" class="project-item archives-link" style="position: absolute; left: 285px; top: 3993px;">
+      {% for page in site.pages %}
+        {% if page.layout == 'navbar-sidebar-posts-archive' %}
+      <a href="{{site.url}}{{page.url}}" class="project-item archives-link" style="position: absolute; left: 285px; top: 3993px;">
 				<div class="inner-wrapper"></div>
 			</a>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>

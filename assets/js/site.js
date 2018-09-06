@@ -43,44 +43,109 @@ var generalFunctions = {};
   }
 
 
+/*
+arr page hompageModule initial object properties
+
+datafilter="" : activeFilter: "*"
+adjustActiveFilters: ƒ ()
+adjustName: ƒ ($item)
+changeArchiveLink: ƒ ()
+checkHash: ƒ ()
+filter: ƒ ()
+grid: a.fn.init [div.projects-grid, selector: ".projects-grid", prevObject: n.fn.init(1), context: document]
+initialArchiveLink: "https://a-rr.ch/projets/"
+__proto__: Object
+
+*/
+
+/*
+this page hompageModule initial object properties
+
+activeFilter:"*"
+adjustActiveFilters: ƒ ()
+adjustName: ƒ ($item)
+changeArchiveLink: ƒ ()
+checkHash: ƒ ()
+filter: ƒ ()
+grid: a.fn.init [div.projects-grid, selector: ".projects-grid", prevObject: n.fn.init(1), context: document]
+initialArchiveLink: "http://localhost:4000/projets"
+__proto__: Object
+
+*/
+
+
+
 var homepageModule = {};
 
+// Get the href of the .archives link attribute
 homepageModule.initialArchiveLink = $('.archives-link').attr('href');
 
+// Declared function to change the archive link to what the current homepageModule link is
 homepageModule.changeArchiveLink = function(){
   $('.archives-link').attr('href', homepageModule.archiveLink );
 }
 
+// Declared function to adjust the active filters. It defaults to dimming all elements.
 homepageModule.adjustActiveFilters = function(){
+  // If the homepageModule active filter is not equal to *, dim all element of the navbar and sidebar.
   if(homepageModule.activeFilter != '*' ){
     $('.filter').addClass('inactive');
     $('.nav-right').addClass('filtering-active');
   }else{
+  // If remove and undim all navbar and sidebar elements.
     $('.nav-right').removeClass('filtering-active');
     $('.filter').removeClass('inactive');
   }
 
+// Select the element that has the active filter highlighted, and remove the class, so that this element becomes selected.
   $('.filter[data-filter="'+homepageModule.activeFilter+'"]').removeClass('inactive');
 
 }
 
+// archiveLink: "https://a-rr.ch/tag-de-projet/concours/"
+// archiveLink: "http://localhost:4000/tag-de-projet/git"
 
+// Function to check the hash which is before tagged elements
 homepageModule.checkHash = function(){
+  // Local hash will
   var locHash = window.location.hash.substr(1);
   homepageModule.activeFilter = '';
   if( locHash.length > 0 ){
     homepageModule.activeFilter = locHash;
     homepageModule.archiveLink = $('[data-filter="' + locHash + '"]').attr('data-archive');
+    // Does the sidebar and/or navbar add an active filter or not?
     $('.filter[data-filter='+locHash+']').addClass('active');
   }else{
     homepageModule.activeFilter = '*';
   }
 }
-
-
 homepageModule.checkHash();
 homepageModule.changeArchiveLink();
 
+/*
+activeFilter:"git"
+adjustActiveFilters: ƒ ()
+adjustName: ƒ ($item)
+archiveLink: "http://localhost:4000/tag-de-projet/git"
+changeArchiveLink: ƒ ()
+checkHash: ƒ ()
+filter: ƒ ()
+grid: a.fn.init [div.projects-grid, selector: ".projects-grid", prevObject: n.fn.init(1), context: document]
+initialArchiveLink: "http://localhost:4000/projets"
+__proto__:Object
+
+activeFilter:"concours"
+adjustActiveFilters: ƒ ()
+adjustName:ƒ ($item)
+archiveLink:"https://a-rr.ch/tag-de-projet/concours/"
+changeArchiveLink:ƒ ()
+checkHash: ƒ ()
+filter: ƒ ()
+grid: a.fn.init [div.projects-grid, selector: ".projects-grid", prevObject: n.fn.init(1), context: document]
+initialArchiveLink: "https://a-rr.ch/projets/"
+__proto__: Object
+
+*/
 
 homepageModule.filter = function(){
   homepageModule.grid.isotope({ filter: function(){
@@ -98,20 +163,24 @@ homepageModule.adjustName = function($item){
 }
 
 
+// Toggle css active for clicked element. Remove filtered on hover options, which bold elements when container images are highlighted.
 $('.filter').on('click', function(){
 
   $this = $(this);
+  // Remove any other active filter that is not this.
   $('.filter').not($(this)).removeClass('active');
+  // Toggle this class active
   $this.toggleClass('active');
+  // Remove filtered on hover class , which boldens elements when hovered on.
   $('.nav-right').removeClass('filtered-on-hover');
-
+  // If chosen class is active, change the activeFilter and archiveLink respectively.
   if( $this.hasClass('active') ){
     homepageModule.activeFilter = $this.attr('data-filter');
     homepageModule.archiveLink = $this.attr('data-archive');
   }else{
     homepageModule.activeFilter = '*';
   }
-
+// Error here - "homepageModule is not defined"
   homepageModule.filter();
 
 });
@@ -273,8 +342,8 @@ $(window).bind("pageshow", function(event) {
 $(window).on('load', function(){
   if( localStorage.getItem('splashShown') !== 'true' ){
     window.setTimeout(function(){
-      $('.splash-overlay').fadeOut( 2000, 'swing');
-    }, 500)
+      $('.splash-overlay').fadeOut( 800);
+    }, 200)
     //localStorage.setItem('splashShown', 'true');
   }
 });

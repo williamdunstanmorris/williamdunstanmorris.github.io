@@ -2,7 +2,7 @@
 layout: post
 title:  "noisy matrices in opengl"
 cover: assets/img/glitch-shot.png
-date:   2018-01-07 12:31:01 +0000
+date:   2017-01-07 12:31:01 +0000
 categories: speak
 published: true
 tags: max-msp opengl graphics noise

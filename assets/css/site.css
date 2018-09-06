@@ -830,7 +830,7 @@ nav .mobile-links {
 
 nav .mobile-links .mobile-links-inner-wrapper {
     padding: 1.25em 5%;
-    padding-top: 4.375em;
+    padding-top: 7.375em;
     background: #fff;
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -845,7 +845,6 @@ nav .mobile-links ul {
 
 nav .mobile-links li {
     font-size: .875em;
-    font-weight: 700;
     line-height: 1em;
     text-decoration: none;
     color: #000;
@@ -999,7 +998,7 @@ body.windows-os .nav-right:after {
 }
 
 .sidebar {
-    padding-top: 9.0625em;   
+    padding-top: 9.0625em;
     padding-bottom: 1.875em;
     width: 15%;
     position: absolute;
@@ -1188,7 +1187,7 @@ body.windows-os .nav-right:after {
     }
 
     .sidebar ul li.last-filter {
-        margin-bottom: 20vh
+        margin-bottom: 8vh
     }
 }
 
@@ -2156,7 +2155,7 @@ footer .social-links {
 
 @media screen and (max-width: 640px) {
     html,body {
-        font-size:16px
+        font-size: 1.1em;
     }
 
     .container-inner-wrapper {
@@ -2167,8 +2166,8 @@ footer .social-links {
     }
 
     body.menu-open .container-inner-wrapper {
-        -ms-transform: translateY(50px);
-        transform: translateY(50px)
+        -ms-transform: translateY(200px);
+        transform: translateY(200px)
     }
 
     .project-item {
