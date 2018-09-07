@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: navbar-post
 title:  "noisy matrices in opengl"
 cover: assets/img/glitch-shot.png
 date:   2017-01-07 12:31:01 +0000

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: navbar-post
 current: post
 class: post-template
 cover:  assets/img/klusterlogo.png

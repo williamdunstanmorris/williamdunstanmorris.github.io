@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: navbar-post
 title:  "glsl explained for shaders"
 cover: assets/img/glslmatrix.png
 date:   2017-01-07 12:31:01 +0000

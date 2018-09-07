@@ -1,3 +1,15 @@
+---
+layout: navbar-post
+title:  "introduction to sound itself"
+cover: assets/img/me.JPG
+date:   2018-02-07 12:31:01 +0000
+categories: speak
+published: true
+tags: audio 
+---
+
+
+
 ## Sound Basics
 
 To understand this, you have to strip back to the basics and determine what sound actually is at its most basic level.
@@ -33,4 +45,4 @@ Active vs passive listeners.
 
 ## Broadcast sound
 
-Music is like cake. Made up of different components. 
+Music is like cake. Made up of different components.

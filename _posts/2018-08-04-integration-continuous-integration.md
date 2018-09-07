@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: navbar-post
 title:  "integration of continuous...integration"
 cover: assets/img/git-cover.png
 date:   2018-02-07 12:31:01 +0000
@@ -7,6 +7,11 @@ categories: speak
 published: true
 tags: continuous-integration ci/cd docker git
 ---
+
+Notes for Philip:
+- Sphinx - what is it?
+- Andreas has taken over some of the initial documentation of VISR with sphinx
+-
 
 When we were building VISR, we ended up with a pipeline that starts at linting written code, and
 
