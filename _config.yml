@@ -1,8 +1,3 @@
-# # dependencies
-# markdown:         redcarpet
-# highlighter:      pygments
-# language: 'en-uk'
-
 # baseurl for personal page instead of a project page . Append this if a project.
 baseurl: /
 url: https://williamdunstanmorris.github.io/
@@ -15,6 +10,10 @@ image: assets/img
 elogo: assets/img/email.png
 glogo: assets/img/github.png
 slogo: assets/img/soundcloud.png
+
+
+
+
 # social info
 navigation: true # show the navbar links
 subscribers: true # you need to connect an external service for this to work.
@@ -30,8 +29,10 @@ author:
 # Custom vars
 # version:          2.1.0
 
-github:
-  repo:           https://github.com/poole/hyde
+github: https://github.com/williamdunstanmorris
+email: william.dunstan.morris@gmail.com
+instagram: https://www.instagram.com/its_dizzylo/
+
   # username:       williamdunstanmorris
 
 # Permalinks
@@ -77,3 +78,9 @@ defaults:
     categories: speak
     excerpt_separator: <!--more-->
     pdfdownload: null
+
+
+# # dependencies
+# markdown:         redcarpet
+# highlighter:      pygments
+# language: 'en-uk'
