@@ -6,15 +6,11 @@
           <h2>{{page.categories}}</h2>
           <h1>{{page.title}}</h1>
           <div class="excerpt">
-            {{page.excerpt}}
-          </div>
-          {% if page.pdfdownload != 'null' %}
-          <div class="additional-text">
-            <div class="inner-wrapper">
+            <div class="col-sm-3">
+              <div id="toc" data-toggle="toc">
+              </div>
             </div>
-            <a target="_blank" class="download-link" href="{{site.url}}/{{page.pdfdownload}}">download pdf</a><br>
           </div>
-          {% endif %}
         </div>
       </div>
     </div>
@@ -23,7 +19,7 @@
   <div class="container-inner-wrapper photos-container row">
     <div class="small-12 medium-6 large-7 medium-offset-6 large-offset-5 column">
       <div class="gallery-wrapper" data-pswp-uid="1">
-        <div class="image-wrapper text-content">
+        <div class="image-wrapper text-content" id="post">
           {{page.content}}
         </div>
       </div>

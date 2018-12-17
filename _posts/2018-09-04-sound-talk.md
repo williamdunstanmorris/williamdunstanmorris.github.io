@@ -4,8 +4,8 @@ title:  "introduction to sound itself"
 cover: assets/img/me.JPG
 date:   2018-02-07 12:31:01 +0000
 categories: speak
-published: true
-tags: audio 
+published: false
+tags: audio
 ---
 
 
