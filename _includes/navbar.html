@@ -1,25 +1,25 @@
 <nav>
   <div class="row">
     <div class="nav-column-left">
-      <a class="logo-left" href="{{ site.baseurl }}">
+      <a class="logo-left" href="{{ site.url }}">
         <span class="site-title">{{ site.title }}</span>
       </a>
     </div>
     <div class="nav-column-right">
       <ul class="nav-right">
-        {% assign pages_list = site.pages %}
-        {% for node in pages_list %}
-          {% if node.title != null %}
-            {% if node.show-in-navbar == true %}
+        {% for page in site.pages %} {% if page.title != null %} {% if page.show-in-navbar == true %} {%- if page.title == 'about' -%}
         <li>
-
-          <a class="filter" data-filter="{{node.categories}}" data-archive="{{site.url}}/archive-tag/{{ node.title }}" href="{{site.url}}/#{{ node.title }}">
-            <span>{{ node.title }}</span>
+          <a class="filter" href="{{site.url}}/{{ page.url }}">
+                <span>{{ page.title }}</span>
+              </a>
+        </li>
+        {%- else -%}
+        <li>
+          <a class="filter" data-filter="{{page.categories}}" data-archive="{{site.url}}/archive-tag/{{ page.title }}" href="{{site.url}}/#{{ page.title }}">
+            <span>{{ page.title }}</span>
           </a>
         </li>
-        {% endif %}
-        {% endif %}
-        {% endfor %}
+        {% endif %} {% endif %} {% endif %} {% endfor %}
       </ul>
     </div>
     <div class="menu-trigger">
@@ -30,7 +30,7 @@
     <div class="mobile-links">
       <div class="mobile-links-inner-wrapper">
         <ul>
-          <li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="">cv</a></li>
+          <li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="/assets/downloads/cv-william-morris-september-2018.pdf">cv</a></li>
           <li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="mailto:williamdunstanmorris@gmail.com">email</a></li>
           <li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="https://github.com/williamdunstanmorris">github</a></li>
           <li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://soundcloud.com/">soundcloud</a></li>

@@ -7,7 +7,7 @@ fill: true
 published: true
 class: vertical
 author: "William Morris"
-tags: git version-control unix
+tags: git unix
 ---
 
 Starting a new repo can be quite tricky sometimes, and there are a number of ways you can get yourself into a mess. I'll try to explain what I can about how it works, and how you can dig yourself out.

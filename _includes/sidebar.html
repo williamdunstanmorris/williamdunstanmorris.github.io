@@ -6,24 +6,19 @@
   <div class="row">
     <div class="sidebar">
       <ul>
-        {% for tag in site.tags %}
-        {% if forloop.last == false %}
+        {% for tag in site.tags %} {% if forloop.last == false %}
         <li>
-          {%- comment %}
-          	When the sidebar or navbar is clicked, the data-archive address replaces the current archives-link href address as a result.
-          {% endcomment -%}
-          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/archive-tag/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
-        {% else %}
-        <li class="last-filter">
-          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/archive-tag/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="">cv</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="mailto:williamdunstanmorris@gmail.com">email</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="https://github.com/williamdunstanmorris">github</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="https://soundcloud.com/">soundcloud</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a href="https://www.instagram.com/its_dizzylo/">instagram</a></li>
+          {%- comment %} When the sidebar or navbar is clicked, the data-archive address replaces the current archives-link href address as a result. {% endcomment -%}
+          <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/archive-tag/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a> {% else %}
+          <li class="last-filter">
+            <a class="filter" data-filter="{{tag[0]}}" data-archive="{{site.url}}/archive-tag/{{ tag[0] | slugify }}" href="{{site.url}}/#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+          </li>
+          {% endif %} {% endfor %}
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="/assets/downloads/cv-william-morris-september-2018.pdf">cv</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="mailto:williamdunstanmorris@gmail.com">email</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="https://github.com/williamdunstanmorris">github</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="https://soundcloud.com/">soundcloud</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a href="https://www.instagram.com/its_dizzylo/">instagram</a></li>
       </ul>
     </div>
   </div>

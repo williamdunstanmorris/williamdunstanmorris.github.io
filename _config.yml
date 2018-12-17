@@ -1,5 +1,5 @@
 # baseurl for personal page instead of a project page . Append this if a project.
-baseurl: /
+baseurl: ""
 url: https://williamdunstanmorris.github.io/
 
 # website info
@@ -10,9 +10,6 @@ image: assets/img
 elogo: assets/img/email.png
 glogo: assets/img/github.png
 slogo: assets/img/soundcloud.png
-
-
-
 
 # social info
 navigation: true # show the navbar links
@@ -78,6 +75,7 @@ defaults:
     categories: speak
     excerpt_separator: <!--more-->
     pdfdownload: null
+    nav-archive: true
 
 
 # # dependencies

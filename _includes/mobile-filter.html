@@ -2,18 +2,13 @@
 	<div class="row">
 		<div class="small-12 medium-6 medium-offset-6 column">
 			<ul class="nav-right">
-				{% assign pages_list = site.pages %}
-				{% for node in pages_list %}
-					{% if node.title != null %}
-						{% if node.show-in-navbar == true %}
+				{% for page in site.pages %} {% if page.title != null %} {% if page.show-in-navbar == true %}
 				<li>
-					<a class="filter" data-filter="{{node.categories}}" data-archive="{{site.url}}/archive-tag/{{ node.title }}" href="{{site.url}}/#{{ node.title }}">
-						<span>{{ node.title }}</span>
+					<a class="filter" data-filter="{{page.categories}}" data-archive="{{site.url}}/archive-tag/{{ page.title }}" href="{{site.url}}/#{{ page.title }}">
+						<span>{{ page.title }}</span>
 					</a>
 				</li>
-				{% endif %}
-				{% endif %}
-				{% endfor %}
+				{% endif %} {% endif %} {% endfor %}
 				<!-- <li><a class="filter" data-filter="design-dinterieur" data-archive="https://a-rr.ch/categorie-de-projet/design-dinterieur/" href="https://a-rr.ch/#design-dinterieur"><span>design d’intérieur</span></a></li> -->
 			</ul>
 		</div>

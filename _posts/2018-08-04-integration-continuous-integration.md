@@ -5,13 +5,27 @@ cover: assets/img/git-cover.png
 date:   2018-02-07 12:31:01 +0000
 categories: speak
 published: true
-tags: continuous-integration ci/cd docker git
+tags:  
+    - continuous-integration
+    - ci/cd
+    - docker
+    - git
 ---
 
-Notes for Philip:
-- Sphinx - what is it?
-- Andreas has taken over some of the initial documentation of VISR with sphinx
--
+
+## Deployment for platform-dependency
+
+If you have software that needs to be packaged for different operating systems, or have different runners setup on different operating systems, chances are that you will run into a lot of redundancy when crafting specific jobs. This is partly to do with scripting, and that bash and windows command line don't share the same language directives.
+
+Luckily, we were using CMake, and CMake have created their own internal language through their command , so you can call
+
+```
+cmake -E make_directory <directory-name>
+```
+
+which will run an internal environment that makes a directory, in whatever operating system the runner is in. This means you don't have to write platform specific jobs for creating a directory on each platform. Kind of neat.
+
+One of the biggest issues I had to work around was using a windows machine at Southampton, and passing the successful product.
 
 When we were building VISR, we ended up with a pipeline that starts at linting written code, and
 

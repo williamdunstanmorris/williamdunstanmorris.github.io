@@ -1,3 +1,19 @@
+---
+layout: navbar-post
+title:  "Object-based Reveberation software"
+cover: assets/img/git-cover.png
+date:   2018-12-10 12:31:01 +0000
+categories: speak
+published: true
+tags:  
+    - continuous-integration
+    - ci/cd
+    - docker
+    - git
+---
+
+
+
 I think the requirements can be split into 3 specific sub-requirements to make things easier to understand . For the sake of time, feel free to propose any modifications of these requirements to make implementation at this stage as easy as possible. I stress the importance of keeping things as simple as possible and make it extensible.
 
 Even though they the scene renderer sits in the reproduction stage and the reverbrenderer sits in the production stage, I feel that the implementation should remain fairly similar.
@@ -53,3 +69,47 @@ Concatenates an array of point sources and adds reverb metadata -> encodes the o
 
 * SoundObjectiser outputs PointSource coordinates with bool isReverbEnabled determining if reverb is to be send to the ReverbRenderer.
 *
+
+
+
+New *Minimal* Reverb Implementation Requirements:
+
+*Level 1:*
+
+**Add a slider for object level, which will control the dry/wet level**
+1. Within PointSourceWithRevWrapper, implement a control for the ID::objLevel, which will grab the current state level of all levels, and set them.
+2. If possible, introduce a smoothing gain with the slider. (not high-priority)
+
+**Copy in the JSON library**
+1. Copy Room JSON into its own .h file that contains the room library raw JSON data as an std::string.
+2. Include this .h file in the PointSourceWithRevWrapper class.
+3. Create a function to load room that uses this class - use whatever is currently implemented as its function.
+4. Constructor should load a room based on current room chosen in box. Check this works properly.
+
+*Level 2: More challenging requirements:*
+
+**Implement a JUCE Checkbox to determine whether object is PointSource or PointSourceWithReverb in the PluginEditor.cpp/hpp.**
+1. Toggle switch state between PointSource or PointSourceWithReverb. Use std:: in each constructor to determine which is being created and/or pointed to.
+2. Add if statement to action on Checkbox to perform PluginSetup() again.
+3. Add an if condition to the objecthandler.reset(...) using the checkbox to status to determine which object type it should be.
+
+**Integration implementation requirements (integration ReverbObjectMetagen->PointSourceWithReverb)**
+1. Add room and object level parameters via parameters.createAndAddParamter(...)
+2. Add parameters.addMetadata(...) for room and object level .
+3. Do the same for removeParameterListener for room type and object level.
+4. Add enableRoomLoading(), addRoomsToComboBox() functions to the PluginEditor
+5. Inherit private::Timer and implement timeCallback override();
+
+**Implement a JUCE timer after user has stopped playback before room can be changed to avoid audio spiking**
+Add an additional 5 second pause time after playback has stopped which prevents users from loading a room. This will potentially reduce the amount of audio spikes. This does NOT completely remove audio spikes, but may reduce the chance of them from occurring.
+1. Add an additional timer clock of 5 seconds as an additional condition of !result.isPlaying clause in timerCallback() function.
+
+*Issue:* When the plugin is first loaded, the parameters of the room being initially loaded are not correct. They are only corrected after changing a room.
+*Issue:* When a room is changed, audio spikes can cause a slow linear increase in BOTH late level and late decay, until muted by REAPER.
+*Issue* When a room is changed, audio spikes can cause a rapid increase in late level, but with a very short decay.
+
+*This a constant issue I have been going around in circles for a long long time with.*
+Potential tryouts to fix.
+1. Create a new function called roomChangeCallback() to determine when the room has been changed.
+2. *Tried multiple times with this:* When a room is changed, iteratively set the 8ve bands of all late-level and late-decay and object-level to its MINIMUM value (presumably 0, equating to -inf dB. ) BEFORE loading a new room dataset.
+3. [optional - Andreas' suggestion] Use the rcl::CrossfadingMatrix to implement switches between filters with crossfading - use that for the mLateReverFilter in reverbobject::ReverbObjectRenderer. (requires someone with DSP understanding for this)

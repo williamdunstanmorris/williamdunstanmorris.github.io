@@ -3,38 +3,22 @@
 
     <div class="small-12 medium-6 large-7 medium-offset-6 large-offset-5 column">
 
-    {% comment %}
-
-    iterate over site.tags
-    assign page.url to string
-    compare strings, if tag == page.url
-    iterate through site.posts and assign the posts that have this tag assigned to it
-
-    {% endcomment %}
-
-    {% assign this_tag = page.url %}
-
-    {% for post in site.posts  %}
-    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-    {% if forloop.first %}
+      {% assign this_tag = page.url %} {% for post in site.posts %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %} {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+      {% if forloop.first %}
       <div class="year-wrapper">
-        <span class="year" id="{{ this_year }}-ref">{{this_year}}</span>
-    {% endif %}
-      <a href="{{post.url}}" class="archive-item">
+        <span class="year" id="{{ this_year }}-ref">{{this_year}}</span> {% endif %}
+        <a href="{{post.url}}" class="archive-item">
           <h3>{{post.categories}}</h3>
           <h2>{{post.title}}</h2>
-      </a>
-    {% if forloop.last %}
+        </a>
+        {% if forloop.last %}
       </div>
-    {% else %}
-        {% if this_year != next_year %}
+      {% else %} {% if this_year != next_year %}
       <div class="year-wrapper">
         <span class="year" id="{{ next_year }}-ref">{{next_year}}</span>
       </div>
-      {% endif %}
-    {% endif %}
-    {% endfor %}
+      {% endif %} {% endif %} {% endfor %}
     </div>
   </div>
 </div>

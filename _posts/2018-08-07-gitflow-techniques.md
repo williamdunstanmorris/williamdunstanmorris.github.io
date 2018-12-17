@@ -6,7 +6,9 @@ cover: assets/img/git-airport-cover.jpg
 published: true
 categories: speak
 author: "William Morris"
-tags: version-control git philosophy
+tags:
+    - git
+    - philosophy
 ---
 
 - Git is an open-source technology that keeps records of your changes
