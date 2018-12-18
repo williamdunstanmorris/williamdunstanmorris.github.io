@@ -7,8 +7,8 @@
           <h1>{{page.title}}</h1>
           <div class="excerpt">
             <div class="col-sm-3">
-              <div id="toc" data-toggle="toc">
-              </div>
+              <!-- <div id="toc" data-toggle="toc" class="bs-docs-sidebar"></div> -->
+              <div id="js-toc" data-toggle="toc" class="js-toc"></div>
             </div>
           </div>
         </div>
@@ -19,7 +19,7 @@
   <div class="container-inner-wrapper photos-container row">
     <div class="small-12 medium-6 large-7 medium-offset-6 large-offset-5 column">
       <div class="gallery-wrapper" data-pswp-uid="1">
-        <div class="image-wrapper text-content" id="post">
+        <div class="image-wrapper text-content js-toc-content" id="post .js-toc-content">
           {{page.content}}
         </div>
       </div>
