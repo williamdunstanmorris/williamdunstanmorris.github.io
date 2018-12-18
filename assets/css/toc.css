@@ -54,3 +54,7 @@ a.toc-link {
 .is-active-link::before {
   background-color: #515151
 }
+
+.js-toc-content h3 {
+  padding-top: 10px;
+}
