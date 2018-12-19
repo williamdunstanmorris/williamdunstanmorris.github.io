@@ -652,27 +652,6 @@ Separate software for panning, reflection handling
 Scene rendering for room parameters that exists on the master/auxiliary channel within a DAW
 Redesign the reflection storage of data that stem from BiquadCoefficentLists in JSON format into something like EQ bands – BUT should we really invest time in this if we plan to re-engineer multiple sources etc. in a room?
 
-Administrative Development
-* Because of support from Southampton, embedding the reverb tool into the production suite is going to become more difficult
-
-Implication => more time is spent troubleshooting errors than development via Giacomo - he’s not really concerned with making sure the reverb builds correctly
-Resolution => 6.1b have a focus on this development
-* Updates at this time can cause breaking changes - Time has to be spent now integrating with configuration and packaging as securely as possible
-Implication => Linking errors that stop the flow of development recently have been extremely ambiguous to resolve
-* Version compatibility with the production suite now
-* The bar is now much higher for public release requirements, regards to user-installation methods
-* Administrative development - i.e. package installations but also library loading and embedding methods
-* Implication of this - less time to focus now on the metadata editing/c++/DSP blocks
-*
-
-Reverb Development
-
-
-Steering board concerns
-* In a nutshell - I don’t want to lead a demo this time into the reverb tool
-Implications => highly pressured to resolve far too many DSP artefact bugs with lack of support
-* Creating and leading a demonstration that is more highly tuned
-*
 
 ## Verification, Validation and Outstanding Issues
 
