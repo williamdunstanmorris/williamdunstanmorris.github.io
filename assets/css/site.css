@@ -328,7 +328,7 @@ font-family: 'Montserrat', sans-serif; */
   color: #eceff1;
   font-size: 14px;
   background: #263238;
-  padding: 20px;
+  /* padding: 20px; */
   white-space: pre-wrap;
 }
 
@@ -2350,4 +2350,8 @@ table th[class*="col-"] {
 table tr td {
     hyphens: auto;
     font-size: 0.7em;
+}
+
+code {
+  font-size: 0.8em;
 }

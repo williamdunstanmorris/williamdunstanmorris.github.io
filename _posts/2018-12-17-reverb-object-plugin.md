@@ -48,7 +48,7 @@ Constructor should load a room based on current room chosen in box. Check this w
 *[LR, PC] Will need extensive support on how this function is used, and where this function is to be placed exactly. For instance, is it used in the Reverb Editor or is it used in the reverbobjectmodel(DSP). If the latter, then will need much more guidance. Also How do we use this when changing rooms i.e. parsing a JSON dataset rooms.?*
 *[GC] Told me once of a way to do asyncronookus updated in the objectwrapper? Still a viable/safe way to do for loading a room object model that will prevent audio hiccups?*
 
-### __Level 4:__ Minimal user parameter design
+### __Level 3:__ Minimal user parameter design
 
 - Implement some form of dry/wet slider UI. Add a slider for object level, which will control the dry/wet level within PointSourceWithRevWrapper, implement a control for the ID::objLevel, which will grab the current state level of all levels, and set them.
 If possible, introduce a smoothing gain with the slider. (not high-priority, requires some DSP knowledge)
@@ -59,7 +59,7 @@ If possible, introduce a smoothing gain with the slider. (not high-priority, req
 
 *[GC] hold audio rendering when slider is being dragged? This MAY be the safest way to stop clicks/pops*
 
-### __Level 5:__ Implement a JUCE timer after user has stopped playback before room can be changed - **to avoid audio spikes**
+### __Level 4:__ Implement a JUCE timer after user has stopped playback before room can be changed - **to avoid audio spikes**
 
 Add an additional 5 second pause time after playback has stopped which prevents users from loading a room. This will potentially reduce the amount of audio spikes. This does NOT completely remove audio spikes, but may reduce the chance of them from occurring.
 Add an additional timer clock of 5 seconds as an additional condition of !result.isPlaying clause in timerCallback() function.
@@ -93,7 +93,7 @@ Create a new function called roomChangeCallback() to determine when the room has
 Here is the current PointSourceWithReverb class that sits in the libobjectmodel/ directory in VISR. Lets take this apart.
 
 
-```c++
+```cpp
 /* Copyright Institute of Sound and Vibration Research - All rights reserved
 
  Adapted for the S3A room object by Phil Coleman, University of Surrey
@@ -127,7 +127,7 @@ namespace objectmodel
      */
 ```
 
-### NumberOfSubBands and NumDiscreteReflectionBiquads
+#### NumberOfSubBands and NumDiscreteReflectionBiquads
 
 ```c++
     static const std::size_t cNumberOfSubBands = 9;
@@ -140,7 +140,7 @@ namespace objectmodel
 
 ```
 
-### C++ std:: array vs std::vector for **LateReverbCoeffs**
+#### C++ std:: array vs std::vector for **LateReverbCoeffs**
 
 ```c++
     /**
@@ -172,7 +172,7 @@ Have a look at this to make things clearer about the differences between std::ar
 
 http://www.devx.com/cplus/Article/42114
 
-### Nested-class **DiscreteReflection**
+#### Nested-class **DiscreteReflection**
 
 The Inner-class that exists within our PointSourceWithReverb.
 ```c++
@@ -200,7 +200,7 @@ The Inner-class that exists within our PointSourceWithReverb.
       Coordinate positionZ() const { return mZ; }
 ```
 
-### SampleType delay for discrete reflections
+#### SampleType delay for discrete reflections
 
 ```c++
       /** Return the delay (in seconds) for the discrete reflection. */
@@ -217,7 +217,7 @@ The Inner-class that exists within our PointSourceWithReverb.
        */
       rbbl::BiquadCoefficientList<SampleType> const & reflectionFilters() const { return mDiscreteReflectionFilters; }
 ```
-### Biquad return from wall reflection filter
+#### Biquad return from wall reflection filter
 
 Returns a specific biquad section of the wall reflection filter.
 ```c++
@@ -229,7 +229,7 @@ Returns a specific biquad section of the wall reflection filter.
       rbbl::BiquadCoefficient<SampleType> const & reflectionFilter( std::size_t biquadIdx ) const;
 ```
 
-### Mutator functions for a DiscreteReflection
+#### Mutator functions for a DiscreteReflection
 
 ```c++
       /**
@@ -277,7 +277,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ```
 
-### Other DiscreteReflection members
+#### Other DiscreteReflection members
 
 ```c++
       /**
@@ -299,7 +299,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ```
 
-### Nested LateReverb class & constructor
+#### Nested LateReverb class & constructor
 
 ```c++
     /**
@@ -331,7 +331,7 @@ Returns a specific biquad section of the wall reflection filter.
                            std::initializer_list<SampleType> const attackTimes = std::initializer_list<SampleType>() );
 ```
 
-### LateReverb onsetDelay
+#### LateReverb onsetDelay
 
 ```c++
       /**
@@ -346,7 +346,7 @@ Returns a specific biquad section of the wall reflection filter.
       void setOnsetDelay( SampleType onset ) { mOnsetDelay = onset; }
 ```
 
-### LateReverb decayCoefficients
+#### LateReverb decayCoefficients
 
 ```c++
       /**
@@ -398,7 +398,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ```
 
-### Attack Time set
+#### Attack Time set
 
 ```c++
       /**
@@ -437,7 +437,7 @@ Returns a specific biquad section of the wall reflection filter.
     };
 ```
 
-### PointSouceWithReverb Constructors
+#### PointSouceWithReverb Constructors
 
 ```c++
     /**
@@ -463,7 +463,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ### References for the LateReverb object
 
-```c++
+```cpp
 
     /**
     * Return a reference to the late reverb object (const version).
@@ -476,7 +476,7 @@ Returns a specific biquad section of the wall reflection filter.
     LateReverb & lateReverb() { return mLateReverb; }
 ```
 
-### Late Reverb Onset
+#### Late Reverb Onset
 
 ```c++
     /**
@@ -491,7 +491,7 @@ Returns a specific biquad section of the wall reflection filter.
     void setLateReverbOnset( SampleType onset ) { lateReverb().setOnsetDelay( onset ); }
 ```
 
-### LateReverb decay coefficients with fixed subbands
+#### LateReverb decay coefficients with fixed subbands
 
 ```c++
     /**
@@ -520,7 +520,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ```
 
-### LateReverb levels
+#### LateReverb levels
 
 ```c++
     /**
@@ -539,7 +539,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ```
 
-### LateReverb decay coefficients
+#### LateReverb decay coefficients
 
 ```c++
     /**
@@ -572,7 +572,7 @@ Returns a specific biquad section of the wall reflection filter.
 
 ```
 
-### DiscreteReflection functionality
+#### DiscreteReflection functionality
 
 ```c++
 
@@ -607,7 +607,7 @@ Returns a specific biquad section of the wall reflection filter.
   }
 ```
 
-### PointSouceWithReverb data structure
+#### PointSouceWithReverb data structure
 
 ```c++
 private:
