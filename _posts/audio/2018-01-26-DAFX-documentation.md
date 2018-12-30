@@ -2,7 +2,7 @@
 layout: post
 title:  "DAFX/RSAO Documentation"
 date:   2018-01-26 12:31:01 +0000
-categories: reverb
+categories: reverb audio
 published: false
 ---
 

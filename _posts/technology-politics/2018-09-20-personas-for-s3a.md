@@ -8,7 +8,6 @@ published: false
 tags: philosophy
 ---
 
-
 Creating baseline personas of potential users for S3A software is a great way of discerning both the target audience and what the alpha tests will look like.
 
 By satisfying these personas, we can start to create content on the website which will guide a specific user through a specific path of content/downloads/links. This technique is really great for generating content.

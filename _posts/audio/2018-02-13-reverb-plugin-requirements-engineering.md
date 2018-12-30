@@ -10,9 +10,8 @@ tags:
     - ci/cd
     - docker
     - git
+    - reverb
 ---
-
-
 
 I think the requirements can be split into 3 specific sub-requirements to make things easier to understand . For the sake of time, feel free to propose any modifications of these requirements to make implementation at this stage as easy as possible. I stress the importance of keeping things as simple as possible and make it extensible.
 

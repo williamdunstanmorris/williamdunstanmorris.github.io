@@ -9,6 +9,7 @@ date:   2018-02-07 12:31:01 +0000
 published: true
 author: williamdunstanmorris
 tags: max-msp audio midi graphics framework
+category: work
 
 ---
 

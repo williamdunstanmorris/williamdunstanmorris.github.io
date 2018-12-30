@@ -7,7 +7,7 @@ published: false
 ---
 
 /**
-* Singleton class used as a reference by the PluginProcessor. A facade that makes reference to other lower-level classes, generating the base ObjectVector with a PointSourceWithReverb. 
+* Singleton class used as a reference by the PluginProcessor. A facade that makes reference to other lower-level classes, generating the base ObjectVector with a PointSourceWithReverb.
 */
 
 

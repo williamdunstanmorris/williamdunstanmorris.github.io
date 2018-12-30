@@ -8,8 +8,6 @@ published: false
 tags: audio
 ---
 
-
-
 ## Sound Basics
 
 To understand this, you have to strip back to the basics and determine what sound actually is at its most basic level.

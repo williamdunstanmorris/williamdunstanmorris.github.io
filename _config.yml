@@ -3,8 +3,8 @@ baseurl: ""
 url: https://williamdunstanmorris.github.io/
 
 # website info
-title:            williammorris_
-description:      'Developer && Devops working on EPSRC project for 3D Spatial Audio'
+title: william-morris
+description: 'Developer && Devops working on EPSRC project for 3D Spatial Audio'
 favicon: assets/img/favicon.png
 image: assets/img
 elogo: assets/img/email.png
@@ -76,6 +76,7 @@ defaults:
     excerpt_separator: <!--more-->
     pdfdownload: null
     nav-archive: true
+    category: work
 
 
 # # dependencies
