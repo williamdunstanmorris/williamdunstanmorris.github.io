@@ -1312,7 +1312,7 @@ body.windows-os .nav-right:after {
         left: -50%;
         top: -50%;
         width: 200%;
-        height: 200%
+        height: 100%
     }
 
     nav .row {
