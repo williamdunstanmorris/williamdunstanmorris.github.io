@@ -3,7 +3,7 @@ baseurl: ""
 url: https://williamdunstanmorris.github.io/
 
 # website info
-title: william-morris
+title: william morris
 description: 'Developer && Devops working on EPSRC project for 3D Spatial Audio'
 favicon: assets/img/favicon.png
 image: assets/img-compressed

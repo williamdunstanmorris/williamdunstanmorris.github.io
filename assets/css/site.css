@@ -905,7 +905,7 @@ nav .mobile-links {
 
 nav .mobile-links .mobile-links-inner-wrapper {
     padding: 1.25em 5%;
-    padding-top: 7.375em;
+    padding-top: 10.375em;
     background: #fff;
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -915,7 +915,10 @@ nav .mobile-links .mobile-links-inner-wrapper {
 nav .mobile-links ul {
     margin: 0;
     padding: 0;
-    list-style: none
+    list-style: none;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: bold;
 }
 
 nav .mobile-links li {
