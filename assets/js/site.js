@@ -188,7 +188,7 @@ $('.filter').on('click', function(){
 homepageModule.grid = $('.projects-grid').isotope({
   itemSelector: '.project-item',
   // stagger: 5,
-  transitionDuration: '0.5s',
+  transitionDuration: '0.4s',
 
   filter: function(){
     return homepageModule.activeFilter === '*' || $(this).hasClass(homepageModule.activeFilter) || $(this).hasClass('archives-link')

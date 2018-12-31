@@ -1,17 +1,12 @@
 ---
 layout: navbar-post
-title:  "integration of continuous...integration"
+title:  "Integration of Continuous...Integration"
 cover: assets/img/git-cover.png
 date:   2018-02-07 12:31:01 +0000
 categories: speak
 published: true
-tags:  
-    - continuous-integration
-    - ci/cd
-    - docker
-    - git
+tags: continuous-integration ci/cd git
 ---
-
 
 ## Deployment for platform-dependency
 

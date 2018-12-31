@@ -6,7 +6,7 @@ url: https://williamdunstanmorris.github.io/
 title: william-morris
 description: 'Developer && Devops working on EPSRC project for 3D Spatial Audio'
 favicon: assets/img/favicon.png
-image: assets/img
+image: assets/img-compressed
 elogo: assets/img/email.png
 glogo: assets/img/github.png
 slogo: assets/img/soundcloud.png

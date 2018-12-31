@@ -1,7 +1,7 @@
 ---
 layout: navbar-post
 title:  "the inspiration behind Kluster"
-cover: assets/img/piano-me.jpg
+cover: assets/img-compressed/piano-me.webp
 date:   2018-02-07 12:31:01 +0000
 categories: speak
 published: true

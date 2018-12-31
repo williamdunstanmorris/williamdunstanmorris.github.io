@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Website blog for myself",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamdunstanmorris/williamdunstanmorris.github.io.git"
+  },
+  "author": "willmorris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamdunstanmorris/williamdunstanmorris.github.io/issues"
+  },
+  "homepage": "https://github.com/williamdunstanmorris/williamdunstanmorris.github.io#readme",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "imagemin": "^6.1.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^6.0.0"
+  },
+  "devDependencies": {
+    "compress-images": "^1.4.6"
+  }
+}

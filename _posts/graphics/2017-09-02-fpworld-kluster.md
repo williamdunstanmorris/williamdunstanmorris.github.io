@@ -1,7 +1,7 @@
 ---
 layout: navbar-post
 title:  "kluster: first-person module in max-msp"
-cover: assets/img/kluster-1.jpeg
+cover: assets/img-compressed/kluster-1.webp
 date:   2018-02-07 12:31:01 +0000
 categories: speak
 published: true
