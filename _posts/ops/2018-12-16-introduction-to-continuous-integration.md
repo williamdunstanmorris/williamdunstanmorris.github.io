@@ -4,7 +4,7 @@ title:  "Introduction To Continuous Integration"
 cover: assets/img/git-cover.png
 date:   2018-02-07 12:31:01 +0000
 categories: speak
-published: true
+published: false
 tags: continuous-integration ci/cd git
 ---
 

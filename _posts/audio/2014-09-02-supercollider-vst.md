@@ -4,7 +4,7 @@ title:  "a supercollider plugin"
 cover: assets/img/supercollider-vst.png
 date:   2018-02-07 12:31:01 +0000
 categories: speak
-published: true
+published: false
 tags: audio
 ---
 

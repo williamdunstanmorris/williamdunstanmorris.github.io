@@ -1,52 +1,44 @@
 <head>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta name="author" content="Design Sprint Switzerland, www.design-sprint.com">
-
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
-    {% else %}
-      {{ page.title }} | {{ site.title }}
-    {% endif %}
-  </title>
-
-  <!-- add after bootstrap.min.css -->
-  <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.0/dist/bootstrap-toc.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-
+  <title>{% if page.title == "Home" %}{{ site.title }}|{{ site.description }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{site.baseurl}}/assets/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{site.baseurl}}/assets/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{site.baseurl}}/assets/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{site.baseurl}}/assets/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{site.baseurl}}/assets/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{site.baseurl}}/assets/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{site.baseurl}}/assets/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{site.baseurl}}/assets/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{site.baseurl}}/assets/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{site.baseurl}}/assets/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="{{site.baseurl}}/assets/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{site.baseurl}}/assets/img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- 3rd Stylesheets -->
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/foundation.min.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/photoswipe.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/default-skin.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/toc.css">
-
-  <!-- TocBot Table of Contents -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css"> -->
-
-
+  <!-- Site Stylesheet -->
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/site.css">
-
-<!-- add after bootstrap.min.js -->
+  <!-- JS Scripts -->
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-migrate.min.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/photoswipe.min.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/photoswipe-ui-default.min.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/anchor.js"></script>
+  <!-- Table of Contents -->
   <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.0/dist/bootstrap-toc.min.js"></script>
-  <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/agate.min.css">
+  <script type="text/javascript" src="{{ site.github.url }}/assets/js/tocbot.js"></script>
+  <!-- Code Highlighting -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/agate.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
 
 </head>

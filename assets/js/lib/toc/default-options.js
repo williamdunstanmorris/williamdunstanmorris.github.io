@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-us">
-{% include head.html %}
-
-<body class="home blog" data-spy="scroll" data-target="#toc">
-  {% include navbar.html %}
-  {% include mobile-filter.html %}
-  {% include post-toc.html %}
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
-
-  <script type="text/javascript">
-  tocbot.init({
+module.exports = {
   // Where to render the table of contents.
   tocSelector: '.js-toc',
   // Where to grab the headings to build the table of contents.
@@ -36,6 +25,8 @@
   collapsibleClass: 'is-collapsible',
   // Class to add to list items.
   listItemClass: 'toc-list-item',
+  // Class to add to active list items.
+  activeListItemClass: 'is-active-li',
   // How many heading levels should not be collpased.
   // For example, number 6 will show everything since
   // there are only 6 heading levels and number 0 will collpase them all.
@@ -47,7 +38,7 @@
   // Smooth scroll duration.
   scrollSmoothDuration: 420,
   // Callback for scroll end.
-  scrollEndCallback: function (e) { },
+  scrollEndCallback: function (e) {},
   // Headings offset between the headings and the top of the document (this is meant for minor adjustments).
   headingsOffset: 1,
   // Timeout between events firing to make sure it's
@@ -68,13 +59,5 @@
   // onclick function to apply to all links in toc. will be called with
   // the event as the first parameter, and this can be used to stop,
   // propagation, prevent default or perform action
-  onClick: false,
-  // orderedList can be set to false to generate unordered lists (ul)
-  // instead of ordered lists (ol)
-  orderedList: true
-  });
-  </script>
-  {% include scripts.html %}
-</body>
-
-</html>
+  onClick: false
+}

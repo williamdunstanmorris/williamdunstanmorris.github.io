@@ -883,7 +883,7 @@ nav .logo-left {
 }
 
 .site-title {
-   font-size: 1.625em;
+   font-size: 40px;
    font-weight: bold;
    color: inherit;
    line-height: 1em;
@@ -1273,9 +1273,8 @@ body.windows-os .nav-right:after {
         width: 20%
     }
 
-
     .site-description {
-      display:block;
+      display:none;
       line-height: 17px;
       padding-top: 0.4em;
     }
@@ -1283,6 +1282,12 @@ body.windows-os .nav-right:after {
     .sidebar ul li.last-filter {
         margin-bottom: 8vh
     }
+}
+
+@media screen and (max-width: 950px) {
+  .site-title {
+    display: table-caption;
+  }
 }
 
 @media screen and (max-height: 700px) {

@@ -4,7 +4,7 @@ title:  "VISR Reverb Plugin Infrastructure"
 cover: assets/img/visr-reverb-object.png
 date:   2018-02-07 12:31:01 +0000
 categories: work
-published: true
+published: false
 tags: audio c/c++ object-orientation reverb
 ---
 

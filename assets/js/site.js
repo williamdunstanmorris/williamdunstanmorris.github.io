@@ -342,14 +342,14 @@ $(window).bind("pageshow", function(event) {
 
 //localStorage.setItem('splashShown', '');
 
-$(window).on('load', function(){
-  if( localStorage.getItem('splashShown') !== 'true' ){
-    window.setTimeout(function(){
-      $('.splash-overlay').fadeOut( 800);
-    }, 200)
-    //localStorage.setItem('splashShown', 'true');
-  }
-});
+// $(window).on('load', function(){
+//   if( localStorage.getItem('splashShown') !== 'true' ){
+//     window.setTimeout(function(){
+//       $('.splash-overlay').fadeOut( 800);
+//     }, 200)
+//     //localStorage.setItem('splashShown', 'true');
+//   }
+// });
 
 
 

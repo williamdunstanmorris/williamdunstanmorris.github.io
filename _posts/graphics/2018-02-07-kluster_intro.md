@@ -6,7 +6,7 @@ cover:  assets/img-compressed/klusterlogo.webp
 fill: false
 title:  "kluster: an audio-graphics package for max"
 date:   2018-02-07 12:31:01 +0000
-published: true
+published: false
 author: williamdunstanmorris
 tags: max-msp audio midi graphics framework
 category: work

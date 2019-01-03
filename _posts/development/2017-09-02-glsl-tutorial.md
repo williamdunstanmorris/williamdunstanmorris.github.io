@@ -4,7 +4,7 @@ title:  "glsl explained for shaders"
 cover: assets/img/glslmatrix.png
 date:   2017-01-07 12:31:01 +0000
 categories: speak
-published: true
+published: false
 tags: max-msp opengl graphics glsl shaders
 ---
 

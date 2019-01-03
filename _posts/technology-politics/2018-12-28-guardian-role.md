@@ -8,7 +8,27 @@ published: false
 tags: politics research career
 ---
 
-Stay in Guildford for a month or two
+## Tech Prep for the Guardian
+
+- CSS DevTips: Intro series 7-9 videos - things like inline vs. block elements, what is html doing with CSS
+
+
+## Why Full Stack Development ?
+
+- Unix-based, all round developer software developer. I am particularly enthusiastic about developing the technology community. (Tailor point to be more focussed towards journalism)
+- Exploring HCI research and new user-centred design approaches to deliver new prototypes of app products
+- Quite young, still interested in exploring the other web application capabailities. There coming into this understand that things being done that we do are valid worthwhile and valuable, surround myself with a culture that values learning and grow, receive renumeration for that and increase my confidence, desire learn and grow, better projects with more visibility.
+- Seeking better projects, become
+
+### Why Full Stack Development in Journalism?
+
+I Read Guardian's open-source Github page. I wanted to know exactly what kind of technology they are using to support their platform for journalism, to derive the kinds of reasons and motivations about why I could be suited to work there. Remember this is from a technological standpoint.
+The Guardian is capable of handling news live
+- Image access
+- An app capable of handling live news cross platform. Producing an app that is handling incoming events as they happen thru optimal and safe means
+- Interested in developing more front-end ?? Optimisations
+Raising the barrier for entry of public releases
+You cannot make awesome things now on the internet, you could not scale this before. It is possible to make amazing things now.
 
 ## What to say to Adrian
 ## Companies of Interest in Brighton or London
