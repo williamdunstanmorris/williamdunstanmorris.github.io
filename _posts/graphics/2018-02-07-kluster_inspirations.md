@@ -4,7 +4,7 @@ title:  "the inspiration behind Kluster"
 cover: assets/img-compressed/piano-me.webp
 date:   2018-02-07 12:31:01 +0000
 categories: speak
-published: false
+published: true
 tags: max-msp opengl midi graphics research
 pdfdownload: assets/downloads/extending_graphical_composition_using_improvisatory_techniques_in_music.pdf
 ---

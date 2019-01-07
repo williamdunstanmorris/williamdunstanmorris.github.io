@@ -1,10 +1,10 @@
 ---
 layout: navbar-post-basic
 title:  "Introduction To Continuous Integration"
-cover: assets/img/git-cover.png
+cover: assets/img/git-cover-2.png
 date:   2018-02-07 12:31:01 +0000
 categories: speak
-published: false
+published: true
 tags: continuous-integration ci/cd git
 ---
 

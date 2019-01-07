@@ -3,7 +3,7 @@ layout: navbar-post
 title:  "rookie-git: it's like an airport"
 date:   2018-02-07 12:31:01 +0000
 cover: assets/img/git-airport-cover.jpg
-published: false
+published: true
 categories: speak
 author: "William Morris"
 tags:
