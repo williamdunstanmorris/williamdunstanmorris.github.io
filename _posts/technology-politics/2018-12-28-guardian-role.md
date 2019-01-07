@@ -11,11 +11,13 @@ tags: politics research career
 ## Tech Prep for the Guardian
 
 - CSS DevTips: Intro series 7-9 videos - things like inline vs. block elements, what is html doing with CSS
-
+- PHP highlights for OO programming on the main php website. 
 
 ## Why Full Stack Development ?
 
-- Unix-based, all round developer software developer. I am particularly enthusiastic about developing the technology community. (Tailor point to be more focussed towards journalism)
+I developed a passion for development, through owning apps front to back both collaboratively and independently,
+I am particularly enthusiastic about developing the technology community. (Tailor point to be more focussed towards journalism)
+
 - Exploring HCI research and new user-centred design approaches to deliver new prototypes of app products
 - Quite young, still interested in exploring the other web application capabailities. There coming into this understand that things being done that we do are valid worthwhile and valuable, surround myself with a culture that values learning and grow, receive renumeration for that and increase my confidence, desire learn and grow, better projects with more visibility.
 - Seeking better projects, become

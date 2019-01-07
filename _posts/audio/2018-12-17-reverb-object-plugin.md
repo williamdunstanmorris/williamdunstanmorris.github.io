@@ -2,9 +2,9 @@
 layout: navbar-post
 title:  "VISR Reverb Plugin Infrastructure"
 cover: assets/img/visr-reverb-object.png
-date:   2018-02-07 12:31:01 +0000
+date: 2018-02-07 12:31:01 +0000
 categories: work
-published: false
+published: true
 tags: audio c/c++ object-orientation reverb
 ---
 
