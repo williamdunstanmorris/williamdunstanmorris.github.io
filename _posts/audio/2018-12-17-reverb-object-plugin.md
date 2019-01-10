@@ -8,12 +8,30 @@ published: true
 tags: audio c/c++ object-orientation reverb
 ---
 
-The VISR Reverb Object is a VST3 software available as part of the VISR Production Suite. It is part of a suite of plugins available within a channel-based, digital-audio workstation (DAW), that easily enables spatial audio production through a newer up and coming format - object-based audio.
+The VISR Reverb Object is a VST3 software available as part of the VISR Production Suite. It is part of a suite of plugins available within a channel-based, digital-audio workstation (DAW), that easily enables spatial audio production through a newer up and coming format - object-based audio. This post is spit into a number of differing sections on how this VISR Reverb Object VST3 was built, and how many of the under-the-hood components work. A high level understanding of object-based audio is assumed, along with development practices and digital-signal processing concepts too.
 
-This post is spit into a number of differing sections on how this VISR Reverb Object VST3 was built, and how many of the under-the-hood components work. A high level understanding of object-based audio is assumed, along with development practices and digital-signal processing concepts too.
+In order to understand the concept of the S3A ecosystem and software in action, perhaps it is best to describe the software from a digital-audio-workstation perspective - the perspective of a creative individual.
+
+> For creatives wanting to have a go at creating a object-based session in a DAW, a full tutorial is available on the website, [here](https://cvssp.org/data/s3a/public/VISRPluginSuite/html/index.html)
+
+It’s a DAW session/project that contains all the fundamental elements of an object-based production, as described in the Object-based audio section, are:
+
+Those are usual DAW audio tracks, containing audio items. As soon as they are equipped with the Object Editor plugin they become audio objects (Objects category) and start to be part of the object-based scene. Everything that is done on a per-object-track level can be seen in real time in the following plugin, which collects all the positional information of the Object Editor plugins.
+
+Your first two items, requirements and software design, seem to be the one most relevant for any discussions to specify what are are aiming to achieve, as least as a starting point. I would assume that the GUI wireframe captures user requirements in terms of the interface and expected behaviour. Does the algorithm that defines how RSAO parameters respond to values on a slider, for example, come under the software design?
+
+In what we've discussed, there are the flows for each group of metadata. We need to show the top-level abstraction (diagram from Coleman et al. 2017), the logical signal flow (diagram that Phil circulate last week) and the physical signal flow (VISR components). We also need a way to define separately the static behaviour and the real-time behaviour. Perhaps you can recommend a way to visualise that for us to talk about it.
+
+In the structure you have, I'm not that clear about the differences between evaluation, verification, validation and testing. Can you clarify?
+
+Related to that, there is a need for a debug view of the RSAO parameters at various points along the signal flow between plugins. We need to verify that parameters get set and flow thru undamaged, and that the renderer is responding how we expect. This is more of a display than a user interface, which will enable us to confirm behaviour of a GUI while we're testing and then hide it from the user once testing is complete.
+
+It would be good also to add cross-references to other relevant documentation, e.g., on the wiki or in VISR/prod tools documentation. We need to have things that can work as the input to a discussion (where we can all see what we recognize and understand) and also as an output (where we've added detail or reviewed/revised).
+
+For example, we there exists a wireframe or data structure description, those should be accessible and discoverable ideally.
+
 
 ## Requirements specifications
-
 
 ### __Level 1:__ Object IDs & Updating the User Interface
 
