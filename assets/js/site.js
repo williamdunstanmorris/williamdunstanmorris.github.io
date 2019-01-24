@@ -2,6 +2,10 @@ var generalFunctions = {};
 
 (function($){
 
+})(jQuery);
+
+(function($){
+
   //disabling scrolling
 
   // left: 37, up: 38, right: 39, down: 40,
@@ -101,9 +105,6 @@ homepageModule.adjustActiveFilters = function(){
   $('.filter[data-filter="'+homepageModule.activeFilter+'"]').removeClass('inactive');
 
 }
-
-// archiveLink: "https://a-rr.ch/tag-de-projet/concours/"
-// archiveLink: "http://localhost:4000/tag-de-projet/git"
 
 // Function to check the hash which is before tagged elements
 homepageModule.checkHash = function(){

@@ -14,29 +14,13 @@ slogo: assets/img/soundcloud.png
 # social info
 navigation: true # show the navbar links
 subscribers: true # you need to connect an external service for this to work.
-# url:              http://hyde.getpoole.com
-# baseurl:          /
 
 author:
   name:           'William Morris'
-  # url:            https://twitter.com/mdo
-
-# paginate:         4
-
-# Custom vars
-# version:          2.1.0
-
 github: https://github.com/williamdunstanmorris
 email: william.dunstan.morris@gmail.com
 instagram: https://www.instagram.com/its_dizzylo/
-
-  # username:       williamdunstanmorris
-
-# Permalinks
-# permalink:        pretty
-# relative_permalinks: true
 permalink: /:title:output_ext
-
 
 # Code Highlighter
 ## 'pygments' is unsupported on GitHub Pages now.
@@ -49,7 +33,6 @@ highlight:
 markdown: kramdown
 kramdown:
     input: GFM
-
 
 plugins:
   - jekyll-gist
@@ -77,9 +60,3 @@ defaults:
     pdfdownload: null
     nav-archive: true
     category: work
-
-
-# # dependencies
-# markdown:         redcarpet
-# highlighter:      pygments
-# language: 'en-uk'
