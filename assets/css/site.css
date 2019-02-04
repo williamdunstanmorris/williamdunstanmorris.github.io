@@ -471,7 +471,7 @@ html,body {
 }
 
 .gallery-wrapper {
-    margin: -1.25em;
+    margin: -1.24em;
 }
 
 .gallery-wrapper .image-wrapper {
@@ -481,6 +481,8 @@ html,body {
     text-decoration: none;
     width: 100%;
     margin: 0;
+    text-align: justify;
+
 }
 
 .gallery-wrapper .image-wrapper img {
@@ -2470,4 +2472,15 @@ p code {
   margin-right: 5px;
   background: #dedddd;
   color: #38463b;
+}
+
+.text-content > p:first-child:first-letter {
+  /* color: #903; */
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 5em;
+  line-height: 60px;
+  /* padding-top: 1px; */
+  padding-right: 8px;
+  /* padding-left: 3px; */
 }

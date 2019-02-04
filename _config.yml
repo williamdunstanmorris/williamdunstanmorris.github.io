@@ -48,6 +48,7 @@ google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 defaults:
   post:
+    future: true
     layout: navbar-post
     permalink: /:title:output_ext
     show-in-navbar: false
