@@ -357,6 +357,11 @@ html,body {
   font-size: 1.05em;
   line-height: 1.5em;
   /* padding-right: 25%; */
+  /* position: absolute; */
+  /* visibility: hidden; */
+  /* white-space: nowrap; */
+  /* text-align: justify; */
+
 }
 
 .project-container .gallery-wrapper .text-content h2 {
@@ -374,6 +379,11 @@ html,body {
     /* margin-top: 20px; */
 }
 
+.project-container .text-content h3 {
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
 .project-container .text-content h2 {
     font-family: 'Playfair Display', serif;
     font-size: 68px;
@@ -381,13 +391,14 @@ html,body {
     font-weight: bold;
     letter-spacing: normal;
     text-transform: none;
-    color: #000000;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    /* color: #000000; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: normal;
 }
 
 .project-container .text-content h1 {
-    font-size: 1.5em;
+    font-size: 2.4em;
     /* margin: 0; */
     /* margin-bottom: 1.66667em; */
     font-family: Lato, sans-serif;

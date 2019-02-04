@@ -21,6 +21,8 @@ A friend of mine in the office noted that there is a trend of objects in the wor
 
 With Java as one of my backbones when learning the world of computer science, I do enjoy the fact that PHP offers you great ways of using object orientated programming concepts. For instance, I really like `singleton` declaration in PHP. Something within a class, like:
 
+In PHP, remember the difference between using the `self` and `$this->member` keywords when writing OO classes. `self::$member` refers to the class itself, whereas `$this->member` refers to the current object in question. With a singleton design, `self::$member` is what we should be using, to access a static member.
+
 ```
 
 // Hold the class instance.
