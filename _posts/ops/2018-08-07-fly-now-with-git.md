@@ -1,6 +1,6 @@
 ---
 layout: navbar-post-centered
-title:  "rookie-git: it's like an airport"
+title:  "Fly Now with Git"
 date:   2018-02-07 12:31:01 +0000
 cover: assets/img/git-airport-cover.jpg
 published: true
@@ -11,12 +11,9 @@ tags:
     - philosophy
 ---
 
-- Git is an open-source technology that keeps records of your changes
-- Allows for collaborative development
-- Allows you to know what changes you made and when
-- Allows you to revert changes you made
+Git is an open-source technology that keeps records of your changes. It allows for collaborative development. It allows you to know what changes you made and when, and to revert changes you made
 
-## How does it work?
+## So how does it work?
 
 Its quite simple conceptually - you have local machines you and other each work on, and everyone stores and retrieves their work through revision control - by 'committing', 'pushing' and 'pulling' work.
 
@@ -212,7 +209,17 @@ Switched to a new branch "myfeature"
 
 # Incorporating a finished feature on develop
 
-Finished features may be merged into the develop branch to definitely add them to the upcoming release:
+Merging in git can be scary. But there are some things I wish I knew before I started to merge. First. What branch should I be on to merge into what? Imagine you are on a motorway for a second. You want to be in the lane (or branch)
+
+If you are the lorry driver in Italy, the annoying car merging into your lane right in front of you is the thing that is affecting you. Therefore,
+
+
+`git checkout my-lane`
+`git merge car-merges-into-lane`
+
+This will perform a merge from the car-merging into your lane into the branch you are driving on - your god dam lane. Again, it is a little weird to think in this reverse way, and for ages I thought it was the other way around, I would be checked out on a branch and merge into another using the branch I was on. A bit weird, I know.
+
+For something more elaborate, like within a Gitflow model, more sensible names for branches help finished features that may be merged into the develop branch to definitely add them to the upcoming release. For example:
 
 ```
 $ git checkout develop

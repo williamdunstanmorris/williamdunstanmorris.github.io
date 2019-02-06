@@ -1,0 +1,40 @@
+<!-- Newsletter Centered -->
+<footer>
+  <div class="wrap row small-up-1 medium-up-4">
+    <!-- Newsletter -->
+    <!-- <div class="column">
+      <p class="site-footer__newsletter">
+        <span>sign up for a newsletter</span>
+      </p>
+    </div> -->
+    <!-- Copyright -->
+    <div class="columns site-footer_block">
+      <a>all rights reserved 2019 © williamdunstanmorris</a>
+    </div>
+    <!-- Contact Information -->
+    <!-- <div class="column site-footer_block"> -->
+      <!-- <h2>Contact Information</h2> -->
+        <!-- <a href="#"><span>telefone: </span> 07455205052</a> -->
+        <!-- <a href="#"><span>mails: </span> william.dunstan.morris@gmail.com</a> -->
+    <!-- </div> -->
+    <!-- Site Map -->
+    <div class="columns site-footer_block">
+      <!-- <h2>Site Map</h2> -->
+      {% for page in site.pages %} {% if page.title != null || page.title != '404: Page not found' %}
+        <a href="#">{{page.title}}</a>
+      {% endif %}{% endfor %}
+    </div>
+    <!-- Social Media -->
+    <div class="columns site-footer_block">
+      <!-- <h2>Social Media</h2> -->
+      <!-- TODO: Relevant ruby loop for iteration of a social media types here? -->
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram fa-stack-1x"></a>
+      <a href="#" class="fa fa-at"></a>
+    </div>
+    <!-- Social Media -->
+    <div class="columns">
+      <p><span></span></p>
+    </div>
+  </div>
+</footer>
