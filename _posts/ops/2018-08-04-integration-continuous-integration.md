@@ -1,5 +1,5 @@
 ---
-layout: navbar-post-basic
+layout: navbar-post-centered
 title:  "Integration of Continuous...Integration"
 cover: assets/img/git-cover.png
 date:   2018-02-07 12:31:01 +0000

@@ -36,9 +36,9 @@ html,body {
 }
 
 .container-inner-wrapper {
-    padding-left: 15%;
+    /* padding-left: 15%; */
     padding-top: 11.25em;
-    padding-bottom: 6.25em
+    /* padding-bottom: 6.25em */
 }
 
 .projects-grid {
@@ -350,6 +350,7 @@ html,body {
   background: #263238;
   /* padding: 20px; */
   white-space: pre-wrap;
+  line-height: 0.9em
 }
 
 
@@ -363,6 +364,15 @@ html,body {
   /* text-align: justify; */
 
 }
+
+.content-left {
+  padding-right: 25%;
+}
+
+
+
+
+
 
 .project-container .gallery-wrapper .text-content h2 {
     /* font-size: 16px; */
@@ -406,9 +416,9 @@ html,body {
     font-style: normal;
     font-weight: bold;
     letter-spacing: 1.39999997615814px;
-    /* line-height: 17px; */
+    line-height: initial;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 
 }
 
@@ -426,6 +436,14 @@ html,body {
 
 .project-container .text-content p {
     margin-top: 0
+}
+
+.project-container .text-content p::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+
+.project-container .text-content p:::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
 }
 
 .project-container .text-content blockquote p {
@@ -864,6 +882,17 @@ html,body {
     }
 }
 
+.nav-fixed {
+  position: fixed;
+  transform: translateZ(0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: #fff
+
+}
+
 nav {
     position: fixed;
     transform: translateZ(0);
@@ -885,12 +914,35 @@ nav .nav-column-left {
     float: left
 }
 
+/* Table cell approach: For stacking table cells in a row on a menu */
+
+nav .nav-column-display {
+  display: table;
+}
+
+nav .nav-column-display a {
+  display: table-cell;
+}
+
+nav .nav-column-display div {
+  display: table-cell;
+}
+
 nav .nav-column-right {
     width: 50%;
     float: right
 }
 
 nav .logo-left {
+    /* display: inline-block; */
+    vertical-align: top;
+    width: 6.25em;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 9em;
+}
+
+nav .logo {
     /* display: inline-block; */
     vertical-align: top;
     width: 6.25em;
@@ -1002,12 +1054,12 @@ nav .mobile-links.open+.overlay {
     transition: all 0s 0s, opacity 0.3s
 }
 
-body.windows-os .nav-right:after {
+body.windows-os .nav-justify:after {
     margin-top: 0px
 }
 
 .sidebar-wrapper {
-    position: inherit;
+    position: static;
     transform: translateZ(0);
     top: 0;
     left: 0;
@@ -1016,6 +1068,15 @@ body.windows-os .nav-right:after {
 }
 
 .sidebar-wrapper-fixed {
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3
+}
+
+.sidebar-wrapper-fixed-hamburger {
   position: fixed;
   /* top: 140px; */
   /* width: 350px; */
@@ -1032,6 +1093,12 @@ body.windows-os .nav-right:after {
   background-color: #fff;
   width:350px;
   padding-left:57px;
+  padding-left: 57px;
+  background-color: #fff;
+  width: 350px;
+  box-sizing: border-box;
+  /* padding-left: 52px; */
+  height: 100vh;
 
 }
 
@@ -1050,7 +1117,48 @@ body.windows-os .nav-right:after {
     display: none
 }
 
-.nav-right {
+.nav-centered {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  padding-top: .625em;
+  margin-top: -.625em;
+  padding-bottom: .625em;
+  margin-bottom: -.625em;
+  position: relative;
+  overflow: hidden
+}
+
+.nav-centered li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.625em;
+    line-height: 1em
+}
+
+.nav-centered li a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold
+}
+
+.nav-centered li a span {
+    position: relative;
+    display: block;
+    line-height: 1em;
+    z-index: 2;
+    /* background: #fff; */
+    padding-left: .38462em;
+    padding-right: .38462em;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.39999997615814px;
+}
+
+.nav-justify {
     margin: 0;
     list-style: none;
     padding: 0;
@@ -1063,7 +1171,7 @@ body.windows-os .nav-right:after {
     overflow: hidden
 }
 
-.nav-right:after {
+.nav-justify-decoration:after {
     content: "";
     height: 3px;
     background: #515151;
@@ -1075,24 +1183,24 @@ body.windows-os .nav-right:after {
     transition: 0.5s
 }
 
-.nav-right li {
+.nav-justify li {
     display: inline-block;
     vertical-align: top;
     font-size: 1.625em;
     line-height: 1em
 }
 
-.nav-right li:first-of-type {
+.nav-justify li:first-of-type {
     float: left;
     margin-left: -.38462em
 }
 
-.nav-right li:last-of-type {
+.nav-justify li:last-of-type {
     float: right;
     margin-right: -.38462em
 }
 
-.nav-right li a {
+.nav-justify li a {
     color: inherit;
     text-decoration: none;
     display: inline-block;
@@ -1100,7 +1208,7 @@ body.windows-os .nav-right:after {
     font-weight: bold
 }
 
-.nav-right li a span {
+.nav-justify li a span {
     position: relative;
     display: block;
     line-height: 1em;
@@ -1113,11 +1221,11 @@ body.windows-os .nav-right:after {
     letter-spacing: 1.39999997615814px;
 }
 
-.nav-right.filtered-on-hover:after {
+.nav-justify.filtered-on-hover:after {
     background: #d6d6d6
 }
 
-.nav-right.filtering-active:after {
+.nav-justify.filtering-active:after {
     background: #d6d6d6
 }
 
@@ -1339,16 +1447,17 @@ body.windows-os .nav-right:after {
           transform: translateX(-50%);
           bottom: 2px; }
   header .hamburger {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    /* top: 50%; */
     -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 36px;
+    /* -webkit-transform: translateY(-50%); */
+    /* transform: translateY(-50%); */
+    width: 8%;
     height: 30px;
     /* left: 52px; */
     cursor: pointer;
-    z-index: 3; }
+    z-index: 3;
+  }
     @media screen and (max-width: 1200px) and (min-width: 0px) and (orientation: portrait) {
   header .hamburger {
     left: 40px;
@@ -2368,11 +2477,9 @@ body section.socialShop .insta-item a:hover {
 
 /* ENd compiled content code  */
 
-
-
 .sidebar {
     padding-top: 11em;
-    padding-bottom: 1.875em;
+    padding-bottom: 4.4em;
     width: 15%;
     position: absolute;
     overflow: hidden;
@@ -2716,16 +2823,16 @@ body section.socialShop .insta-item a:hover {
       padding-bottom: 1.875em;
     }
 
-    nav .nav-right {
+    nav .nav-justify {
         display: none
     }
 
-    .nav-right:after {
+    .nav-justify:after {
         height: 2px;
         top: 40%
     }
 
-    .nav-right li {
+    .nav-justify li {
         font-size: .875em
     }
 
@@ -3872,7 +3979,7 @@ p code {
 /* Social Media */
 
 .fa {
-  /* padding: 20px; */ */
+  /* padding: 20px; */
   font-size: 30px;
   width: 80px;
   text-align: center;
@@ -3884,7 +3991,16 @@ p code {
   /* background: #515151 */
 }
 
+.fa-container {
+  color: black;
+}
 
+.fa-container .fa {
+  text-align: left;
+  width: 40px;
+  font-size: 25px;
+  margin-bottom:15px;
+}
 
 .circle-icon {
   background: #ffc0c0;

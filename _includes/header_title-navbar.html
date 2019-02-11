@@ -1,13 +1,13 @@
-<nav class="main-nav">
+<nav class="nav-fixed">
   <div class="row">
     <div class="nav-column-left">
-      <a class="logo-left" href="{{ site.url }}">
+      <a class="logo" href="{{ site.url }}">
         <span class="site-title">{{ site.title }}</span>
       </a>
       <span class="site-description" style="opacity: 0.5;">{{ site.description }}</span>
     </div>
-    <div class="nav-column-right">
-      <ul class="nav-right">
+    <div class="nav-justify nav-justify-decoration">
+      <ul class="nav-right" style="padding-inline-start: 0px;">
         {% for page in site.pages %} {% if page.title != null %} {% if page.show-in-navbar == true %} {%- if page.title == 'about' -%}
         <li>
           <a class="filter" href="{{site.url}}/{{ page.url }}">

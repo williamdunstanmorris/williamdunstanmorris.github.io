@@ -2,17 +2,18 @@
 <html lang="en-us">
 {% include head.html %}
 <body class="home blog">
-  {% include sidebar_mobile-tags-info.html %}
-  {% include sidebar_hidden-menu-left.html %}
-  {% include header_title-navbar-half.html %}
-  {% include cont_half-fullscreen-img.html%}
+  {% include header_title-navbar.html %}
+  {% include partial_sidebar-mobile-tags-info.html %}
+  <!-- TODO: Content has to be completely split up here. Look, I need to find a neat way to be able to include things like left/right sidebars more easily when changing elements of the site. -->
+  <div id="content" class="site-content">
+  	<div id="primary" class="content-area">
+  		<main id="main" class="site-main">
+        {% include posts-container.html %}
+      </main>
+    </div>
+  </div>
+  {% include foot_copyright-sm.html %}
   {% include mobile-filter.html %}
-  <!-- <div class="splash-overlay" > -->
-    <!-- <span>{{ site.title }}</span> -->
-  <!-- </div> -->
-  <!-- {% include posts-container.html %} -->
   {% include scripts.html%}
-
 </body>
-
 </html>

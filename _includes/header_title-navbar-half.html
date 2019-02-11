@@ -1,44 +1,47 @@
 
-  <header class="header_title-navbar-half site-header" id="masthead">
-    <nav>
-      <div class="row">
-        <div class="nav-column-left">
-      <!-- Hamburger Icon Menu -->
-      <div class="hamburger close" style="visibility ">
-  			<span style="top: 5px; transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-  			<span style="opacity: 1;"></span>
-  			<span style="top: 23px; transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-  		</div>
-      <!-- Logo/Title -->
-      <a class="logo-left" href="{{ site.url }}">
-        <span class="site-title" style="float:right">{{ site.title }}</span>
-      </a>
-      <!-- Navigation Menu -->
-      <nav class="main-nav" id="menuVeloce">
-  			<ul>
-          {% for page in site.pages %} {% if page.title != null %} {% if page.show-in-navbar == true %} {%- if page.title == 'about' -%}
-          <li>
-            <a class="filter" href="{{site.url}}/{{ page.url }}">
-                  <span>{{ page.title }}</span>
-                </a>
-          </li>
-          {%- else -%}
-          <li>
-            <a class="filter" data-filter="{{page.categories}}" data-archive="{{site.url}}/archive-tag/{{ page.title }}" href="{{site.url}}/#{{ page.title }}">
-              <span>{{ page.title }}</span>
-            </a>
-          </li>
-          {% endif %} {% endif %} {% endif %} {% endfor %}
-  			</ul>
-  		</nav>
-    </div>
-    <div class="nav-column-right">
-      <!-- Search Form -->
-      <form id="search_form">
+<header class="header_title-navbar-half site-header" id="masthead">
+  <nav>
+    <div class="row">
+      <div class="nav-column-left nav-column-display">
+        <!-- Hamburger Icon Menu -->
+        <div class="hamburger close">
+          <span style="top: 5px; transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+          <span style="opacity: 1;"></span>
+          <span style="top: 23px; transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+        </div>
+        <!-- Logo/Title -->
+        <a class="logo-left" href="{{ site.url }}">
+          <span class="site-title">{{ site.title }}</span>
+        </a>
+      </div>
+      <div class="nav-column-right">
+        <!-- Navigation Menu -->
+        <!-- <nav class="main-nav" id="menuVeloce"> -->
+        <!-- You can remove the .nav-justify-decoration if you want to remove the lines. -->
+        <!-- You can choose between nav-centered and nav-justify -->
+        <!-- For nav-centered, you can choose between left and right too, by using style="text-align:left|right" -->
+        <!-- To display elements in a row, use the .nav-column-display -->
+          <ul class="nav-centered" style="text-align:right">
+            {% for page in site.pages %} {% if page.title != null %} {% if page.show-in-navbar == true %} {%- if page.title == 'about' -%}
+            <li>
+              <a class="filter" href="{{site.url}}/{{ page.url }}">
+                <span>{{ page.title }}</span>
+              </a>
+            </li>
+            {%- else -%}
+            <li>
+              <a class="filter" data-filter="{{page.categories}}" data-archive="{{site.url}}/archive-tag/{{ page.title }}" href="{{site.url}}/#{{ page.title }}">
+                <span>{{ page.title }}</span>
+              </a>
+            </li>
+            {% endif %} {% endif %} {% endif %} {% endfor %}
+          </ul>
+        <!-- Search Form -->
+        <form id="search_form">
           <input type="text" id="ss_text" name="ss_text">
         </form>
 
+      </div>
     </div>
-  </div>
   </nav>
-  </header>
+</header>

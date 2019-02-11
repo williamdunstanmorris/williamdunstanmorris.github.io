@@ -1,7 +1,11 @@
-<!-- Hidden Fixed Left Menu Bar -->
-<div class="sidebar-wrapper-fixed-hamburger" id="layerMenu">
+<!-- Fixed menu on the sidebar representing a menu that can either be sidebar-wrapped-fixed or sidebar-wrapper-static (absolute) -->
+<div class="sidebar-wrapper-fixed">
+  <div class="filters-mobile-link">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
   <div class="row">
-    <div class="sidebar-hidden">
+    <div class="sidebar">
       <ul>
         {% for tag in site.tags %} {% if forloop.last == false %}
         <li>

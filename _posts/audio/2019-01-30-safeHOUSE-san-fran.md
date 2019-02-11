@@ -26,6 +26,10 @@ I have been asked to be involved in an upcoming concert in San Francisco. The pe
 * Section 3: Sassy and hip hop vibe, reminiscent of Beyonce. Working into the mix. Many gods
 * circa 10 minutes.
 
+# Music
+
+* Modular phone sounds
+
 # Rig Ideas:
 
 ## Rig 1: Max/MSP + Ableton Live
@@ -43,6 +47,11 @@ I have been asked to be involved in an upcoming concert in San Francisco. The pe
 * Modules used include (1) LZX Industries Cyclops, (3) Doepfer A-143-9 Quadrature VCLFO and (1) Doepfer A-132-3 Dual VCA.  Cyclops ILDA output is connected to a  TTL RGB laser projector.  Stereo audio recorded is the same signal being sent to X & Y inputs on Cyclops. Cyclops from LZX Industries is available now from EuroRack retailers.
 * The main module for laser projection would be something like [this](ttps://lzxindustries.net/products/cyclops).
 
+ETC Express Lighting Board
+XLR
+Colin the tech guy
+
+
 # Visualization Ideas:
 
 ## Laser Projection
@@ -57,4 +66,5 @@ I have been asked to be involved in an upcoming concert in San Francisco. The pe
 * http://eavi.goldsmithsdigital.com/
 * (Memo Atken)[http://www.memo.tv/]
 
-# Google X Project
+## SF Other Venues
+http://www.counterpulse.org/

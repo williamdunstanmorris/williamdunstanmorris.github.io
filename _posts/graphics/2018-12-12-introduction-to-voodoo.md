@@ -1,5 +1,5 @@
 ---
-layout: navbar-post-left
+layout: navbar-post-centered
 title:  "Voodoo: A combo of React and Three.js"
 cover: assets/img/react-three-logo.png
 date:   2018-12-12 12:31:01 +0000
