@@ -1,6 +1,6 @@
 ---
 layout: navbar-post-centered
-title:  "Gitlab-CI with CMake an Audio C++/Python Framework"
+title:  "Gitlab-CI with CMake: An Audio C++/Python Framework"
 cover: assets/img/git-cover.png
 date:   2019-03-29 12:31:01 +0000
 categories: speak
