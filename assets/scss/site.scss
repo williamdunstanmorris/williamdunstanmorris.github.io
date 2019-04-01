@@ -1,0 +1,4042 @@
+//colors
+$white: #fff;
+$color_cod_gray_approx: #0a0a0a;
+$black: #000;
+$color_cape_cod_approx: #414241;
+$color_fuscous_gray_approx: #515151;
+$color_iron_approx: #d6d6d6;
+$red:  red;
+$white_100: rgba(255,255,255,1);
+$color_athens_gray_approx: #eceff1;
+$color_outer_space_approx: #263238;
+$color_alto_approx: gainsboro;
+$color_sundown_approx: #ffb7b7;
+$color_monza_approx: #ce0013;
+$color_gray_nurse_approx: #eaeaea;
+$yellow: yellow;
+$web_orange: orange;
+$color_mountain_mist_approx: #999;
+$color_victoria_approx: #563d7c;
+$color_tapa_approx: #777;
+$color_alabaster_approx: #f9f9f9;
+$color_lunar_green_approx: #38463b;
+$color_your_pink_approx: #ffc0c0;
+$color_cinnabar_approx: #ef3b3b;
+$color_purple_heart_approx: #442ef4;
+$color_log_cabin_approx: #1f1f1f;
+
+//fonts
+$font_0: Georgia;
+$font_1: Times;
+$font_2: Times New Roman;
+$font_3: serif;
+$font_4: arr !important;
+$font_5: Playfair Display;
+$font_6: Lato;
+$font_7: sans-serif;
+$font_8: Graphik Medium;
+$font_9: Graphik Regular;
+$font_10: Kanit;
+
+//urls
+$url_0: url(../img/7.jpg);
+$url_1: url(../img/9.jpg);
+$url_2: url(../img/11.jpg);
+$url_3: url(../img/13.jpg);
+$url_4: url(../img/15.jpg);
+$url_5: url(../img/17.jpg);
+$url_6: url(../img/19.jpg);
+$url_7: url(../img/21.jpg);
+$url_8: url(../img/23.jpg);
+$url_9: url(../img/2.jpg);
+$url_10: url(../img/4.jpg);
+$url_11: url(../img/6.jpg);
+$url_12: url(../img/8.jpg);
+$url_13: url(../img/1.jpg);
+$url_14: url(../img/3.jpg);
+$url_15: url(../img/5.jpg);
+$url_16: url(../img/10.jpg);
+$url_17: url(../img/12.jpg);
+
+//@extend-elements
+//original selectors
+//html, body
+%extend_1 {
+	font-size: 16px;
+	height: 100%;
+	font-size: calc(10px + 0.4vw);
+	background: $white;
+	color: $color_fuscous_gray_approx;
+	font-family: $font_0, $font_1, $font_2, $font_3;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 33.9999961853027px;
+	text-transform: none;
+	color: $black;
+}
+
+//original selectors
+//.container.row:after, .container:after
+%extend_2 {
+	content: "";
+	display: block;
+	height: 5em;
+}
+
+//original selectors
+//.project-item.archives-link .inner-wrapper:before, .project-item.archives-link .inner-wrapper:after
+%extend_3 {
+	content: "";
+	width: 3.875em;
+	height: 4px;
+	background: $black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -2px;
+	margin-left: -1.9375em;
+}
+
+//original selectors
+//.close-icon:before, .close-icon:after
+%extend_4 {
+	content: "";
+	width: 1.625em;
+	height: 4px;
+	background: $black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+//original selectors
+//[class^="icon-"]:before, [class*=" icon-"]:before
+%extend_5 {
+	font-family: $font_4;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+}
+
+
+html {
+	@extend %extend_1;
+}
+
+body {
+	@extend %extend_1;
+	#testata {
+		position: relative;
+		overflow: hidden;
+		h1 {
+			font-family: $font_8;
+			font-size: 22px;
+			line-height: 24px;
+			font-size: 10vh;
+			line-height: 5vh;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate(-50%, -50%);
+			top: 44%;
+			text-transform: lowercase;
+			width: 90%;
+			text-align: center;
+			color: $black;
+			span {
+				font-size: 3vh;
+				line-height: 3vh;
+			}
+		}
+		img {
+			float: left;
+			display: block;
+			&.testata1 {
+				padding: 140px;
+				width: 50%;
+			}
+			&.testata2 {
+				width: 50%;
+			}
+		}
+	}
+	section {
+		width: 100%;
+		&.product {
+			overflow: hidden;
+			width: calc(100% - 280px);
+			margin-left: 140px;
+			margin-bottom: 280px;
+			h2 {
+				font-family: $font_8;
+				font-size: 22px;
+				line-height: 24px;
+				font-size: 10vh;
+				line-height: 10vh;
+			}
+			.item {
+				float: left;
+				width: calc((100% / 3) - 40px);
+				&:nth-child(3n) {
+					margin: 0 60px;
+				}
+				img {
+					width: 100%;
+				}
+				h2 {
+					font-family: $font_9;
+					font-size: 14px;
+					line-height: 21px;
+					font-weight: normal;
+					margin-bottom: 0;
+				}
+				a {
+					color: $black;
+					text-decoration: none;
+				}
+				.price ins {
+					color: $color_monza_approx;
+					text-decoration: none;
+				}
+			}
+		}
+		&.doppio {
+			overflow: hidden;
+			position: relative;
+			div {
+				position: relative;
+				float: left;
+				padding: 280px 140px 140px;
+				width: calc(50% - 210px);
+				&.homeShop {
+					padding-right: 70px;
+				}
+				&.homeCollection {
+					padding-left: 70px;
+				}
+				img {
+					width: 100%;
+					display: block;
+				}
+				h3 {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: translate(-50%, -50%);
+					color: $white;
+					font-family: $font_8;
+					font-size: 22px;
+					line-height: 24px;
+					font-size: 10vh;
+					line-height: 10vh;
+					&:nth-child(3) {
+						left: calc(50% + 130px);
+					}
+				}
+			}
+		}
+		&.video {
+			overflow: hidden;
+			background: $color_gray_nurse_approx;
+			height: 100vh;
+			position: relative;
+			video {
+				width: 50%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate(-50%, -50%);
+			}
+			i {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate(-50%, -50%);
+				font-size: 30px;
+				color: $white;
+				z-index: 1;
+			}
+		}
+		&.mono {
+			overflow: hidden;
+			position: relativE;
+			img {
+				display: block;
+				width: 70%;
+				margin-left: 15%;
+				margin-top: 280px;
+				margin-bottom: 280px;
+			}
+			h3 {
+				font-family: $font_8;
+				font-size: 22px;
+				line-height: 24px;
+				font-size: 10vh;
+				line-height: 10vh;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate(-50%, -50%);
+				color: $white;
+				text-transform: lowercase;
+			}
+		}
+		&.doppio2 {
+			overflow: hidden;
+			position: relative;
+			h3 {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate(-50%, -50%);
+				font-family: $font_8;
+				font-size: 22px;
+				line-height: 24px;
+				white-space: nowrap;
+				color: $white;
+				font-size: 10vh;
+				line-height: 10vh;
+				text-transform: lowercase;
+			}
+			.left {
+				float: left;
+				width: 50%;
+				position: relative;
+			}
+			img {
+				width: 100%;
+				display: block;
+				&.mag1 {
+					padding: 140px;
+					width: calc(50% - 280px);
+					cursor: pointer;
+					position: absolute;
+					bottom: 280px;
+					left: 50%;
+				}
+			}
+			p {
+				position: absolute;
+				width: calc(50% - 280px);
+				margin-left: calc(50% + 140px);
+				bottom: 140px;
+				background-color: $white;
+				margin-top: 0;
+				margin-bottom: 0;
+				padding-top: 30px;
+				strong {
+					font-family: $font_8;
+					font-size: 22px;
+					line-height: 24px;
+				}
+			}
+		}
+		&.socialShop {
+			overflow: hidden;
+			margin: 280px 70px;
+			width: calc(100% - 140px);
+			.insta-item {
+				float: left;
+				width: calc((100% / 3) - 140px);
+				margin: 0 70px;
+				img {
+					width: 100%;
+				}
+				.tag {
+					font-size: 12px;
+				}
+				a {
+					color: $black;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	&.windows-os .nav-justify:after {
+		margin-top: 0;
+	}
+	&.archive header {
+		background-color: $white;
+	}
+	&.woocommerce-cart header {
+		background-color: $white;
+	}
+	&.single-product header {
+		background-color: $white;
+	}
+	&.woocommerce-checkout header {
+		background-color: $white;
+	}
+	&.single-collezione header {
+		background-color: $white;
+	}
+}
+.container {
+	min-height: 100%;
+	margin-bottom: -5em;
+	&.row {
+		min-height: 100%;
+		margin-bottom: -5em;
+		&:after {
+			@extend %extend_2;
+		}
+	}
+	&:after {
+		@extend %extend_2;
+	}
+}
+.row {
+	width: 90.625em;
+	margin: 0 auto;
+	max-width: 90%;
+	.row {
+		max-width: 100%;
+	}
+}
+.container-inner-wrapper {
+	padding-top: 11.25em;
+}
+.projects-grid {
+	margin-top: -1.25em;
+	margin-left: -1.25em;
+	margin-right: -1.25em;
+}
+.project-item {
+	width: 25%;
+	float: left;
+	position: relative;
+	text-decoration: none;
+	display: block;
+	color: $black;
+	&:after {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+	.inner-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 1.25em;
+		display: flex;
+	}
+	img {
+		max-height: 100%;
+		margin: 0 auto;
+		display: block;
+		align-self: center;
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(20px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.5s;
+		//Instead of the line below you could use @include backface-visibility($visibility)
+		backface-visibility: hidden;
+		&.loaded {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(0px);
+		}
+	}
+	.content-wrapper {
+		width: auto;
+		position: relative;
+		margin: auto;
+	}
+	.project-name {
+		position: absolute;
+		top: 85%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		padding-top: .9375em;
+		font-weight: 700;
+		line-height: 1em;
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-20px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0s 0s, transform 0.5s, opacity 0.5s;
+	}
+	.vertical-image {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		padding-top: .9375em;
+		font-weight: 700;
+		line-height: 1em;
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-20px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0s 0s, transform 0.5s, opacity 0.5s;
+	}
+	.svg-rect {
+		width: 100%;
+		height: 100%;
+	}
+	&:hover img.loaded + .project-name {
+		opacity: 1;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: none;
+	}
+	&.archives-link .inner-wrapper {
+		&:before {
+			@extend %extend_3;
+		}
+		&:after {
+			@extend %extend_3;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: rotate(90deg);
+		}
+	}
+}
+.filter {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.5s;
+	&.inactive {
+		color: $color_iron_approx;
+	}
+	&.highlight {
+		color: $color_iron_approx;
+	}
+	&.last-filter {
+		margin-bottom: 5em;
+	}
+}
+.close-icon {
+	position: absolute;
+	width: 3.75em;
+	height: 3.75em;
+	border: 1px solid $red;
+	&:before {
+		@extend %extend_4;
+		margin-top: -2px;
+		margin-left: -.8125em;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(45deg);
+	}
+	&:after {
+		@extend %extend_4;
+		margin-top: -2px;
+		margin-left: -.8125em;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(-45deg);
+	}
+}
+.splash-overlay {
+	background: $white;
+	position: fixed;
+	z-index: 50;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate(-50%, -50%);
+		width: 15.625em;
+		text-align: center;
+		font-size: 6em;
+	}
+}
+@media screen and(max-width: 640px) {
+	.client-title {
+		font-size: .875em;
+		padding-bottom: 2.85714em;
+	}
+	.project-container {
+		.mobile-hero-photo {
+			display: block;
+			margin-bottom: .9375em;
+			width: 100%;
+		}
+		.text-content {
+			padding-right: 0;
+			font-size: .875em;
+			line-height: 1.42857em;
+			h2 {
+				font-size: 3em;
+				line-height: 1.58333em;
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+			h1 {
+				font-size: 1em;
+				line-height: 1.21429em;
+				margin-bottom: 1.21429em;
+			}
+			.additional-text {
+				.inner-wrapper {
+					display: none;
+				}
+				.read-more-link {
+					font-size: 1em;
+					display: block;
+				}
+			}
+		}
+		.container-inner-wrapper {
+			padding-top: 1.25em;
+			padding-bottom: .625em;
+			&.photos-container {
+				padding-top: 0;
+			}
+		}
+		.additional-text .inner-wrapper {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(20px);
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0s 0s, transform 0.3s, opacity 0.3s;
+			&.open {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: none;
+				opacity: 1;
+			}
+		}
+	}
+	.project-description-container {
+		position: static;
+	}
+	.download-link {
+		font-size: 1em;
+	}
+	.gallery-wrapper {
+		margin: 0 -.625em;
+		margin-left: 0;
+		margin-right: 0;
+		.image-wrapper {
+			padding-left: 0;
+			padding-right: 0;
+			&:first-of-type {
+				padding: .625em;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.grid {
+			.image-wrapper {
+				display: block;
+			}
+			.column {
+				&:first-of-type {
+					width: 100%;
+					float: none;
+				}
+				&:last-of-type {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.mfp-arrow-left {
+		width: 3.125em;
+		height: 3.125em;
+		top: 50%;
+		left: 0;
+		margin-top: -1.5625em;
+		&:before {
+			left: 1.25em;
+			height: 2px;
+			width: 14px;
+			margin-bottom: -1px;
+		}
+		&:after {
+			left: 1.25em;
+			height: 2px;
+			width: 14px;
+			margin-top: -1px;
+		}
+	}
+	.mfp-arrow-right {
+		width: 3.125em;
+		height: 3.125em;
+		top: 50%;
+		right: 0;
+		margin-top: -1.5625em;
+		&:before {
+			right: 1.25em;
+			height: 2px;
+			width: 14px;
+			margin-bottom: -1px;
+		}
+		&:after {
+			right: 1.25em;
+			height: 2px;
+			width: 14px;
+			margin-top: -1px;
+		}
+	}
+	.career-item {
+		padding-left: 3.75em;
+		margin-bottom: 1.5625em;
+		&:after {
+			left: 0;
+			top: 1.6875em;
+			height: 2px;
+			width: 3.125em;
+		}
+		h3 {
+			font-size: .75em;
+			line-height: 1.16667em;
+			margin-bottom: .41667em;
+		}
+		h2 {
+			font-size: .875em;
+		}
+		&:not(:last-of-type) {
+			margin-bottom: 1.5625em;
+		}
+	}
+	nav {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: none;
+		.logo-left {
+			width: 3.125em;
+			position: relative;
+            color: $color_cod_gray_approx;
+			text-decoration: none;
+			&:after {
+				content: "";
+				position: absolute;
+				left: -50%;
+				top: -50%;
+				width: 200%;
+				height: 100%;
+			}
+		}
+		.row {
+			padding-top: 2em;
+			padding-bottom: 1.875em;
+		}
+		.nav-justify {
+			display: none;
+		}
+	}
+	.site-description {
+		display: none;
+	}
+	.nav-justify {
+		&:after {
+			height: 2px;
+			top: 40%;
+		}
+		li {
+			font-size: .875em;
+		}
+	}
+	.sidebar-wrapper {
+		padding-top: 3.75em;
+		padding-top: 1.875em;
+		margin-bottom: -1.875em;
+		position: relative;
+	}
+	.sidebar {
+		position: static;
+		width: 100%;
+		height: auto;
+		display: block;
+		padding-top: 0;
+		padding-bottom: 0;
+		display: none;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-20px);
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0s 0s, transform 0.3s 0s, opacity 0.5s 0s;
+		ul {
+			display: block;
+			li {
+				width: 50%;
+				float: left;
+				font-size: .875em;
+				margin-bottom: 1.78571em;
+				&.menu-item {
+					display: none;
+				}
+				&:nth-of-type(2n + 1) {
+					clear: left;
+				}
+				a.filter {
+					&:before {
+						opacity: 0;
+					}
+					&:after {
+						opacity: 0;
+					}
+					&.active {
+						&:before {
+							opacity: 0;
+						}
+						&:after {
+							opacity: 0;
+						}
+					}
+				}
+			}
+		}
+		&.open {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(0px);
+			opacity: 1;
+			font-size: 0.8em;
+		}
+	}
+	.menu-trigger {
+		display: block;
+	}
+	.filters-mobile {
+		display: block;
+		padding-top: 5.8em;
+	}
+	.filters-mobile-link {
+		width: 30px;
+		height: 20px;
+		left: 1.25em;
+		top: 30px;
+		position: absolute;
+		.line {
+			height: 2px;
+			background: $black;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				width: 8px;
+				height: 8px;
+				border: 2px solid $black;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 50%;
+				background: $white;
+				margin-top: -4px;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: 0.3s;
+			}
+			&:first-of-type {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				&:before {
+					left: 0;
+				}
+			}
+			&:last-of-type {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				&:before {
+					right: 0;
+				}
+			}
+		}
+		&.active .line {
+			&:first-of-type:before {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(137.5%);
+			}
+			&:last-of-type:before {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateX(-137.5%);
+			}
+		}
+	}
+	.year-wrapper {
+		padding-left: 3.75em;
+		.year {
+			right: auto;
+			left: 0;
+			bottom: 100%;
+			margin-bottom: -.35714em;
+			top: auto;
+			font-size: .875em;
+			padding-bottom: 1.07143em;
+			padding-right: 0;
+			&:after {
+				right: auto;
+				left: 0;
+				top: 100%;
+				height: 2px;
+				width: 3.57143em;
+			}
+		}
+		&:not(:last-of-type) {
+			margin-bottom: 3.125em;
+		}
+	}
+	.archive-item {
+		margin-bottom: 1.5625em;
+		h3 {
+			font-size: .75em;
+			line-height: 1.16667em;
+			margin-bottom: .41667em;
+		}
+		h2 {
+			font-size: .875em;
+		}
+	}
+	.contacts-container {
+		.content {
+			max-width: 100%;
+		}
+		.text-content {
+			font-size: 16px;
+			padding-left: 30%;
+			padding-left: 3.75em;
+			padding-bottom: 1.875em;
+			margin-top: 0;
+			h4 {
+				font-size: .875em;
+				line-height: 2em;
+			}
+			p {
+				font-size: .875em;
+				line-height: 2em;
+			}
+			> .column {
+				padding-top: 0;
+				margin-top: 2.8125em;
+				position: relative;
+				&:after {
+					content: "";
+					position: absolute;
+					right: 100%;
+					margin-right: .625em;
+					top: .75em;
+					height: 2px;
+					background: $black;
+					width: 3.125em;
+				}
+				&:last-of-type {
+					display: none;
+				}
+			}
+		}
+	}
+	.team-member-wrapper {
+		width: 50%;
+		padding: 0 1.5625em 2.5em 1.5625em;
+		&.touched {
+			z-index: 2;
+			img {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(0.8);
+				opacity: 0;
+			}
+			.content-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(1);
+				opacity: 1;
+			}
+			&:hover {
+				z-index: 2;
+				img {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(0.8);
+					opacity: 0;
+				}
+				.content-wrapper {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
+		&:hover {
+			z-index: 1;
+			img {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: none;
+				opacity: 1;
+			}
+			.content-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(0.8);
+				opacity: 0;
+			}
+		}
+	}
+	.single-page-container {
+		.text-content {
+			padding-right: 0;
+			font-size: .875em;
+			line-height: 1.42857em;
+			h2 {
+				font-size: .85714em;
+				line-height: 1.58333em;
+				margin-bottom: 0;
+			}
+			h1 {
+				font-size: 1em;
+				line-height: 1.21429em;
+				margin-bottom: 1.21429em;
+			}
+			.additional-text {
+				.inner-wrapper {
+					display: none;
+				}
+				.read-more-link {
+					font-size: 1em;
+					display: block;
+				}
+			}
+		}
+		.container-inner-wrapper {
+			padding-top: 1.25em;
+			padding-bottom: .625em;
+		}
+	}
+	footer {
+		position: static;
+		.footer-inner-wrapper {
+			padding-left: 0;
+			display: table;
+			display: flex;
+		}
+		.contact-link {
+			display: none;
+		}
+		p {
+			display: inline-block;
+			font-size: .875em;
+			line-height: 1.42857em;
+			display: flex;
+			width: 100%;
+		}
+		span {
+			display: none;
+		}
+		strong {
+			display: none;
+		}
+		.social-links {
+			display: table-cell;
+			vertical-align: top;
+			display: flex;
+			margin-left: auto;
+			line-height: 1.25em;
+			li {
+				width: 1.25em;
+				height: 1.25em;
+				a {
+					//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: inset 0 0 0 1px $color_cape_cod_approx;
+					i:before {
+						font-size: .75em;
+					}
+				}
+				&:not(:last-of-type) {
+					margin-right: 1.125em;
+				}
+			}
+		}
+		a:not(:first-of-type) {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+	html {
+		font-size: 1.1em;
+	}
+	body {
+		font-size: 1.1em;
+		&.menu-open .container-inner-wrapper {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(200px);
+		}
+	}
+	.container-inner-wrapper {
+		padding-left: 0;
+		padding-top: 2.25em;
+		padding-bottom: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.7s;
+	}
+	.project-item {
+		width: 50%;
+		.inner-wrapper {
+			padding: 1em;
+		}
+		.project-name {
+			display: none;
+		}
+		&.archives-link .inner-wrapper {
+			&:before {
+				width: 1.875em;
+				margin-left: -.9375em;
+				height: 2px;
+			}
+			&:after {
+				width: 1.875em;
+				margin-left: -.9375em;
+				height: 2px;
+			}
+		}
+	}
+	.projects-grid {
+		margin-left: -1em;
+		margin-right: -1em;
+	}
+	.splash-overlay img {
+		width: 7.5em;
+	}
+	#toc-scroll .excerpt {
+		display: none;
+	}
+	.post-type-archive-arr-client .single-page-container .container-inner-wrapper {
+		padding-left: 0;
+		margin-top: 0;
+	}
+	.logos-grid .column {
+		text-align: center;
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 75%;
+		}
+	}
+	.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+		width: 1.78571em;
+		height: 1.78571em;
+		padding-right: 0;
+		&:before {
+			height: 2px;
+			width: 20px;
+			margin-left: -5px;
+		}
+		&:after {
+			height: 2px;
+			width: 20px;
+			margin-left: -5px;
+		}
+	}
+	.home .sidebar-wrapper {
+		padding-top: 3.75em;
+	}
+	.team-member .content-wrapper {
+		h2 {
+			font-size: .875em;
+			line-height: 1.21429em;
+		}
+		p {
+			font-size: .625em;
+			line-height: 1.4em;
+			margin-top: .4em;
+		}
+	}
+	.container.team-container {
+		max-width: 100%;
+		.container-inner-wrapper {
+			padding-left: 5%;
+			padding-right: 5%;
+			margin-left: -1.5625em;
+			margin-right: -1.5625em;
+		}
+	}
+}
+.client-title {
+	margin: 0;
+	font-size: 1.5em;
+	padding-bottom: 3.125em;
+}
+.project-container {
+	.container-inner-wrapper {
+		padding-left: 0;
+	}
+	.text-content {
+		font-size: 1.05em;
+		line-height: 1.5em;
+		h3 {
+			opacity: 0.5;
+			font-size: 0.9em;
+		}
+		h2 {
+			font-family: $font_5, $font_3;
+			font-size: 68px;
+			font-style: italic;
+			font-weight: bold;
+			letter-spacing: normal;
+			text-transform: none;
+			margin-top: 0;
+			margin-bottom: 0;
+			line-height: normal;
+		}
+		h1 {
+			font-size: 2.4em;
+			font-family: $font_6, $font_7;
+			font-style: normal;
+			font-weight: bold;
+			letter-spacing: 1.39999997615814px;
+			line-height: initial;
+			text-transform: uppercase;
+		}
+		p {
+			margin-top: 0;
+		}
+		p::selection {
+			background: $color_sundown_approx;
+		}
+		a {
+			color: inherit;
+		}
+		.read-more-link {
+			display: none;
+		}
+		.download-link {
+			margin-top: 1.11111em;
+		}
+		p::-moz-selection {
+			background: $color_sundown_approx;
+		}
+		blockquote p {
+			margin-top: 0;
+			font-style: italic;
+			background-color: $color_alto_approx;
+		}
+	}
+	.mobile-hero-photo {
+		display: none;
+	}
+	.gallery-wrapper .text-content {
+		h2 {
+			font-family: $font_5, $font_3;
+			font-size: 28px;
+			font-style: normal;
+			font-weight: bold;
+			letter-spacing: normal;
+			text-transform: none;
+			color: $black;
+		}
+		h1 {
+			font-family: $font_6, $font_7;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: bold;
+			letter-spacing: 1.39999997615814px;
+			text-transform: uppercase;
+			background-color: $color_alto_approx;
+		}
+	}
+}
+.project-container-dim {
+	height: 140px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: linear-gradient(to top, rgba(255,255,255,0) 0,$white_100 90%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+.content-left {
+	padding-right: 25%;
+}
+.download-link {
+	text-decoration: underline;
+	color: $black;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 1.38889em;
+	font-size: 1.125em;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		margin-top: -6px;
+		left: 0;
+		border-top: 7px solid $black;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+	}
+}
+.read-more-link {
+	text-decoration: underline;
+	color: $black;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 1.38889em;
+	font-size: 1.125em;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		margin-top: -6px;
+		left: 0;
+		border-top: 7px solid $black;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+	}
+}
+.project-description-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+}
+.gallery-wrapper {
+	margin: -1.24em;
+	.image-wrapper {
+		padding: 1.25em;
+		position: relative;
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		margin: 0;
+		text-align: justify;
+		img {
+			width: 100%;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(20px);
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.5s;
+			//Instead of the line below you could use @include backface-visibility($visibility)
+			backface-visibility: hidden;
+			&.loaded {
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateY(0px);
+			}
+		}
+		&:focus {
+			outline: none;
+		}
+		.overlay {
+			position: relative;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.5s;
+		}
+		&.popup-open {
+			img {
+				align-self: center;
+				max-height: 90vh;
+				max-width: 100%;
+				margin: auto;
+			}
+			.overlay {
+				background: $white;
+				.inner-content {
+					max-width: 90%;
+					margin: 0 auto;
+					display: flex;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.grid .column {
+		&:first-of-type {
+			width: 60%;
+			float: left;
+		}
+		&:last-of-type {
+			width: 40%;
+			float: left;
+		}
+	}
+}
+.project-images-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1.25em;
+}
+.project-photo {
+	width: 100%;
+	&.half {
+		width: 50%;
+	}
+}
+.pswp__button {
+	width: 100px;
+	height: 100px;
+	margin-top: -50px;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	z-index: 1050;
+	&:before {
+		content: "";
+		position: absolute;
+		height: 4px;
+		width: 20px;
+		background: $black;
+		border: 0;
+		margin: 0;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		height: 4px;
+		width: 20px;
+		background: $black;
+		border: 0;
+		margin: 0;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.pswp__button--arrow--left {
+	left: 0;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.5s;
+	&:before {
+		top: 50%;
+		left: 1.25em;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(-45deg);
+		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+		transform-origin: top left;
+		margin-bottom: -3px;
+	}
+	&:after {
+		top: 50%;
+		left: 1.25em;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(45deg);
+		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+		transform-origin: bottom left;
+		margin-top: -3px;
+	}
+}
+.pswp__button--arrow--right {
+	right: 0;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.5s;
+	&:before {
+		top: 50%;
+		right: 1.25em;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(45deg);
+		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+		transform-origin: top right;
+		margin-bottom: -3px;
+	}
+	&:after {
+		top: 50%;
+		right: 1.25em;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(-45deg);
+		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+		transform-origin: bottom right;
+		margin-top: -3px;
+	}
+}
+.pswp__img--placeholder--blank {
+	background: $white;
+}
+@media screen and(max-width: 1200px) {
+	.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+		margin-left: 0;
+		left: auto;
+		right: 0;
+		bottom: auto;
+		top: 0;
+	}
+}
+@media screen and(min-width: 640px) and(max-width: 1024px) {
+	#toc-scroll {
+		position: fixed;
+		height: 100vh;
+	}
+	.contacts-container {
+		.text-content {
+			margin-top: 0;
+			.column {
+				margin-top: 1.875em;
+			}
+		}
+		.social-links {
+			text-align: left;
+			li:not(:last-of-type) {
+				margin-right: .9375em;
+			}
+		}
+	}
+	footer {
+		.contact-link {
+			display: none;
+		}
+		p {
+			display: inline-block;
+			font-size: .875em;
+			line-height: 1.42857em;
+			display: flex;
+			width: 100%;
+		}
+	}
+	.project-item {
+		width: 33.33%;
+	}
+	.container-inner-wrapper {
+		padding-left: 20%;
+	}
+	.project-container .text-content {
+		padding-right: 10%;
+	}
+	.single-page-container .text-content {
+		padding-right: 10%;
+	}
+}
+.career-item {
+	position: relative;
+	margin-bottom: 2.0625em;
+	display: block;
+	text-decoration: none;
+	color: $black;
+	&:after {
+		content: "";
+		width: 6.0625em;
+		height: 4px;
+		background: $black;
+		position: absolute;
+		right: 100%;
+		top: 2em;
+		top: .375em;
+		margin-right: 2.5em;
+	}
+	h3 {
+		margin: 0;
+		font-weight: 400;
+		font-size: 1em;
+		line-height: 1em;
+		color: $black;
+		margin-bottom: .625em;
+		margin-bottom: .3125em;
+		text-transform: uppercase;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.5em;
+		font-size: 1.25em;
+		line-height: 1.45em;
+		line-height: 1.2em;
+		font-weight: 700;
+		text-transform: lowercase;
+	}
+	&:not(:last-of-type) {
+		margin-bottom: 3.125em;
+	}
+}
+.nav-fixed {
+	position: fixed;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: $white;
+}
+nav {
+	position: fixed;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	.row {
+		padding-top: 2em;
+		padding-bottom: 1.875em;
+		position: relative;
+	}
+	.nav-column-left {
+		width: 50%;
+		float: left;
+	}
+	.nav-column-display {
+		display: table;
+		a {
+			display: table-cell;
+		}
+		div {
+			display: table-cell;
+		}
+	}
+	.nav-column-right {
+		width: 50%;
+		float: right;
+	}
+	.logo-left {
+		vertical-align: top;
+		width: 6.25em;
+		text-decoration: none;
+		color: $black;
+		padding-left: 9em;
+	}
+	.logo {
+		vertical-align: top;
+		width: 6.25em;
+		text-decoration: none;
+		color: $black;
+	}
+	.mobile-links {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: -100%;
+		z-index: -1;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0s 0.3s;
+		.mobile-links-inner-wrapper {
+			padding: 1.25em 5%;
+			padding-top: 10.375em;
+			background: $white;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(-100%);
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.5s;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: $font_5, $font_3;
+			font-style: normal;
+			font-weight: bold;
+		}
+		li {
+			font-size: .875em;
+			line-height: 1em;
+			text-decoration: none;
+			color: $black;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(-20px);
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.3s;
+			a {
+				color: $black;
+				text-decoration: none;
+				position: relative;
+				&:after {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: -50%;
+					width: 100%;
+					height: 200%;
+				}
+			}
+			&:not(:last-of-type) {
+				margin-bottom: 1.78571em;
+			}
+		}
+		&.open {
+			left: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0s 0s;
+			.mobile-links-inner-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateY(0);
+			}
+			li {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateY(0);
+				opacity: 1;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0s 0s, transform 0.3s 0s, opacity 0.5s 0s;
+			}
+			+ .overlay {
+				left: 0;
+				opacity: 1;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: all 0s 0s, opacity 0.3s;
+			}
+		}
+	}
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: $white;
+		opacity: 0;
+		z-index: -2;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0s 0.3s, opacity 0.3s 0s;
+	}
+}
+.site-title {
+	font-size: 40px;
+	color: inherit;
+	line-height: 1em;
+	font-family: $font_6, $font_7;
+	font-weight: bold;
+	letter-spacing: 1.39999997615814px;
+}
+.sidebar-wrapper {
+	position: static;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	.row {
+		position: relative;
+		top: 20px;
+	}
+}
+.sidebar-wrapper-fixed {
+	position: fixed;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateZ(0);
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	.row {
+		position: relative;
+		top: 20px;
+		background-color: $white;
+	}
+}
+.sidebar-wrapper-fixed-hamburger {
+	position: fixed;
+	z-index: 2;
+	visibility: hidden;
+	height: 0;
+	background-color: $white;
+	padding-left: 57px;
+	background-color: $white;
+	width: 350px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	height: 100vh;
+}
+.filters-mobile {
+	display: none;
+}
+.nav-centered {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	padding-top: .625em;
+	margin-top: -.625em;
+	padding-bottom: .625em;
+	margin-bottom: -.625em;
+	position: relative;
+	overflow: hidden;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1.625em;
+		line-height: 1em;
+		a {
+			color: inherit;
+			text-decoration: none;
+			display: inline-block;
+			vertical-align: top;
+			font-weight: bold;
+			span {
+				position: relative;
+				display: block;
+				line-height: 1em;
+				z-index: 2;
+				padding-left: .38462em;
+				padding-right: .38462em;
+				font-family: $font_6, $font_7;
+				font-weight: bold;
+				letter-spacing: 1.39999997615814px;
+			}
+		}
+	}
+}
+.nav-justify {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	padding-top: .625em;
+	margin-top: -.625em;
+	padding-bottom: .625em;
+	margin-bottom: -.625em;
+	position: relative;
+	overflow: hidden;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1.625em;
+		line-height: 1em;
+		&:first-of-type {
+			float: left;
+			margin-left: -.38462em;
+		}
+		&:last-of-type {
+			float: right;
+			margin-right: -.38462em;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+			display: inline-block;
+			vertical-align: top;
+			font-weight: bold;
+			span {
+				position: relative;
+				display: block;
+				line-height: 1em;
+				z-index: 2;
+				background: $white;
+				padding-left: .38462em;
+				padding-right: .38462em;
+				font-family: $font_6, $font_7;
+				font-weight: bold;
+				letter-spacing: 1.39999997615814px;
+			}
+		}
+	}
+	&.filtered-on-hover:after {
+		background: $color_iron_approx;
+	}
+	&.filtering-active:after {
+		background: $color_iron_approx;
+	}
+}
+.header_title-navbar-half {
+	height: 140px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.5s cubic-bezier(0, 0.74, 0.36, 1);
+	header {
+		height: 140px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 999;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.5s cubic-bezier(0, 0.74, 0.36, 1);
+	}
+	#search {
+		position: fixed;
+		width: 100%;
+		height: calc(100vh - 140px);
+		background-color: $white;
+		top: 140px;
+		z-index: 3;
+		visibility: hidden;
+	}
+}
+@media screen and(max-width: 1200px) and(min-width: 0px) and(orientation: portrait) {
+	header {
+		height: 60px;
+		background-color: $white;
+		#logo {
+			height: 30px;
+			left: 80px;
+		}
+		#menuVeloce {
+			display: none;
+		}
+		#shoppingMenu {
+			right: 40px;
+		}
+		.hamburger {
+			left: 40px;
+			width: 20px;
+			height: 15px;
+			span {
+				height: 1px;
+			}
+			&.close span {
+				&:nth-child(1) {
+					top: 0;
+				}
+				&:nth-child(2) {
+					top: 7px;
+				}
+				&:nth-child(3) {
+					top: 14px;
+				}
+			}
+		}
+	}
+	#search {
+		top: 60px;
+		height: calc(100vh - 60px);
+		.result {
+			width: calc(100% - 80px);
+			margin-left: 40px;
+			margin-bottom: 40px;
+			.ss-item {
+				width: calc(50% - 20px);
+				margin-bottom: 40px;
+				&:nth-child(2n) {
+					margin: 0 0 40px 40px;
+				}
+				&:nth-child(3n + 2) {
+					margin: 0;
+				}
+			}
+		}
+	}
+	#search_form {
+		width: 150px;
+		right: 148px;
+	}
+	#layerMenu {
+		top: 60px;
+		width: 100%;
+		height: calc(100% - 60px);
+		padding-left: 40px;
+		a {
+			font-size: 2.5vh;
+			line-height: 3.5vh;
+		}
+	}
+	body {
+		#testata {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 60px;
+			img {
+				&.testata1 {
+					display: none;
+				}
+				&.testata2 {
+					width: 100%;
+				}
+			}
+		}
+		section {
+			&.product {
+				width: calc(100% - 80px);
+				margin-left: 40px;
+				margin-bottom: 60px;
+				h2 {
+					font-size: 6vh;
+					line-height: 6vh;
+				}
+				.item {
+					width: calc(50% - 20px);
+					&:nth-child(4) {
+						display: none;
+					}
+					&:nth-child(3n) {
+						margin: 0 0 0 40px;
+					}
+				}
+			}
+			&.video {
+				height: 50vh;
+				video {
+					width: calc(100% - 80px);
+				}
+			}
+			&.doppio2 {
+				width: calc(100% - 80px);
+				margin-left: 40px;
+				h3 {
+					font-size: 4vh;
+					line-height: 4vh;
+				}
+				.left {
+					width: calc(50% - 20px);
+				}
+				p {
+					visibility: visible;
+					width: calc(50% - 20px);
+					margin-left: calc(50% + 20px);
+					bottom: 0;
+				}
+				img.mag1 {
+					position: relative;
+					bottom: auto;
+					top: 60px;
+					left: 0;
+					padding: 0 0 0 40px;
+					width: calc(50% - 20px);
+				}
+			}
+			&.socialShop {
+				width: calc(100% - 80px);
+				margin: 60px 40px;
+				.insta-item {
+					width: calc(50% - 20px);
+					margin: 0;
+					&:nth-child(2) {
+						margin-left: 40px;
+					}
+					&:nth-child(3) {
+						display: none;
+					}
+				}
+			}
+			&.doppio div {
+				width: calc(50% - 60px);
+				padding: 60px 40px;
+				&.homeShop {
+					padding-right: 20px;
+				}
+				&.homeCollection {
+					padding-left: 20px;
+				}
+				h3 {
+					font-size: 4vh;
+					line-height: 4vh;
+					&:nth-child(3) {
+						left: calc(50% + 80px);
+					}
+				}
+			}
+			&.mono img {
+				margin-top: 60px;
+				margin-bottom: 60px;
+				width: calc(100% - 80px);
+				margin-left: 40px;
+			}
+		}
+	}
+}
+@media screen and(max-width: 1200px) and(min-width: 0px) and(orientation: landscape) {
+	header {
+		height: 60px;
+		background-color: $white;
+		#logo {
+			height: 30px;
+			left: 80px;
+		}
+		#menuVeloce {
+			display: none;
+		}
+		#shoppingMenu {
+			right: 40px;
+		}
+		.hamburger {
+			left: 40px;
+			width: 20px;
+			height: 15px;
+			span {
+				height: 1px;
+			}
+			&.close span {
+				&:nth-child(1) {
+					top: 0;
+				}
+				&:nth-child(2) {
+					top: 7px;
+				}
+				&:nth-child(3) {
+					top: 14px;
+				}
+			}
+		}
+	}
+	#search {
+		top: 60px;
+		height: calc(100vh - 60px);
+		.result {
+			width: calc(100% - 80px);
+			margin-left: 40px;
+			margin-bottom: 40px;
+			.ss-item {
+				width: calc((100% / 3) - 27px);
+				&:nth-child(3n + 2) {
+					margin: 0 40px;
+				}
+			}
+		}
+	}
+	#search_form {
+		right: 148px;
+	}
+	#layerMenu {
+		top: 60px;
+		width: 100%;
+		height: calc(100% - 60px);
+		padding-left: 40px;
+	}
+	body {
+		#testata {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 60px;
+			img.testata1 {
+				padding: 40px 80px 40px 0;
+				width: calc(50% - 80px);
+			}
+		}
+		section {
+			&.product {
+				width: calc(100% - 80px);
+				margin-left: 40px;
+				margin-bottom: 60px;
+				.item {
+					width: calc((100% / 3) - 27px);
+					&:nth-child(3n) {
+						margin: 0 40px;
+					}
+				}
+			}
+			&.video {
+				height: 84vh;
+				video {
+					width: calc(100% - 80px);
+				}
+			}
+			&.doppio2 {
+				p {
+					visibility: visible;
+					width: calc(50% - 80px);
+					margin-left: calc(50% + 40px);
+					bottom: 0;
+				}
+				img.mag1 {
+					position: relative;
+					bottom: auto;
+					top: 60px;
+					left: 0;
+					padding: 40px;
+					width: calc(50% - 80px);
+				}
+			}
+			&.socialShop {
+				width: calc(100% - 80px);
+				margin: 60px 40px;
+				.insta-item {
+					width: calc(50% - 20px);
+					margin: 0;
+					&:nth-child(2) {
+						margin-left: 40px;
+					}
+					&:nth-child(3) {
+						display: none;
+					}
+				}
+			}
+			&.doppio div {
+				width: calc(50% - 60px);
+				padding: 60px 40px;
+				&.homeShop {
+					padding-right: 20px;
+				}
+				&.homeCollection {
+					padding-left: 20px;
+				}
+				h3 {
+					font-size: 4vh;
+					line-height: 4vh;
+				}
+			}
+			&.mono img {
+				margin-top: 60px;
+				margin-bottom: 60px;
+				width: calc(100% - 80px);
+				margin-left: 40px;
+			}
+		}
+	}
+}
+@media only screen and(min-device-width: 1024px) and(max-device-width: 1366px) and(-webkit-min-device-pixel-ratio: 2) and(orientation: landscape) {
+	header {
+		height: 60px;
+		background-color: $white;
+		#logo {
+			height: 30px;
+			left: 80px;
+		}
+		#menuVeloce {
+			display: none;
+		}
+		#shoppingMenu {
+			right: 40px;
+		}
+		.hamburger {
+			left: 40px;
+			width: 20px;
+			height: 15px;
+			span {
+				height: 1px;
+			}
+			&.close span {
+				&:nth-child(1) {
+					top: 0;
+				}
+				&:nth-child(2) {
+					top: 7px;
+				}
+				&:nth-child(3) {
+					top: 14px;
+				}
+			}
+		}
+	}
+	#search {
+		top: 60px;
+		height: calc(100vh - 60px);
+		.result {
+			width: calc(100% - 80px);
+			margin-left: 40px;
+			margin-bottom: 40px;
+			.ss-item {
+				width: calc((100% / 3) - 27px);
+				&:nth-child(3n + 2) {
+					margin: 0 40px;
+				}
+			}
+		}
+	}
+	#search_form {
+		right: 148px;
+	}
+	#layerMenu {
+		top: 60px;
+		width: 100%;
+		height: calc(100% - 60px);
+		padding-left: 40px;
+	}
+	body {
+		#testata {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 60px;
+			img.testata1 {
+				padding: 40px 80px 40px 0;
+				width: calc(50% - 80px);
+			}
+		}
+		section {
+			&.product {
+				width: calc(100% - 80px);
+				margin-left: 40px;
+				margin-bottom: 60px;
+				.item {
+					width: calc((100% / 3) - 27px);
+					&:nth-child(3n) {
+						margin: 0 40px;
+					}
+				}
+			}
+			&.video {
+				height: 84vh;
+				video {
+					width: calc(100% - 80px);
+				}
+			}
+			&.doppio2 {
+				p {
+					visibility: visible;
+					width: calc(50% - 80px);
+					margin-left: calc(50% + 40px);
+					bottom: 0;
+				}
+				img.mag1 {
+					position: relative;
+					bottom: auto;
+					top: 60px;
+					left: 0;
+					padding: 40px;
+					width: calc(50% - 80px);
+				}
+			}
+			&.socialShop {
+				width: calc(100% - 80px);
+				margin: 60px 40px;
+				.insta-item {
+					width: calc(50% - 20px);
+					margin: 0;
+					&:nth-child(2) {
+						margin-left: 40px;
+					}
+					&:nth-child(3) {
+						display: none;
+					}
+				}
+			}
+			&.doppio div {
+				width: calc(50% - 60px);
+				padding: 60px 40px;
+				&.homeShop {
+					padding-right: 20px;
+				}
+				&.homeCollection {
+					padding-left: 20px;
+				}
+				h3 {
+					font-size: 4vh;
+					line-height: 4vh;
+				}
+			}
+			&.mono img {
+				margin-top: 60px;
+				margin-bottom: 60px;
+				width: calc(100% - 80px);
+				margin-left: 40px;
+			}
+		}
+	}
+}
+header {
+	&.head-fix {
+		background-color: $white;
+	}
+	#logo {
+		height: 40px;
+		z-index: 3;
+		position: absolute;
+		top: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-50%);
+		left: 140px;
+	}
+	#menuVeloce {
+		position: absolute;
+		top: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-50%);
+		font-family: $font_8;
+		font-size: 22px;
+		line-height: 24px;
+		left: calc(280px - 2vw);
+		z-index: 3;
+		ul {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		li {
+			display: inline-block;
+			margin-left: 2vw;
+			a {
+				color: $black;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&:nth-child(3) a {
+				color: $color_monza_approx;
+			}
+		}
+	}
+	#shoppingMenu {
+		position: absolute;
+		top: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-50%);
+		right: 52px;
+		ul {
+			overflow: hidden;
+			margin-left: 0;
+		}
+		li {
+			display: inline-block;
+			font-family: $font_9;
+			font-size: 14px;
+			line-height: 21px;
+			font-weight: normal;
+			&:nth-child(1) {
+				font-size: 17px;
+				margin-right: 20px;
+			}
+			&:nth-child(2) {
+				font-size: 17px;
+				margin-right: 20px;
+			}
+			&:nth-child(3) {
+				font-size: 18px;
+				margin-right: 0;
+			}
+			a {
+				color: $black;
+				position: relative;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+				span {
+					color: $white;
+					font-size: 10px;
+					line-height: 10px;
+					position: absolute;
+					left: 50%;
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: translateX(-50%);
+					bottom: 2px;
+				}
+			}
+		}
+	}
+	.hamburger {
+		position: relative;
+		width: 8%;
+		height: 30px;
+		cursor: pointer;
+		z-index: 3;
+		span {
+			height: 2px;
+			background-color: $black;
+			display: block;
+			top: 10px;
+			position: absolute;
+			width: 100%;
+		}
+		&.close {
+			animation-name: test;
+			animation-duration: 0.5s;
+			span {
+				&:nth-child(1) {
+					top: 5px;
+				}
+				&:nth-child(2) {
+					top: 14px;
+				}
+				&:nth-child(3) {
+					top: 23px;
+				}
+			}
+		}
+	}
+}
+@media screen and(max-width: 532px) and(min-width: 0px) and(orientation: portrait) {
+	header {
+		#logo {
+			left: 60px;
+			height: 30px;
+		}
+		#shoppingMenu {
+			right: 20px;
+		}
+		.hamburger {
+			left: 20px;
+		}
+	}
+	#search_form {
+		width: calc(100% - 145px);
+		z-index: 5;
+		right: 125px;
+		#ss_text {
+			background-color: $white;
+			height: 20px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	#layerMenu {
+		padding-left: 20px;
+	}
+	body {
+		#testata {
+			width: 100%;
+			margin-top: 60px;
+			margin-left: 0;
+			h1 {
+				font-size: 5vh;
+				line-height: 5vh;
+			}
+		}
+		section {
+			&.product {
+				width: calc(100% - 40px);
+				margin-left: 20px;
+				margin-bottom: 20px;
+				h2 {
+					font-size: 4vh;
+					line-height: 4vh;
+				}
+				.item {
+					width: 100%;
+					&:nth-child(4) {
+						display: block;
+						margin-top: 20px;
+					}
+					&:nth-child(3n) {
+						margin: 20px 0 0;
+					}
+				}
+			}
+			&.video {
+				height: 30vh;
+				video {
+					width: calc(100% - 40px);
+				}
+			}
+			&.mono {
+				img {
+					width: calc(100% - 40px);
+					margin-left: 20px;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+				h3 {
+					font-size: 4vh;
+					line-height: 4vh;
+				}
+			}
+			&.doppio2 {
+				width: calc(100% - 40px);
+				margin-left: 20px;
+				.left {
+					width: 100%;
+				}
+				p {
+					width: 100%;
+					margin-left: 0;
+					position: static;
+				}
+				img.mag1 {
+					position: static;
+					width: 100%;
+					padding: 20px 0 0;
+				}
+			}
+			&.socialShop {
+				width: calc(100% - 40px);
+				margin: 20px;
+				.insta-item {
+					width: 100%;
+					&:nth-child(2) {
+						margin-top: 20px;
+						margin-left: 0;
+					}
+					&:nth-child(3) {
+						margin-top: 20px;
+						display: block;
+					}
+				}
+			}
+			&.doppio div {
+				width: calc(100% - 40px);
+				padding: 20px;
+				&.homeCollection {
+					padding-top: 0;
+				}
+				h3:nth-child(3) {
+					left: 50px;
+					top: 82%;
+				}
+			}
+		}
+	}
+	#search .result {
+		width: calc(100% - 40px);
+		margin-left: 20px;
+		.ss-item {
+			width: 100%;
+			margin-bottom: 20px !important;
+			&:nth-child(2n) {
+				margin: 0;
+			}
+		}
+	}
+}
+#search {
+	#load-search {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate(-50%, -50%);
+		width: 80px;
+	}
+	.result {
+		width: calc(100% - 280px);
+		margin-left: 140px;
+		margin-bottom: 140px;
+		overflow: hidden;
+		.ss-item {
+			float: left;
+			width: calc((100% / 3) - 40px);
+			margin-bottom: 60px;
+			position: relative;
+			img {
+				width: 100%;
+				display: block;
+			}
+			h2 {
+				font-family: $font_9;
+				font-size: 14px;
+				line-height: 21px;
+				font-weight: normal;
+				margin-bottom: 0;
+			}
+			.disc {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				line-height: 21px;
+				color: $black;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&:nth-child(3n + 2) {
+				margin: 0 60px;
+			}
+		}
+	}
+}
+#search_form {
+	width: 250px;
+	margin-left: 0;
+	right: 234px;
+	top: 50%;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translateY(-50%);
+	visibility: hidden;
+	position: absolute;
+	#ss_text {
+		width: 100%;
+		height: 15px;
+		border: 0;
+		border-bottom: 1px solid $black;
+		padding: 5px 0;
+		text-align: left;
+		font-size: 20px;
+		background-color: transparent;
+	}
+}
+#layerMenu {
+	a {
+		&.linkhome {
+			margin-top: 20px;
+			display: block;
+			font-size: 12px;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	ul {
+		&.menuSoc {
+			margin-top: 30px;
+			li a {
+				font-size: 12px;
+			}
+		}
+		&.menuSh li {
+			a {
+				font-family: $font_8;
+			}
+			&:nth-child(3) a {
+				color: $color_monza_approx;
+			}
+		}
+	}
+}
+.sidebar {
+	padding-top: 11em;
+	padding-bottom: 4.4em;
+	width: 15%;
+	position: absolute;
+	overflow: hidden;
+	height: 100%;
+	height: 100vh;
+	left: 0;
+	top: 1.5em;
+	display: flex;
+	flex-wrap: wrap;
+	top: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			font-size: 1em;
+			line-height: 1em;
+			color: $color_fuscous_gray_approx;
+			width: 100%;
+			flex-shrink: 1;
+			&.last-filter {
+				margin-bottom: 6.25em;
+				margin-bottom: 5vh;
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+				position: relative;
+				&.filter {
+					padding-right: .9375em;
+					&:before {
+						content: "";
+						position: absolute;
+						width: 12px;
+						height: 2px;
+						background: $black;
+						right: 0;
+						top: 50%;
+						opacity: 0;
+						//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: 0.5s;
+						//Instead of the line below you could use @include backface-visibility($visibility)
+						backface-visibility: hidden;
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotate(45deg) scaleX(0);
+					}
+					&:after {
+						content: "";
+						position: absolute;
+						width: 12px;
+						height: 2px;
+						background: $black;
+						right: 0;
+						top: 50%;
+						opacity: 0;
+						//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: 0.5s;
+						//Instead of the line below you could use @include backface-visibility($visibility)
+						backface-visibility: hidden;
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotate(-45deg) scaleX(0);
+						content: "";
+						position: absolute;
+						width: 12px;
+						height: 2px;
+						background: $black;
+						right: 0;
+						top: 50%;
+						opacity: 0;
+						//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: 0.5s;
+						//Instead of the line below you could use @include backface-visibility($visibility)
+						backface-visibility: hidden;
+					}
+					&.active {
+						&:before {
+							opacity: 1;
+							//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+							transform: rotate(45deg) scaleX(1);
+						}
+						&:after {
+							opacity: 1;
+							//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+							transform: rotate(-45deg) scaleX(1);
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(2) {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(3) {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(4) {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(5) {
+				align-self: flex-end;
+			}
+		}
+	}
+}
+.sidebar-hidden {
+	padding-bottom: 1.875em;
+	padding-top: 176px;
+	overflow: hidden;
+	height: 100vh;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	top: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			font-size: 1em;
+			line-height: 1em;
+			color: $color_fuscous_gray_approx;
+			width: 100%;
+			flex-shrink: 1;
+			&.last-filter {
+				margin-bottom: 6.25em;
+				margin-bottom: 5vh;
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+				position: relative;
+				&.filter {
+					padding-right: .9375em;
+					&:before {
+						content: "";
+						position: absolute;
+						width: 12px;
+						height: 2px;
+						background: $black;
+						right: 0;
+						top: 50%;
+						opacity: 0;
+						//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: 0.5s;
+						//Instead of the line below you could use @include backface-visibility($visibility)
+						backface-visibility: hidden;
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotate(45deg) scaleX(0);
+					}
+					&:after {
+						//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+						transform: rotate(-45deg) scaleX(0);
+					}
+					&.active {
+						&:before {
+							opacity: 1;
+							//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+							transform: rotate(45deg) scaleX(1);
+						}
+						&:after {
+							opacity: 1;
+							//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+							transform: rotate(-45deg) scaleX(1);
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(2) {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(3) {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(4) {
+				align-self: flex-end;
+			}
+			&:nth-last-of-type(5) {
+				align-self: flex-end;
+			}
+		}
+	}
+}
+.menu-trigger {
+	display: none;
+	width: 1.4375em;
+	height: .875em;
+	top: 50%;
+	margin-top: -.4375em;
+	position: absolute;
+	right: 0;
+	&:before {
+		content: "";
+		position: absolute;
+		top: -150%;
+		left: -100%;
+		width: 300%;
+		height: 400%;
+	}
+	.line {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 2px;
+		background: $black;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+		&.line-1 {
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.3s 0.3s, transform 0.3s 0s;
+		}
+		&.line-2 {
+			top: 50%;
+			margin-top: -1px;
+			left: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.3s 0.3s;
+		}
+		&.line-3 {
+			bottom: 0;
+			top: auto;
+			left: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.3s 0.3s, transform 0.3s 0s;
+		}
+	}
+	&.active {
+		.line-1 {
+			top: 50%;
+			margin-top: -1px;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: rotate(45deg);
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.3s, transform 0.3s 0.3s;
+		}
+		.line-2 {
+			opacity: 0;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.3s, opacity 0.3s 0s;
+		}
+		.line-3 {
+			bottom: 50%;
+			margin-bottom: -1px;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: rotate(-45deg);
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: all 0.3s, transform 0.3s 0.3s;
+		}
+	}
+}
+@media screen and(min-width: 64em) {
+	nav {
+		.nav-column-left {
+			width: 40%;
+		}
+		.nav-column-right {
+			width: 58.33333%;
+		}
+	}
+	.site-description {
+		display: block;
+		line-height: 17px;
+	}
+}
+@media screen and(min-width: 640px) and(max-width: 1025px) {
+	nav {
+		.nav-column-left {
+			width: 35%;
+		}
+		.nav-column-right {
+			width: 65%;
+		}
+	}
+	.sidebar {
+		width: 20%;
+		ul li.last-filter {
+			margin-bottom: 8vh;
+		}
+	}
+	.site-description {
+		display: none;
+		line-height: 17px;
+		padding-top: 0.4em;
+	}
+}
+@media screen and(max-width: 950px) {
+	.site-title {
+		display: table-caption;
+	}
+}
+@media screen and(max-height: 700px) {
+	.sidebar ul li {
+		font-size: 1.0625em;
+	}
+}
+.archive-item {
+	margin-bottom: 2.0625em;
+	display: block;
+	text-decoration: none;
+	color: $black;
+	h3 {
+		margin: 0;
+		font-weight: 400;
+		font-size: 1em;
+		line-height: 1em;
+		color: $black;
+		margin-bottom: .625em;
+		margin-bottom: .3125em;
+		text-transform: uppercase;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.5em;
+		font-size: 1.25em;
+		line-height: 1.45em;
+		line-height: 1.2em;
+		font-weight: 700;
+		text-transform: lowercase;
+	}
+}
+.year-wrapper {
+	position: relative;
+	.year {
+		position: absolute;
+		top: -.2em;
+		right: 100%;
+		padding-right: 8em;
+		font-weight: 700;
+		font-size: 1.25em;
+		line-height: 1em;
+		&:after {
+			content: "";
+			width: 4.85em;
+			height: 4px;
+			background: $black;
+			position: absolute;
+			right: 2em;
+			top: 50%;
+			margin-top: -2px;
+		}
+	}
+}
+.contacts-container {
+	.content {
+		width: 54.8125em;
+		max-width: 90%;
+		margin-left: auto;
+	}
+	.map-wrapper {
+		display: block;
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			padding-top: 46%;
+		}
+		.map {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.text-content {
+		margin-top: 1.94444em;
+		font-size: 1.125em;
+		h4 {
+			margin: 0;
+			font-size: 1.11111em;
+			line-height: 2.11111em;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			line-height: 2.11111em;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.column {
+			padding-right: .625em;
+		}
+	}
+	.social-links {
+		text-align: right;
+	}
+}
+.social-links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	white-space: nowrap;
+	li {
+		width: 2.5em;
+		height: 2.5em;
+		display: inline-block;
+		vertical-align: top;
+		a {
+			display: block;
+			height: 100%;
+			width: 100%;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 0 2px $color_cape_cod_approx;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 50%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: relative;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: 0.3s;
+			color: $color_cape_cod_approx;
+			&:hover {
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: inset 0 0 0 1.875em $color_cape_cod_approx;
+				i:before {
+					color: $white;
+				}
+			}
+			i:before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate(-50%, -50%);
+				font-size: 1.25em;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: 0.3s;
+				color: $color_cape_cod_approx;
+			}
+		}
+		&:not(:last-of-type) {
+			margin-right: 1.5em;
+		}
+	}
+}
+@media screen and(min-width: 480px) and(max-width: 640px) {
+	html {
+		font-size: 22px;
+	}
+	body {
+		font-size: 22px;
+	}
+	.contacts-container .text-content {
+		font-size: 22px;
+	}
+}
+.team-member-wrapper {
+	width: 20%;
+	float: left;
+	padding: 0 1.875em 2.8125em 1.875em;
+}
+.team-member {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: $black;
+	&:after {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+	img {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.content-wrapper {
+		position: absolute;
+		top: -12.5%;
+		left: -12.5%;
+		width: 125%;
+		height: 125%;
+		background: $white;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.8);
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.3s;
+		.content-outter-wrapper {
+			display: table;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		.content-inner-wrapper {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+		}
+		h2 {
+			font-size: 1.375em;
+			margin: 0;
+			line-height: 1em;
+		}
+		p {
+			line-height: 1.2em;
+			margin: 0;
+			font-size: .9375em;
+			margin-top: .93333em;
+			text-transform: uppercase;
+		}
+	}
+	&:hover {
+		z-index: 2;
+		img {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(0.8);
+			opacity: 0;
+		}
+		.content-wrapper {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}
+@media screen and(min-width: 768px) and(max-width: 1024px) {
+	.team-member-wrapper {
+		width: 25%;
+		padding: 0 1.5625em 2.5em 1.5625em;
+		&.touched {
+			z-index: 2;
+			img {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(0.8);
+				opacity: 0;
+			}
+			.content-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(1);
+				opacity: 1;
+			}
+			&:hover {
+				z-index: 2;
+				img {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(0.8);
+					opacity: 0;
+				}
+				.content-wrapper {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
+		&:hover {
+			z-index: 1;
+			img {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: none;
+				opacity: 1;
+			}
+			.content-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(0.8);
+				opacity: 0;
+			}
+		}
+	}
+	html {
+		font-size: 16px;
+	}
+	body {
+		font-size: 16px;
+	}
+	.team-member .content-wrapper {
+		h2 {
+			font-size: 1.125em;
+			line-height: .94444em;
+		}
+		p {
+			font-size: .75em;
+			line-height: 1.16667em;
+			margin-top: .33333em;
+		}
+	}
+}
+@media screen and(min-width: 640px) and(max-width: 768px) {
+	.team-member-wrapper {
+		width: 33.33%;
+		padding: 0 1.5625em 2.5em 1.5625em;
+		&.touched {
+			z-index: 2;
+			img {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(0.8);
+				opacity: 0;
+			}
+			.content-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(1);
+				opacity: 1;
+			}
+			&:hover {
+				z-index: 2;
+				img {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(0.8);
+					opacity: 0;
+				}
+				.content-wrapper {
+					//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
+		&:hover {
+			z-index: 1;
+			img {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: none;
+				opacity: 1;
+			}
+			.content-wrapper {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: scale(0.8);
+				opacity: 0;
+			}
+		}
+	}
+	html {
+		font-size: 14px;
+	}
+	body {
+		font-size: 14px;
+	}
+	.team-member .content-wrapper {
+		h2 {
+			font-size: 1.125em;
+			line-height: .94444em;
+		}
+		p {
+			font-size: .75em;
+			line-height: 1.16667em;
+			margin-top: .33333em;
+		}
+	}
+}
+.single-page-container {
+	.container-inner-wrapper {
+		padding-left: 0;
+		padding-top: 11.5625em;
+	}
+	.text-content {
+		font-size: 1.125em;
+		line-height: 1.05556em;
+		padding-right: 25%;
+		h2 {
+			font-size: 16px;
+			line-height: 1.1875em;
+			text-transform: uppercase;
+			margin: 0;
+			margin-bottom: .9375em;
+		}
+		h1 {
+			font-size: 1.5em;
+			margin: 0;
+			margin-bottom: 1.66667em;
+			text-transform: lowercase;
+		}
+		p {
+			margin-top: 0;
+		}
+		a {
+			color: inherit;
+		}
+		.read-more-link {
+			display: none;
+		}
+		.download-link {
+			margin-top: 1.11111em;
+		}
+	}
+}
+footer {
+	padding: 4.375em 0 3.4375em 0;
+	padding-bottom: 1.875em;
+	padding-top: 1.875em;
+	height: 5em;
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	&.sticky {
+		padding: 4.375em 0 3.4375em 0;
+		padding-bottom: 1.875em;
+		padding-top: 1.875em;
+		height: 5em;
+		width: 100%;
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+	}
+	.footer-inner-wrapper {
+		padding-left: 15%;
+	}
+	p {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		font-size: 1.25em;
+		margin: 0;
+		line-height: 1em;
+	}
+	a {
+		text-decoration: none;
+		color: $black;
+	}
+	.social-links {
+		display: none;
+	}
+}
+@media(max-width: 768px) {
+	nav[data-toggle='toc'] {
+		margin-bottom: 42px;
+		position: static;
+		.nav .active .nav {
+			display: none;
+		}
+	}
+}
+.group {
+	background: $yellow;
+	width: 200px;
+	height: 500px;
+	.subgroup {
+		background: $web_orange;
+		width: 150px;
+		height: 200px;
+	}
+}
+.fixed {
+	position: fixed;
+}
+.bs-docs-sidebar {
+	padding-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	.div {
+		.div {
+			> li > a {
+				padding-top: 1px;
+				padding-bottom: 1px;
+				padding-left: 30px;
+				font-size: 12px;
+			}
+			> .active {
+				> a {
+					font-weight: 500;
+				}
+				&:hover > a {
+					font-weight: 500;
+				}
+				&:focus > a {
+					font-weight: 500;
+				}
+			}
+		}
+		> li > a {
+			color: $color_mountain_mist_approx;
+			border-left: 2px solid transparent;
+			padding: 4px 20px;
+			font-size: 13px;
+			font-weight: 400;
+			&:hover {
+				color: $color_victoria_approx;
+				text-decoration: none;
+				background-color: transparent;
+				border-left-color: $color_victoria_approx;
+			}
+			&:focus {
+				color: $color_victoria_approx;
+				text-decoration: none;
+				background-color: transparent;
+				border-left-color: $color_victoria_approx;
+			}
+		}
+		> .active {
+			> a {
+				color: $color_victoria_approx;
+				text-decoration: none;
+				background-color: transparent;
+				border-left-color: $color_victoria_approx;
+				font-weight: 700;
+			}
+			&:hover > a {
+				font-weight: 700;
+			}
+			&:focus > a {
+				font-weight: 700;
+			}
+			> ul.div {
+				display: block;
+			}
+		}
+		ul.div {
+			display: none;
+		}
+	}
+}
+th {
+	text-align: left;
+}
+table {
+	max-width: 90%;
+	margin-bottom: 20px;
+	border: 1px solid $color_alto_approx;
+	> thead {
+		> tr {
+			> th {
+				padding: 8px;
+				line-height: 1.42857143;
+				vertical-align: top;
+				border-top: 1px solid $color_alto_approx;
+				vertical-align: bottom;
+				border-bottom: 2px solid $color_alto_approx;
+				text-transform: none;
+				background-color: $color_tapa_approx;
+				color: $white;
+				text-align: left;
+			}
+			> td {
+				padding: 8px;
+				line-height: 1.42857143;
+				vertical-align: top;
+				border-top: 1px solid $color_alto_approx;
+			}
+		}
+		&:first-child > tr:first-child {
+			> th {
+				border-top: 0;
+			}
+			> td {
+				border-top: 0;
+			}
+		}
+	}
+	col[class*="col-"] {
+		position: static;
+		display: table-column;
+		float: none;
+	}
+	td[class*="col-"] {
+		position: static;
+		display: table-cell;
+		float: none;
+	}
+	th[class*="col-"] {
+		position: static;
+		display: table-cell;
+		float: none;
+	}
+	> tbody > tr {
+		> th {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			border-top: 1px solid $color_alto_approx;
+		}
+		> td {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			border-top: 1px solid $color_alto_approx;
+		}
+		&:nth-of-type(odd) {
+			background-color: $color_alabaster_approx;
+		}
+	}
+	> tfoot > tr {
+		> th {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			border-top: 1px solid $color_alto_approx;
+		}
+		> td {
+			padding: 8px;
+			line-height: 1.42857143;
+			vertical-align: top;
+			border-top: 1px solid $color_alto_approx;
+		}
+	}
+	> caption + thead > tr:first-child {
+		> th {
+			border-top: 0;
+		}
+		> td {
+			border-top: 0;
+		}
+	}
+	> colgroup + thead > tr:first-child {
+		> th {
+			border-top: 0;
+		}
+		> td {
+			border-top: 0;
+		}
+	}
+	tr td {
+		//Instead of the line below you could use @include hyphens($value)
+		hyphens: auto;
+		font-size: 0.7em;
+	}
+}
+code {
+}
+.fa {
+	font-size: 30px;
+	width: 80px;
+	text-align: center;
+	text-decoration: none;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.fa-container {
+	color: $black;
+	.fa {
+		text-align: left;
+		width: 40px;
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+}
+.circle-icon {
+	background: $color_your_pink_approx;
+	width: 100px;
+	height: 100px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+	text-align: center;
+	line-height: 100px;
+	vertical-align: middle;
+	padding: 30px;
+}
+@media screen and(min-width: 1200px) {
+	.footer-line {
+		margin-bottom: 15px;
+		height: 1px;
+		background: $color_fuscous_gray_approx;
+		top: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: 0.5s;
+	}
+	.site-footer_block {
+		.footer-line {
+			width: 95%;
+		}
+		&:last-of-type {
+			.footer-line {
+				width: 100%;
+			}
+			.fa {
+				float: right;
+			}
+		}
+	}
+}
+.grid {
+	display: grid;
+	width: calc(100% - 6em);
+	height: calc(100vh - 6em);
+	grid-auto-rows: calc((calc(100vh - 6em) / 30) - var(--gap));
+	grid-auto-columns: calc((calc(100% - 6em) / 30) - var(--gap));
+	justify-content: center;
+	align-content: center;
+	grid-gap: var(--gap);
+	pointer-events: none;
+}
+.no-js {
+	.grid {
+		margin: 0 0 15vh;
+	}
+	.grid__item--nav {
+		display: none;
+	}
+}
+.js {
+	.grid {
+		position: absolute;
+		top: 3em;
+		left: 3em;
+		opacity: 0;
+	}
+	.grid--current {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+.grid__item {
+	position: relative;
+	padding: 1em;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: transform 0.2s ease-out;
+}
+.grid__item--name {
+	pointer-events: none;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 0.8;
+	font-family: $font_10, $font_7;
+	font-size: 7vw;
+	color: $color_cinnabar_approx;
+	color: var(--grid-name-text);
+}
+.grid__item--title {
+	pointer-events: none;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 0.8;
+	font-family: $font_10, $font_7;
+	font-size: 3.5vh;
+	text-transform: uppercase;
+	writing-mode: vertical-lr;
+	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+	color: $color_cinnabar_approx;
+	color: var(--grid-title-text);
+}
+.grid__item--text {
+	pointer-events: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.85em;
+	line-height: 1.2;
+	display: flex;
+	color: inherit;
+	color: var(--grid-text);
+}
+.grid__item--nav {
+	background: $color_purple_heart_approx;
+	background: var(--grid-nav-bg);
+	color: $white;
+	color: var(--grid-nav-text);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	&:hover {
+		background: $color_log_cabin_approx;
+		background: var(--grid-nav-bg-hover);
+		color: $white;
+		color: var(--grid-nav-text-hover);
+	}
+}
+.grid__item--animateOut {
+	animation: animateOut 0.8s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+@keyframes animateOut {
+	to {
+		opacity: 0;
+	}
+}
+.grid__item--animateIn {
+	animation: animateIn 0.8s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+@keyframes animateIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.grid--layout-1 {
+	.grid__item {
+		&:first-child {
+			grid-area: 1 / 6 / 10 / 12;
+		}
+		&:nth-child(2) {
+			grid-area: 22 / 6 / 28 / 10;
+		}
+		&:nth-child(3) {
+			grid-area: 8 / 5 / 22 / 15;
+		}
+		&:nth-child(4) {
+			grid-area: 22 / 10 / 29 / 15;
+		}
+		&:nth-child(5) {
+			grid-area: 1 / 11 / 8 / 15;
+		}
+		&:nth-child(6) {
+			grid-area: 17 / 15 / 24 / 20;
+		}
+		&:nth-child(7) {
+			grid-area: 9 / 15 / 17 / 23;
+		}
+		&:nth-child(8) {
+			grid-area: 2 / 18 / 9 / 23;
+		}
+		&:nth-child(9) {
+			grid-area: 17 / 20 / 22 / 26;
+		}
+		&:nth-child(10) {
+			grid-area: 22 / 20 / 28 / 23;
+		}
+		&:nth-child(11) {
+			grid-area: 4 / 23 / 11 / 27;
+		}
+		&:nth-child(12) {
+			grid-area: 11 / 23 / 17 / 30;
+		}
+		&:nth-child(13) {
+			grid-area: 17 / 26 / 22 / 28;
+		}
+	}
+	.grid__item--name {
+		grid-area: 3 / 12 / 30 / 25;
+	}
+	.grid__item--title {
+		grid-area: 1 / 27 / 11 / 29;
+	}
+	.grid__item--text {
+		grid-area: 22 / 23 / 30 / 26;
+	}
+	.grid__item--nav-prev {
+		grid-area: 3 / 6 / 8 / 11;
+	}
+	.grid__item--nav-next {
+		grid-area: 24 / 15 / 29 / 20;
+	}
+}
+.grid--layout-2 {
+	.grid__item {
+		&:first-child {
+			grid-area: 17 / 1 / 24 / 5;
+			background-image: $url_0;
+		}
+		&:nth-child(2) {
+			grid-area: 22 / 6 / 28 / 10;
+			background-image: $url_1;
+		}
+		&:nth-child(3) {
+			grid-area: 14 / 5 / 22 / 10;
+			background-image: $url_2;
+		}
+		&:nth-child(4) {
+			grid-area: 17 / 10 / 26 / 15;
+			background-image: $url_3;
+		}
+		&:nth-child(5) {
+			grid-area: 1 / 10 / 17 / 15;
+			background-image: $url_4;
+		}
+		&:nth-child(6) {
+			grid-area: 11 / 15 / 24 / 20;
+			background-image: $url_5;
+		}
+		&:nth-child(7) {
+			grid-area: 5 / 15 / 11 / 18;
+			background-image: $url_6;
+		}
+		&:nth-child(8) {
+			grid-area: 1 / 18 / 11 / 23;
+			background-image: $url_7;
+		}
+		&:nth-child(9) {
+			grid-area: 20 / 20 / 27 / 24;
+			background-image: $url_8;
+		}
+		&:nth-child(10) {
+			grid-area: 24 / 15 / 29 / 20;
+			background-image: $url_9;
+		}
+		&:nth-child(11) {
+			grid-area: 4 / 23 / 11 / 27;
+			background-image: $url_10;
+		}
+		&:nth-child(12) {
+			grid-area: 11 / 20 / 20 / 30;
+			background-image: $url_11;
+		}
+		&:nth-child(13) {
+			grid-area: 25 / 24 / 29 / 28;
+			background-image: $url_12;
+		}
+	}
+	.grid__item--name {
+		grid-area: 16 / 9 / 30 / 16;
+	}
+	.grid__item--title {
+		grid-area: 1 / 27 / 11 / 29;
+	}
+	.grid__item--text {
+		grid-area: 1 / 5 / 9 / 10;
+		align-items: flex-end;
+		text-align: right;
+	}
+	.grid__item--nav-prev {
+		grid-area: 9 / 5 / 14 / 10;
+	}
+	.grid__item--nav-next {
+		grid-area: 20 / 24 / 25 / 30;
+	}
+}
+.grid--layout-3 {
+	.grid__item {
+		&:first-child {
+			grid-area: 6 / 1 / 14 / 5;
+			background-image: $url_13;
+		}
+		&:nth-child(2) {
+			grid-area: 3 / 5 / 14 / 10;
+			background-image: $url_9;
+		}
+		&:nth-child(3) {
+			grid-area: 14 / 1 / 21 / 5;
+			background-image: $url_14;
+		}
+		&:nth-child(4) {
+			grid-area: 19 / 10 / 28 / 20;
+			background-image: $url_10;
+		}
+		&:nth-child(5) {
+			grid-area: 1 / 10 / 11 / 18;
+			background-image: $url_15;
+		}
+		&:nth-child(6) {
+			grid-area: 11 / 10 / 19 / 15;
+			background-image: $url_11;
+		}
+		&:nth-child(7) {
+			grid-area: 11 / 15 / 19 / 20;
+			background-image: $url_0;
+		}
+		&:nth-child(8) {
+			grid-area: 1 / 18 / 6 / 23;
+			background-image: $url_12;
+		}
+		&:nth-child(9) {
+			grid-area: 20 / 20 / 27 / 24;
+			background-image: $url_1;
+		}
+		&:nth-child(10) {
+			grid-area: 20 / 28 / 25 / 30;
+			background-image: $url_16;
+		}
+		&:nth-child(11) {
+			grid-area: 4 / 23 / 11 / 27;
+			background-image: $url_2;
+		}
+		&:nth-child(12) {
+			grid-area: 11 / 20 / 20 / 30;
+			background-image: $url_17;
+		}
+		&:nth-child(13) {
+			grid-area: 20 / 24 / 26 / 28;
+			background-image: $url_3;
+		}
+	}
+	.grid__item--name {
+		grid-area: 15 / 16 / 30 / 23;
+	}
+	.grid__item--title {
+		grid-area: 1 / 27 / 11 / 29;
+	}
+	.grid__item--text {
+		grid-area: 19 / 5 / 30 / 10;
+		text-align: right;
+	}
+	.grid__item--nav-prev {
+		grid-area: 14 / 5 / 19 / 10;
+	}
+	.grid__item--nav-next {
+		grid-area: 6 / 18 / 11 / 23;
+	}
+}
+[data-icon]:before {
+	font-family: $font_4;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+}
+[class^="icon-"]:before {
+	@extend %extend_5;
+}
+[class*=" icon-"]:before {
+	@extend %extend_5;
+}
+.icon-instagram:before {
+	content: "\61";
+}
+.icon-facebook:before {
+	content: "\62";
+}
+.icon-linkedin:before {
+	content: "\63";
+}
+.logos-grid .column {
+	text-align: center;
+	img {
+		max-width: 70%;
+		display: inline-block;
+		vertical-align: top;
+		//Instead of the line below you could use @include backface-visibility($visibility)
+		backface-visibility: hidden;
+	}
+}
+.post-type-archive-arr-client .single-page-container .container-inner-wrapper {
+	padding-left: 15%;
+	margin-top: -3.125em;
+}
+.highlight pre {
+	color: $color_athens_gray_approx;
+	font-size: 14px;
+	background: $color_outer_space_approx;
+	white-space: pre-wrap;
+	line-height: 0.9em;
+}
+.careers-container .container-inner-wrapper {
+	padding-left: 0;
+}
+.nav-justify-decoration:after {
+	content: "";
+	height: 3px;
+	background: $color_fuscous_gray_approx;
+	position: absolute;
+	width: 1000px;
+	top: 50%;
+	margin-top: -2px;
+	left: 0;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: 0.5s;
+}
+textarea:focus {
+	outline: none;
+}
+input:focus {
+	outline: none;
+}
+.archives-container .container-inner-wrapper {
+	padding-left: 0;
+}
+p code {
+	overflow-x: auto;
+	padding: 0.2em;
+	margin-left: 5px;
+	margin-right: 5px;
+	background: $color_alto_approx;
+	color: $color_lunar_green_approx;
+}
+.text-content > p:first-child:first-letter {
+	float: left;
+	font-family: $font_5, $font_3;
+	font-size: 5em;
+	line-height: 60px;
+	padding-right: 8px;
+}
+.site-footer_block a {
+}
+.grid__item--nav-next .icon--nav-arrow {
+	margin: 0 0 0 auto;
+}
+.grid__item--nav-prev .icon--nav-arrow {
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(180deg);
+	margin: 0;
+}

@@ -96,8 +96,6 @@ You will also see this around, too , which does the same.
 git push --set-upstream origin master
 ```
 
-
-
 ## Push to create a project
 
 > Introduced in Gitlab 10.5

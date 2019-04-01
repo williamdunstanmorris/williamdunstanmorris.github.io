@@ -12,7 +12,8 @@
           <span class="project-name {% if post.class == 'vertical' %}vertical-image {% endif %}">{{post.title}}<p style="font-weight:300">{{post.date | date: "%-d %B %Y"}}</p></span>
         </div>
       </a>
-      {% endif %} {% endfor %} {% for page in site.pages %} {% if page.layout == 'navbar-sidebar-posts-archive' %}
+      {% endif %} {% endfor %}
+      {% for page in site.pages %} {% if page.layout == 'navbar-sidebar-posts-archive' %}
       <a href="{{site.url}}{{page.url}}" class="project-item archives-link" style="position: absolute; left: 285px; top: 3993px;">
         <div class="inner-wrapper"></div>
       </a>

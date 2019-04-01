@@ -657,3 +657,7 @@ window.addEventListener('scroll', function() {
 		$("header").removeClass("head-fix");
 	}
 });
+
+// Foundation enable
+
+$(document).foundation();

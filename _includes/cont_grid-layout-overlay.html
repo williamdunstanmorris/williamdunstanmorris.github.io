@@ -1,0 +1,22 @@
+<div class="container row grid grid--layout-1 grid--current">
+  {% for post in site.posts %} {% if post.published %} {% if post.cover %}
+  <div class="grid__item" style=" background-image: url({{ post.cover }}) ">
+    <div class="revealer" style="background-color: rgb(204, 216, 228);"></div>
+  </div>
+  {% endif %} {% endif %} {% endfor %}
+  <div class="grid__item grid__item--nav grid__item--nav-prev">
+    <svg class="icon icon--nav-arrow">
+      <use xlink:href="#icon-nav-arrow"></use>
+    </svg>
+    <div class="revealer" style="background-color: rgb(204, 216, 228);"></div>
+  </div>
+  <div class="grid__item grid__item--nav grid__item--nav-next">
+    <svg class="icon icon--nav-arrow">
+      <use xlink:href="#icon-nav-arrow"></use>
+    </svg>
+    <div class="revealer" style="background-color: rgb(204, 216, 228);"></div>
+  </div>
+  <h2 class="grid__item grid__item--name">Oyo<br> Expo <br>2017</h2>
+  <h3 class="grid__item grid__item--title">Belfast</h3>
+  <p class="grid__item grid__item--text">A reet bobbydazzler a right toff Sherlock Queen Elizabeth Shakespeare</p>
+</div>

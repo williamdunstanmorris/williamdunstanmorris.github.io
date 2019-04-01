@@ -1,0 +1,8 @@
+<!-- Use fluid to stretch the content to the full width of the available space, and to stretch the content to the full width of the available space and remove grid container padding  -->
+<div class="grid-container fluid">
+<div class="grid-x grid-padding-x" style="min-height: 100vh; justify-content: center;">
+  {% for post in site.posts %} {% if post.published %} {% if post.cover %}
+  <div class="cell small-6 medium-6 large-1" style="background-image: url({{ post.cover }})"></div>
+  {% endif %} {% endif %} {% endfor %}
+</div>
+</div>

@@ -3,20 +3,15 @@
 {% include head.html %}
 <body class="home blog">
 <!-- TODO: Content has to be completely split up here. Look, I need to find a neat way to be able to include things like left/right sidebars more easily when changing elements of the site. -->
-{% include navbar_fullscreen.html %}
-
-{% include cont_grid-4-columns.html %}
-
-
 <div id="content" class="site-content">
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
+            {% include cont_grid-48.html %}
         </main>
     </div>
 </div>
 
-{% include foot_three.html %}
-{% include mobile-filter.html %}
+{% include foot_copyright-sm.html %}
 {% include scripts.html%}
 
 </body>

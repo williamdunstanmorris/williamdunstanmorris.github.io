@@ -8,6 +8,11 @@ published: true
 tags: audio c/c++ object-orientation reverb
 ---
 
+
+Update on Rooms to use:
+
+*
+
 The VISR Reverb Object is a VST3 software available as part of the VISR Production Suite. It is part of a suite of plugins available within a channel-based, digital-audio workstation (DAW), that easily enables spatial audio production through a newer up and coming format - object-based audio. This post is spit into a number of differing sections on how this VISR Reverb Object VST3 was built, and how many of the under-the-hood components work. A high level understanding of object-based audio is assumed, along with development practices and digital-signal processing concepts too.
 
 In order to understand the concept of the S3A ecosystem and software in action, perhaps it is best to describe the software from a digital-audio-workstation perspective - the perspective of a creative individual.

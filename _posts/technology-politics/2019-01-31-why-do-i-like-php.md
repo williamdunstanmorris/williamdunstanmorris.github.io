@@ -51,9 +51,23 @@ public static function getInstance()
 
 ## `$_GET, $_POST` and `$_REQUEST`
 
+`$_GET` is actually an inbuilt array which collects values from the URL. You can access it like any array, with a function like `print_r($__GET)` function
+
+* `$__GET` can only be used to request data.
+* `$__GET` can be cached and remain in the browser history.
+* GET requests can be bookmarked.
+* They are useful to retrieve for instance a list of questions or responses on a site like StackOverflow, but not for any creational things that edit the system state on a web site or web application. For this, we use `$__POST`.
+
+`$_POST` is alos a superglobal that is an inbuilt array in PHP. We should use this for destructive creation, because you can't hit a post action in the address bar of your browser.
+
+`$_REQUEST`
+
+But, even if you are not following RESTful principles, it can be useful to think in terms of using GET for retrieving / viewing information and POST for creating / editing information.
+
+
 These variables are about sending information between a web server and a client. These superglobals do this in three different ways. There are pros and cons of both.
 
-The `$_GET` global variable in PHP is part of a way to construct a new http header. It is limited to 1024 chars and should NEVER be used for sensitive information. It contructs an http header using
+The `$_GET` global variable in PHP is part of a way to construct a new http header. It is limited to 1024 chars and should NEVER be used for sensitive information. It constructs an http header using
 
 ```
 echo $_GET['name']
@@ -67,8 +81,12 @@ See the deployed Voodoo code in
 
 ## Useful Functions
 
-### Querying and Inserting with `mysqli`
+`print_r($variable)`
+`isset($variable_to_check)`
+`header( 'WWW-Authenticate: Basic realm="My Realm"')`
 
+
+### Querying and Inserting with `mysqli`
 
 * Find the string length `strlen($string)`
 * Find the occurrence of a needle in a haystack string with `strpos($haystack, mixed $needle [, int $offset = 0])`. The other function, `stripos(...)` is case sensitive btw.
@@ -76,3 +94,7 @@ See the deployed Voodoo code in
 
 
 # Useful variables
+
+# Cray cray hacks::
+
+How do you push an a key:value element of one associative array onto the end of another associative array (similar to array_push(...)). You can use array_merge ($existing_array, $array_to_add), but this does not solve pushing single elements onto the stack. The only way I found I could actually do this was by using array_slice(...) and set the offset of a specific element within the array to return a brand new array. Kind of annoying, but there was no better way to do that from what I read on 'tinternet . 
