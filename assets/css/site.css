@@ -4,14 +4,14 @@ html,body {
     font-size: calc(10px + 0.4vw);
     background: #fff;
     color: #515151;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: Lato, sans-serif;
     font-size: 1em;
     font-style: normal;
     font-weight: normal;
     letter-spacing: normal;
     line-height: 33.9999961853027px;
     text-transform: none;
-    color: #000000;
+    color: rgba(0,0,0,0.8);
 }
 
 ul li {
@@ -354,11 +354,11 @@ ul li {
   /* margin-top: 52px; */
   /* font-family: Menlo,Monaco,"Courier New",Courier,monospace; */
   color: #eceff1;
-  font-size: 14px;
+  font-size: 18px;
   background: #263238;
   /* padding: 20px; */
   white-space: pre-wrap;
-  line-height: 1.2em
+  line-height: 1.4em;
 }
 
 pre, code {
@@ -377,13 +377,17 @@ pre, code {
 
 
 .project-container .text-content {
-  font-size: 1.05em;
+  font-size: 0.9em;
   line-height: 1.5em;
   /* padding-right: 25%; */
   /* position: absolute; */
   /* visibility: hidden; */
   /* white-space: nowrap; */
   /* text-align: justify; */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.58;
 
 }
 
@@ -396,7 +400,7 @@ pre, code {
     /* font-size: 16px; */
     /* margin: 0; */
     /* margin-bottom: .9375em; */
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     font-size: 28px;
     font-style: normal;
     font-weight: bold;
@@ -413,9 +417,9 @@ pre, code {
 }
 
 .project-container .text-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.0em;
-    font-style: italic;
+  font-family: Menlo, monaco, monospace;
+    font-size: 1.9em;
+    /* font-style: italic; */
     font-weight: bold;
     letter-spacing: normal;
     text-transform: none;
@@ -694,6 +698,12 @@ pre, code {
     }
 }
 
+@media screen and (max-width 1024px){
+  .container-inner-wrapper {
+    padding-left: 15%;
+  }
+}
+
 @media screen and (min-width: 640px) and (max-width: 1024px) {
     .project-container .text-content {
         padding-right:10%
@@ -721,7 +731,7 @@ pre, code {
     }
 
     .project-container .text-content h2 {
-        font-size: 3em;
+        font-size: 1.9em;
         line-height: 1.58333em;
         margin-bottom: 0;
         margin-top: 0px;
@@ -743,12 +753,12 @@ pre, code {
     }
 
     .project-container .container-inner-wrapper {
-        padding-top: 1.25em;
+        /* padding-top: 1.25em; */
         padding-bottom: .625em
     }
 
     .project-container .container-inner-wrapper.photos-container {
-        padding-top: 0
+        padding-top: 180px;
     }
 
     .project-container .additional-text .inner-wrapper {
@@ -919,7 +929,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 10;
-    /* background: #fff */
+    background: #fff
 }
 
 nav .row {
@@ -957,7 +967,7 @@ nav .logo-left {
     vertical-align: top;
     width: 6.25em;
     text-decoration: none;
-    color: #000000;
+    color: rgba(0,0,0,0.8);
     padding-left: 9em;
 }
 
@@ -966,13 +976,13 @@ nav .logo {
     vertical-align: top;
     width: 6.25em;
     text-decoration: none;
-    color: #000000;
+    color: rgba(0,0,0,0.8);
 }
 
 .site-title {
    font-size: 40px;
    font-weight: bold;
-   color: inherit;
+   /* color: inherit; */
    line-height: 1em;
    font-family: Lato, sans-serif;
    font-weight: bold;
@@ -1003,9 +1013,9 @@ nav .mobile-links ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: 'Playfair Display', serif;
+    font-family: Menlo, monaco, monospace;
     font-style: normal;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 nav .mobile-links li {
@@ -1016,7 +1026,8 @@ nav .mobile-links li {
     -ms-transform: translateY(-20px);
     transform: translateY(-20px);
     opacity: 0;
-    transition: 0.3s
+    transition: 0.3s;
+    list-style: none;
 }
 
 nav .mobile-links li a {
@@ -1192,7 +1203,7 @@ body.windows-os .nav-justify:after {
 
 .nav-justify-decoration:after {
     content: "";
-    height: 3px;
+    height: 1px;
     background: #515151;
     position: absolute;
     width: 1000px;
@@ -2539,6 +2550,11 @@ body section.socialShop .insta-item a:hover {
 }
 
 .sidebar ul li a {
+  font-family: Menlo, monaco, monospace;
+  font-size: 0.8em;
+}
+
+.sidebar ul li a {
     text-decoration: none;
     color: inherit;
     position: relative
@@ -2618,6 +2634,12 @@ body section.socialShop .insta-item a:hover {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap
     /* margin-top: 0px; */
+}
+
+.site-description {
+  font-family: Menlo, monaco, monospace;
+  opacity: 0.9;
+  font-size: 0.7em;
 }
 
 .sidebar-hidden ul li {

@@ -6,6 +6,7 @@ date:   2019-03-29 12:31:01 +0000
 categories: speak
 published: true
 tags: continuous-integration ci/cd git
+time-to-read: 20 Minute
 ---
 
 ![gitlab-ci]({{ "/assets/img/gitlab-ci.png" | absolute_url }})

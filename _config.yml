@@ -61,3 +61,6 @@ defaults:
     pdfdownload: null
     nav-archive: true
     category: work
+    time-to-read: 10 Minutes
+  page:
+    time-to-read: 10 Minutes

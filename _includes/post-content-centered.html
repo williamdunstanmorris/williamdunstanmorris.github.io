@@ -1,17 +1,35 @@
 <div class="container project-container">
   <div class="container-inner-wrapper photos-container row">
-    <div class="small-12 medium-6 large-7 column large-centered">
-      <div class="text-content content-left">
-        <h2>{{page.title}}</h2>
-        <h3>{{ page.date | date: "%A, %-d %B %Y"}}</h3>
+    <div class="column small-12 medium-2 show-for-medium" style="position: sticky; top: 150px;">
+      <style>
+        .fa-stack .fa {
+          color: rgba(0,0,0,0.8);
+          padding-top: 15px;
+        }
 
-        <!-- <h1>{{page.categories}}</h1> -->
-      </div>
-      <div class="gallery-wrapper" data-pswp-uid="1">
-        <div class="image-wrapper text-content js-toc-content" id="post .js-toc-content">
-          {{page.content}}
-        </div>
-      </div>
+        .fa {
+          font-size: 24px;
+        }
+      </style>
+
+      <span class="fa-stack" style="margin: -35px;">
+        <a title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?url={{site.url}}{{page.url}}" class="fa fa-facebook"></a>
+        <a title="Share on Google" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{site.url}}{{page.url}}" class="fa fa-google"></a>
+        <a title="Share on Twitter" href="http://twitter.com/home?status={{site.url}}{{page.url}}" class="fa fa-twitter"></a>
+        <a title="Share on Twitter" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}" class="fa fa-linkedin"></a>
+      </span>
+</div>
+    <div class="column small-12 medium-8">
+  <div class="text-content content-left">
+    <h2>{{page.title}}</h2>
+    <span style="font-size:15px">{{ page.date | date: "%A, %-d %B %Y"}} | {{page.time-to-read}} read </span>
+    <!-- <h1>{{page.categories}}</h1> -->
+  </div>
+  <div class="gallery-wrapper" data-pswp-uid="1">
+    <div class="image-wrapper text-content js-toc-content" id="post .js-toc-content">
+      {{page.content}}
     </div>
+    </div></div>
+    <div class="column medium-2 end"></div>
   </div>
 </div>

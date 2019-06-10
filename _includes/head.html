@@ -17,6 +17,11 @@
   <link rel="icon" type="image/png" sizes="96x96" href="{{site.baseurl}}/assets/img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/img/favicon/favicon-16x16.png">
   <link rel="manifest" href="{{site.baseurl}}/assets/img/favicon/manifest.json">
+  <!-- Metadata -->
+  <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:url" content="{{site.url}}{{page.url}}" />
+  <meta property="og:image" content="{{site.url}}/{{page.cover}}" />
+  <meta property="og:description" content="Description Here" />
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="{{site.baseurl}}/assets/img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -31,6 +36,7 @@
   <!-- Site Stylesheet -->
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/site.css">
   <!-- JS Scripts -->
+
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/foundation.min.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-migrate.min.js"></script>
@@ -43,5 +49,11 @@
   <!-- Code Highlighting -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/agate.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <!-- Graphics: p5+threejs Script -->
+
+  <!-- Splash Script -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+  <script type="text/javascript" src="{{ site.github.url }}/assets/js/p5-script.js"></script>
+
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
