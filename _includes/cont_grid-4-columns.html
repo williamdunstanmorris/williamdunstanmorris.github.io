@@ -1,6 +1,6 @@
 <div class="container row">
   <!-- Add padding here with style="padding-left|padding-right:15%" -->
-  <div class="container-inner-wrapper" style="padding-left:15%">
+  <div class="container-inner-wrapper">
     <div class="projects-grid" style="position: relative; height: 4162.5px;">
       {% for post in site.posts %} {% if post.published %}
       <a href="{{site.url}}{{post.url}}" class="project-item {{post.categories}} {{post.tags | array_to_sentence_string | remove: "," | remove: "and "}}" title="{{ post.title }}">

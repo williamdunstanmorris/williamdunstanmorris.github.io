@@ -44,7 +44,7 @@ ul li {
 }
 
 .container-inner-wrapper {
-    /* padding-left: 15%; */
+    padding-left: 15%;
     padding-top: 11.25em;
     /* padding-bottom: 6.25em */
 }
@@ -3855,6 +3855,12 @@ footer .social-links {
     position: static;
   }
 
+  .container-inner-wrapper {
+      padding-left: 0%;
+      padding-top: 180px;
+  }
+
+
   /* PICK ONE */
   /* don't expand nested items, which pushes down the rest of the page when navigating */
   nav[data-toggle='toc'] .nav .active .nav {
@@ -3998,7 +4004,12 @@ table tr td {
 }
 
 code {
-  /* font-size: 0.9em; */
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-size: 12px;
+    overflow: visible;
+    white-space: pre;
+    word-wrap: normal;
+    line-height: 20px;
 }
 
 p code {
@@ -4017,7 +4028,7 @@ p code {
   font-family: 'Playfair Display', serif;
   font-size: 5em;
   line-height: 60px;
-  /* padding-top: 1px; */
+  padding-top: 10px;
   padding-right: 8px;
   /* padding-left: 3px; */
 }
