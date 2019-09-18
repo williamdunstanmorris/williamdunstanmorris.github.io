@@ -661,3 +661,43 @@ window.addEventListener('scroll', function() {
 // Foundation enable
 
 $(document).foundation();
+
+
+
+// typewriter
+//
+
+var app = document.getElementById('typewriter');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
+typewriter.typeString('<strong>docker rmi $(docker images --filter "dangling=true" -q --no-trunc)</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>find . -name wp-content -type d -maxdepth 4</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>sudo lsof -i -P -n | grep LISTEN</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>gitlab-runner run</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>python -m chew docker generate</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>uname -mnrsv</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>df -ah</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong> aws ec2 describe-instances --profile rad_user</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .typeString('<strong>chew docker generate --name Dockerfile.dev</strong>')
+    .pauseFor(200)
+    .deleteAll()
+    .start();

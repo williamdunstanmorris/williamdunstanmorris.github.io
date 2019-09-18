@@ -17,12 +17,20 @@
   },
   "homepage": "https://github.com/williamdunstanmorris/williamdunstanmorris.github.io#readme",
   "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
     "imagemin": "^6.1.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^6.0.0"
   },
   "devDependencies": {
-    "compress-images": "^1.4.6"
+    "compress-images": "^1.4.6",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
   }
 }

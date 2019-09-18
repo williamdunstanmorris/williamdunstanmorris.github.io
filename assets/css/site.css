@@ -980,7 +980,7 @@ nav .logo {
 }
 
 .site-title {
-   font-size: 40px;
+   /* font-size: 30px; */
    font-weight: bold;
    /* color: inherit; */
    line-height: 1em;
@@ -1163,7 +1163,7 @@ body.windows-os .nav-justify:after {
 .nav-centered li {
     display: inline-block;
     vertical-align: top;
-    font-size: 1.625em;
+    /* font-size: 1.625em; */
     line-height: 1em
 }
 
@@ -1183,7 +1183,7 @@ body.windows-os .nav-justify:after {
     /* background: #fff; */
     padding-left: .38462em;
     padding-right: .38462em;
-    font-family: Lato, sans-serif;
+    /* font-family: Lato, sans-serif; */
     font-weight: bold;
     letter-spacing: 1.39999997615814px;
 }
@@ -2508,20 +2508,20 @@ body section.socialShop .insta-item a:hover {
 /* ENd compiled content code  */
 
 .sidebar {
-    padding-top: 11em;
-    padding-bottom: 4.4em;
+    /* padding-top: 8em;
+    padding-bottom: 0.2em;
     width: 15%;
     position: absolute;
-    overflow: hidden;
-    height: 100%;
-    height: 100vh;
-    left: 0;
+    overflow: hidden; */
+    /* height: 100%; */
+    /* height: 100vh; */
+    /* left: 0;
     top: 1.5em;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    top: 0
+    top: 0 */
 }
 
 .sidebar ul {
@@ -2538,6 +2538,7 @@ body section.socialShop .insta-item a:hover {
     font-size: 1em;
     line-height: 1em;
     color: #515151;
+    list-style: none;
     /* font-weight: 700; */
     width: 100%;
     -ms-flex-negative: 1;
@@ -2550,8 +2551,8 @@ body section.socialShop .insta-item a:hover {
 }
 
 .sidebar ul li a {
-  font-family: Menlo, monaco, monospace;
-  font-size: 0.8em;
+  /* font-family: Menlo, monaco, monospace; */
+  /* font-size: 0.8em; */
 }
 
 .sidebar ul li a {
@@ -4005,13 +4006,16 @@ table tr td {
 
 code {
     font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
-    font-size: 12px;
+    font-size: 15px;
     overflow: visible;
     white-space: pre;
     word-wrap: normal;
     line-height: 20px;
 }
 
+blockquote {
+  font-style: italic;
+}
 p code {
   overflow-x: auto;
   /* border-radius: 5px; */

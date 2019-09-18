@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+
+
+header {
+
+@media only screen and (min-width: 768px) {
+  nav a span:last-of-type {
+    padding-left: 3rem;
+
+  }
+}
+
+}
+
+.nav-centered li {
+  font-family: 'Playfair Display';
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.site-title {
+  font-size: 3rem;
+}
+
+.desc {
+  text-align: justify;
+}
+
+.typewriter-wrapper {
+  background-color: #191515;
+}
+
+#typewriter {
+
+  padding-left: 0.5rem;
+
+  color: #ffffff;
+
+  span {
+    font-family: 'Inconsolata';
+    font-size: 1rem;
+  }
+}
+
+.landing-portrait {
+
+  height: 78vh;
+  background-size: cover;
+  background-image: url('/assets/img/18_09_2019_william_portrait.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media only screen and (min-width: 768px) {
+
+    background-position: right top;
+    background-size: contain;
+
+
+  }
+}
+
+.navigation-wrapper{
+  font-family: 'Ubuntu', sans-serif;
+
+  li {
+		padding-bottom: 15px;
+		font-size: 16px;
+		line-height: 24px;
+    padding-left: 0rem;
+
+		@media only screen and (max-width: 768px) {
+			padding-bottom: 30px;
+			font-size: 28px;
+			line-height: 18px;
+		}
+		a {
+			// color: #000;
+
+		}
+		&.current-menu-item a {
+	    	border-bottom: 1px solid;
+		}
+	}
+
+
+  @media only screen and (min-width: 768px) {
+
+      padding-left:3rem;
+
+
+      .menu {
+  			display: table;
+  		}
+
+  		.menu a {
+  			padding: .7rem 0 0 0;
+  			display: inline;
+  		}
+
+  		.menu * {
+  			box-sizing: border-box;
+  		}
+  		.menu li {
+  			//display: inline-block;
+  			//list-style: outside none none;
+  			//margin: 0 1.5em;
+  			//padding: 0;
+  		}
+  		.menu a {
+  			padding: 0.5em 0;
+  			//color: rgba(255, 255, 255, 0.5);
+  			position: relative;
+  			letter-spacing: 1px;
+  			text-decoration: none;
+  		}
+  		.menu a:before,
+  		.menu a:after {
+  			position: absolute;
+  			-webkit-transition: all 0.35s ease;
+  			transition: all 0.35s ease;
+  		}
+  		.menu a:before {
+  			top: 0;
+  			display: block;
+  			height: 2px;
+  			width: 0%;
+  			content: "";
+  			background-color: #000000;
+  		}
+  		.menu a:after {
+  			left: 0;
+  			top: 0;
+  			padding: 0.5em 0;
+  			position: absolute;
+  			content: attr(data-hover);
+  			color: #ffffff;
+  			white-space: nowrap;
+  			max-width: 0%;
+  			overflow: hidden;
+  		}
+  		.menu a:hover:before,
+  		.menu .current a:before {
+  			opacity: 1;
+  			width: 100%;
+  		}
+  		.menu a:hover:after,
+  		.menu .current a:after {
+  			max-width: 100%;
+  		}
+
+
+  	}
+}
