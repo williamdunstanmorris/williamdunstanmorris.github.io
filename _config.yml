@@ -5,7 +5,7 @@ theme: jekyll-theme-chirpy
 
 # Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
 # and doesn't have a custom domain.
-baseurl: ''
+baseurl: '/williamdunstanmorris.github.io'
 # baseurl for personal page instead of a project page . Append this if a project.
 url: https://williamdunstanmorris.github.io/
 
@@ -28,7 +28,6 @@ description: >-                        # used by seo meta and the atom feed
   DevOps and Site Reliability Engineer at PEAT GmbH
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
 
 github:
   username: williamdunstanmorris             # change to your github username
