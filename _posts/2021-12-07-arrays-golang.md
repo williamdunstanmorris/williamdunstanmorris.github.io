@@ -1,0 +1,228 @@
+---
+title: Arrays Slices & Maps in Golang - A Deep Dive
+author: William Morris
+name: William Morris
+date: 2021-12-07 20:55:00 +0800
+categories: [Go]
+pin: true
+tags: [getting started]
+---
+
+Arrays in Golang
+
+Arrays are necessary in understanding how Slices in Golang work
+they do not need to be initialised
+they are of a fixed size; the length of the array is part of its type
+Arrays in Go are values. An Array variable encompasses the entire of its array, not just the first element (like C)
+this means that when you assign or pass around an array value you will make a copy of its contents.
+to avoid the copy you could pass a pointer to the array, but then that’s a pointer to an array, not an array.
+one way to think about arrays is as a sort of struct but with indexed rather than named fields: a fixed-size composite value.
+"composite" definition: data type which can be constructed in a program using the programming language's primitive data types and other composite types
+
+```go
+
+// example of the standard way of declaring an array
+var arrLongHand[3] int
+arrLongHand[0] = 3
+
+```
+
+
+
+```go
+package main
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
+
+func main () {
+
+	// example of the standard way of declaring an array
+	var arrLongHand[3] int
+	arrLongHand[0] = 3
+
+	// example populate values at certain positions
+	arrLongHand[1] = 20
+	arrLongHand[2] = 2
+	arrLongHand[0] = 54
+
+	// example of the array shorthand declaration, with a string
+	arrShorthand := [3]string{"Hello Willy", "How", "Are"}
+	// see https://gobyexample.com/string-formatting
+	fmt.Printf("Type: %T\t Value: %v\n", arrShorthand, arrShorthand)
+
+	// useful: printf types
+	//
+	// %v	the value in a default format
+	// when printing structs, the plus flag (%+v) adds field names
+	// %#v	a Go-syntax representation of the value
+	// %T	a Go-syntax representation of the type of the value
+	// %%	a literal percent sign; consumes no value
+	// %s   converts byte slice to string
+	// %d   is also often used with byte slices and prints the UTF-8 decimal value of each byte.
+	// %q	a single-quoted character literal safely escaped with Go syntax.
+
+	// example of using the ... notation to get the compiler to count elements for you
+	compilerCountsElementsForYou := [...]string{"Hello", "Julian", "How are you sir?"}
+	fmt.Printf("Type: %T\t Value: %v\n", compilerCountsElementsForYou, compilerCountsElementsForYou) // remember all elements are counted here
+
+	// arrays do not need to be initialised explicitly;
+	// the zero value is ready to be used whose elements are already zeroed
+	// there is no convenience to merge, so we need to iterate over each individually with markers and counters. This is a chore...
+
+	// Slices in Golang
+	//
+	// Slices are very similar in syntax, except you leave out the the number of elements e.g. []
+	// shorthand example
+	sliceShorthand := []int{1, 2, 3, 4, 5}
+	fmt.Println(sliceShorthand)
+
+
+	// Slices can be created using the inbuilt make function
+	// why do we use in-built functions here?
+
+	// Remember - a byte is an alias for uint8, which are 8 bits 0-255 (256)
+	// utf-8 1-4 bytes are used to encode characters (ascii)
+
+	// refreshers on bits and bytes and then byte slices
+	// a bit references a single binary value: 0 or 1
+	// a byte is 8 bits right? like the value of 11111111 == 256
+	// before getting into bytes, and notably byte slices, we need to understand encoding
+	// Unicode = universal character encoding
+	// Unicode supports over 137,000 characters and 150 different languages
+	// Each character has a specific Unicode code point that represents the character
+	// For example, the Unicode code point for the capital letter “T” is U+0054
+	// Unicode is actually represented within int32 (32 bit integer), which is much too large
+	// This is where UTF-8 fits in.
+	// Unicode code point, it uses between 1 and 4 bytes. All of the most common characters can be represented using 1–2 bytes (all ASCII characters can be represented in 1 byte).
+	// UTF-8 allows us to use all of the characters defined by Unicode, but allows us to save some extra space and only reach for the 3rd or 4th byte when we really need it.
+	// UTF-8 is a variable length encoding of Unicode code points.
+
+	// UTF-8 stands for unicode transformation format (8)
+
+	// So cool! This prints AB. This is exactly how ASCII backwards compatible problem was solved with utf-8
+	// 10000001 == 65 == A (utf-8 solves back-comp: ASCII table)
+	// 10000010 == 66 == B
+	// 10000011 == 67 == C
+	b := []byte{65, 66}
+	fmt.Printf("Type: %T\t Byte2String: %s\t UTF-8 %d\t Count: %v\n", b, b, b, utf8.RuneCount(b))
+
+	// Lets loop over a byte slice
+	c := []byte{'A', 'b', 'c', 'd', 'r'}
+	for i := range c {
+		fmt.Printf("Quoted Literal: %q UTF-8: %d\n", c[i], c[i])
+	}
+
+	// For loop, shorthand
+	// Lets iterate over a string, in shorthand
+	for i, b := range "Hi there" {
+		fmt.Printf("Index: %d UTF-decimal %d Char %q\n", i, b, b ) // %q is a character literal in golang
+	}
+
+	// Make a slice
+	madeSlice := make([]byte, 5, 5) // second element is length, third is capacity[optional]
+	fmt.Printf("Type %T\t Value: %+v\t Length: %+v\t Capacity %+v\n", madeSlice, madeSlice, len(madeSlice), cap(madeSlice))
+
+	// the zero value of a slice is nil
+
+	// shorthand
+	shorthandMadeSliceWithoutCapacity := make([]byte, 5, 20)
+	fmt.Println("The capacity of shorthandMadeSliceWithoutCapacity: ", cap(shorthandMadeSliceWithoutCapacity))
+	fmt.Println("The length of shorthandMadeSliceWithoutCapacity: ", len(shorthandMadeSliceWithoutCapacity))
+
+
+	shorthandMadeSliceWithoutCapacity = append(shorthandMadeSliceWithoutCapacity, 1, 2)
+	// print with slices
+	fmt.Println("", shorthandMadeSliceWithoutCapacity[5:])
+	// create slice out of this
+	new_s := shorthandMadeSliceWithoutCapacity[:20]
+	fmt.Println("", new_s)
+
+	// differences between slice LENGTH and CAPACITY
+	// Slice tricks
+	// https://github.com/golang/go/wiki/SliceTricks#expand
+	// You can expand a slice to its capacity with slicing:
+
+
+	//
+	a := []int{1, 2, 3}
+	fmt.Printf("a slice - Value %d Capacity %d Length %d\n", a, cap(a), len(a))
+	a = append(a, 4, 5, 6, 7)
+	fmt.Printf("a slice - Value %d Capacity %d Length %d\n", a, cap(a), len(a))
+	// remove element.
+	del := 3
+	// Delete and/or remove
+	a  = append(a[:del], a[del+1:]...)
+	fmt.Printf("a slice after deletion - Value %d Capacity %d Length %d\n", a, cap(a), len(a))
+	// Delete without preserving order
+	a[del] = a[len(a)-1]
+	fmt.Printf("a slice after deletion - Value %d Capacity %d Length %d\n", a, cap(a), len(a))
+
+	// function receivers, pointer receivers vs value receivers vs pass by reference
+	// func (r receiver) identifier(parameters) (return(s)) { code }
+	// https://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/
+	// Pass by reference vs pass by value (Demystified)
+	// https://codeburst.io/pass-by-reference-in-go-demystified-81e0e8dfa2ad
+	// This program proves that this is not the same as C. You cannot create true reference variables like in C
+	//package main
+	//
+	//import "fmt"
+	//
+	//func main() {
+	//	var a int
+	//	var b = &a
+	//	var c = &b
+	//	var d = &c
+	//	fmt.Println(&a, b)
+	//	fmt.Println(&b, &c)
+	//	fmt.Println(&c, &d)
+	//}
+
+
+	// hash tables in golang
+	// A go map looks like this:
+	// map[KeyType]ValueType
+	// example: this is a map of string keys to int values
+	// var m map[string]int
+	// above behaves and reads like an empty map, but it will panic if you write to it.
+	var m map[string]int
+	m = make(map[string]int)
+	m["route"] = 66
+
+	// iterate through values
+	for key, value := range m {
+		fmt.Println("Key:", key, "Value:", value)
+	}
+
+	// get manually
+	fmt.Println(m["route"])
+
+	//i := m["route"] // 66
+	//i = m["root"] // key lookup doesn't exist - we get 0
+	//n := len(m)
+
+	// func delete(m map[Type]Type1, key Type)
+	// delete element from array
+	delete(m, "route") // no return at all.
+	// determine the existance of key using this assignment declaration
+	//j, ok := m["route"]
+	// To test for a key without retrieving the value, use an underscore in place of the first value:
+	//_, okay := m["route"]
+
+	k := map[string]int{
+		"Will": 29,
+		"Dad": 68,
+	}
+
+	// BTW: Programming languages use the word "Literal" when referring to syntactic ways to construct some data structure.
+	// It means it's not constructed by creating an empty one and adding or subtracting as you go.
+	// It assumed you are aware of the Type's structure
+
+}
+
+
+
+
+```
