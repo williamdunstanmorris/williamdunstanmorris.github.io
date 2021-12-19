@@ -10,8 +10,6 @@ order: 1
 
 Hey! I'm Will! 29, from England. I'm a musician and engineer, based in Kreuzberg, Berlin. At the moment, I work as a `DevOps Engineer` at [PEAT GmbH](https://plantix.net/en/), and have help build and maintain infrastructure and architecture across a host of services there. Originally, I grew up with a more audio-artsy-based background, but I got into engineering later on. I studied 🎹 Music(BA) and `Computer Science`(MSc) at university. 
 
----
-
 # current experience
 
 ---
@@ -45,8 +43,6 @@ At Plantix, we help millions of small-scale farmers diagnose crop diseases using
 * I wanted to graph more low level application based metrics from our API. I worked on creating a custom Grafana/Prometheus stated client integration for AWS ECS. This worked like a sidecar, and was valuable because you can observe the behaviour of an application in a very lightweight manner - using a lightweight statsd UDP protocol method. Sometimes it went wrong, but the great thing about UDP is that you can design it to fail and not cause outage. Losing observability is not as bad as losing our application.
 * I was trying to figure out how we can be more sustainable in the cloud and less wasteful. Idle resource usage is the worst. I used ansible as a control point to calling the aws api to shutting instances and agents down when our teams weren't using them. It was great way to shut servers down at night. I actually made this into a mini TeamCity pipeline job and gave developers control over it. If they needed to work at night, they could just boot up the agent servers as they needed.
 
----
-
 # previous experience 
 
 ---
@@ -74,8 +70,6 @@ Part of an EPSRC research project (named S3A) with BBC Research & Development de
 * Learned and worked with Gitflow modelling for the first time
 * My first project that I [built CI/CD pipeline for](https://github.com/williamdunstanmorris/VISR-Production-Suite/blob/master/.gitlab-ci.yml) - building, installing and deploying packages supporting different OS platforms.
 
----
-
 # other selected project work
 
 ---
@@ -88,17 +82,13 @@ Here is a collection of projects that I really enjoyed, as either part of my car
 > If you already have [Max/MSP](https://cycling74.com/products/max) and you want to try it, contact me. I haven't managed to properly package this project up yet. But I will get around to it. You can try and `git clone` it and see if you can get it working in Max/MSP yourself as some running modules.
 
 **Creator & Developer: [SuperCollider VST](https://github.com/williamdunstanmorris/vst_gui)**
-* My Graphical User Interface (GUI) demonstrates the very basic use of subtractive synthesis within digital format. My aim was to build a two-oscillator synthesizer that gives the user some basic variable parameters. The GUI incorporates 2 oscillators of which you can xfade between the two waveforms
-
----
+* My first ever programming project. I really want to go back to this language one day properly. A Graphical User Interface (GUI) that demonstrates the very basic use of subtractive synthesis within digital format. My aim was to build a two-oscillator synthesizer that gives the user some basic variable parameters. The GUI incorporates 2 oscillators of which you can xfade between the two waveforms
 
 # where I'm going
 
 ---
 
-The same place I am now, just a little older, and a little wiser. I would like to go back into a leadership-based  role, as I discovered from previous roles and experience that this is what I loved most. I also want to become a better cook, a better programmer and a better pianist. I guess I want to get pretty smart in one programming language now that I’ve spent a lot of time in *operations* and the *cloud*. I feel like I really know how to host, maintain and deploy a project with some tricks up my sleeve. I just need to transition more into building the code for one now. Time will tell, I guess.
-
----
+The same place I am now, just a little older, and a little wiser. I would move into a leadership-based  role, as I discovered from previous roles and experience that this is what I loved most. I loved to lead, and I want more experience in it. I also want to become a better cook, a better programmer and a better pianist. I guess I want to get pretty smart in one programming language now that I’ve spent a lot of time in *operations* and the *cloud*. I feel like I really know how to host, maintain and deploy a project with some tricks up my sleeve. I just need to transition more into building the code for one now. Time will tell, I guess.
 
 # talks and demonstrations
 
@@ -122,9 +112,9 @@ https://williamdunstanmorris.github.io//gitflow-techniques.html
 
 **2020, Observability for Web Services**
 
----
-
 # languages
+
+---
 
 * I prefer the Macbook trackpads and screen resolution, but I spend a lot of time on Linux. So I use both.
 * I got into programming through [Max/MSP](https://cycling74.com/products/max) and [SuperCollider](https://supercollider.github.io/)
@@ -135,7 +125,6 @@ https://williamdunstanmorris.github.io//gitflow-techniques.html
 * I'm learning [Golang](https://go.dev/)! Specifically, microservices with Golang. I've found it hard to find a language that I really liked, but I think that this is the language I really want to master eventually.
 * I tried some wordpress development with PHP for Wordpress too. That was actually pretty fun. OO is nice.  
 
-------
 
 # skills, buzz-words and the tool soup
 
@@ -176,7 +165,10 @@ Using modularised terraform, I have:
 * Deploying and owning a custom internal on-premise CI/CD platform architecture (TeamCity) for multiple engineering teams.
 * Deployed and own an internal on-premise Grafana for 4 teams
 
+
 # additional experience
+
+---
 
 **English Teacher, British Institute of Rome, 2016**
 Acquired a CELTA teaching qualification, built up teaching skills and acquired a modest
@@ -187,6 +179,9 @@ Organised and managed staff and activities leaders, managing budgets and events 
 Brighton and south-east England.
 
 # references
+
+---
+
 * Dr Philip P Jackson, Reader in Machine Audition, University of Surrey, GU27XH
 p.jackson@surrey.ac.uk 
 * Professor Adrian Hilton, Director of CVSSP, University of Surrey, GU27XH
