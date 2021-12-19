@@ -15,7 +15,7 @@ url: https://williamdunstanmorris.github.io
 lang: en
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Europe/Berlin
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -31,9 +31,6 @@ description: >-                        # used by seo meta and the atom feed
 
 github:
   username: williamdunstanmorris             # change to your github username
-
-#twitter:
-#  username: twitter_username            # change to your twitter username
 
 social:
   # Change to your full name.

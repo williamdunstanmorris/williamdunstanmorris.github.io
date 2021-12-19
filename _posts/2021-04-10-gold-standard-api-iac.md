@@ -1,5 +1,5 @@
 ---
-title: Infrastructure as Code - A High Availability API in AWS
+title: Developers and DevOps-ers. Or just Engineers? But who owns what?
 author: William Morris
 name: William Morris
 date: 2021-04-10 20:55:00 +0800

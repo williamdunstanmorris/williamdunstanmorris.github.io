@@ -1,5 +1,5 @@
 ---
-title: Gitting Started - My thoughts on Git.
+title: Under the hood with Git - What is going on?
 author:
 name: Cotes Chung
 link: https://github.com/cotes2020
