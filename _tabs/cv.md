@@ -29,11 +29,13 @@ At Plantix, we help millions of small-scale farmers diagnose crop diseases using
 
 **Service-orientated architecture and deployment (AWS Fargate ECS, ALB, IAM, RDS, Elasticache)**
 * I worked with the backend team to help craft AWS resources with Terraform for their django-python API, hosted as a stateless application on AWS ECS. This included with it, a service worker and scheduler architecture task definition under the same service, running under within the same cluster. They also needed to integrate similar components, like statsd and flower too. This ran with RDS, an Elasticache cluster (Redis) and an application load balancer that was responsible for registering healthy tasks during a new deployment. I repeated this architecture for three of our APIs.
+* I wanted to graph more low level application based metrics from our API. I worked on creating a custom Grafana/Prometheus stated client integration for AWS ECS. This worked like a sidecar, and was valuable because you can observe the behaviour of an application in a very lightweight manner - using a lightweight statsd UDP protocol method. Sometimes it went wrong, but the great thing about UDP is that you can design it to fail and not cause outage. Losing observability is not as bad as losing our application.
 
-**Hosting on-premise CI/CD architecture and scaling for delivery**
+**Hosting on-premise architecture and scaling for better / less stressful deliveries**
 * From scratch, I deployed, maintained and own an entire on-premise CI server (TeamCity). I used Terraform to create additional VM agents, and Ansible to provision them with the frameworks like correct Android SDK, and docker-compose to support pipeline portability across multiple agents. Docker was great for this, and it meant that we continuously create a stable and efficient delivery pipelines that ensure both high performance and portability, especially during SEV-1 incident hot-fixes.
 * I supported 4 teams, who used TeamCity respectively on their own projects, giving advice on how they could scale and maintain a good pipeline without owning and being responsible for it myself. This was good, as it meant they felt more autonomous developing projects they owned and they were learning.
 * I worked closely with PEAT's Android Team, the developers behind the Plantix App - to help craft two pipelines using mainly Gradle for both building and testing, and release track delivery on the Google Play Store. We even made a nightly build for or develop branch, which helped QA test upcoming features the following morning.
+* I got really into operational metrics, especially with our onprem grafana. Because we had around 45 EC2 VMs that served development, production or internal purposes, we needed some basic observability. However, with so many VMs, this was far too laborious and prone to human error to do. So, I backwards wrote a grafana dashboard panel from json and converted it to jsonnet to make abstractions and create a standard of alert responses and thresholds that could be adjusted without manually having to fiddle with Grafana all the time.
 * I also migrated all our old projects off from Jenkins and put them onto TeamCity, improving them by dockerising more or less all the pipelines so they can be more portable on different agent runner VMs if they need to be.
 
 
@@ -132,27 +134,6 @@ https://williamdunstanmorris.github.io//gitflow-techniques.html
 * Written and collaborated on software with C++ and Java
 * I'm learning [Golang](https://go.dev/)! Specifically, microservices with Golang. I've found it hard to find a language that I really liked, but I think that this is the language I really want to master eventually.
 * I tried some wordpress development with PHP for Wordpress too. That was actually pretty fun. OO is nice.  
-
----
-
-# previous experience
-
----
-
-Project experience & stories:
-
-Worked within technical debt and bad design decisions to slowly recreate services through ground-up documented design.
-
-Bastion and security first
-Least privilege rule
-
-
-I got really into operational metrics, especially with our onprem grafana. Because we had around 45 EC2 VMs that served development, production or internal purposes, we needed some basic observability. However, with so many VMs, this was far too laborious and prone to human error to do. So, I backwards wrote a grafana dashboard panel from json and converted it to jsonnet to make abstractions and create a standard of alert responses and thresholds that could be adjusted without manually having to fiddle with Grafana all the time.
-
-I worked as the platform lead and cloud engineer on our business-focused API. The API was focused on providing communication channels (like WhatsApp, SMS) between retailers and farmers throughout India. The API was integrated into Plantix, our Android-based app for Farmers. I really liked using AWS Code Deploy for this. We configured it to be Green/Blue, and it meant that we could fail fast without impacting farmers with outage. CodeDeploy acted like a controller between AWS ECS and potential registered targets from the AWS application load balancer. I would definitely utilise these exact technologies again for a versioned API.
-
-I wanted to graph more low level application based metrics from our API. I worked on creating a custom Grafana/Prometheus stated client integration for AWS ECS. This worked like a sidecar, and was valuable because you can observe the behaviour of an application in a very lightweight manner - using a lightweight statsd UDP protocol method. Sometimes it went wrong, but the great thing about UDP is that you can design it to fail and not cause outage. Losing observability is not as bad as losing our application.
-
 
 ------
 
