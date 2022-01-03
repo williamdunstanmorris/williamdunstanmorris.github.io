@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 2
 ---
 
-### **DevOps Engineer**, [PEAT GmbH (Plantix)](plantix.net/)
+### **DevOps Engineer**, [PEAT GmbH (Plantix)](https://plantix.net/en/)
 **2019 - present**
 
 ---

@@ -37,7 +37,7 @@ Introduced to programming with Supercollider, a C-style syntax, and produced alg
 
 ---
 
-**DevOps Engineer**, [PEAT GmbH (Plantix)](plantix.net/), 2019 - present
+**DevOps Engineer**, [PEAT GmbH (Plantix)](https://plantix.net/en/), 2019 - present
 
 As an engineer and Head of DevOps at PEAT (the only DevOps engineer actually), I work on the mission to help transform our engineering into a high-performance organisation, by being part of the discussions to prepare technical architecture, micro-services and engineering teams for future growth.
 
