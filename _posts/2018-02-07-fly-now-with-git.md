@@ -1,17 +1,15 @@
 ---
-layout: navbar-post-centered
-title:  Explainer - Git is like taking a flight. Sort of.
+title:  Git is sort of like being at an airport. 🛬
 date:   2018-02-07 12:31:01 +0000
-cover: assets/img/git-airport-cover.jpg
-published: false
-categories: speak
-author: "William Morris"
+published: true
 tags:
 - git
 - philosophy
 ---
 
-Git is an open-source technology that keeps records of your changes. It allows for collaborative development. It allows you to know what changes you made and when, and to revert changes you made
+**COV19 EDIT**: Because of the pandemic, Git is now nothing like taking a flight or being at an airport.
+
+Git is an open-source technology that keeps records of your changes. It allows for collaborative development. It allows you to know what changes you made and when, and sometimes to revert changes you made. It can go even further than that though, and even be embedded within your team as a process to continuously integrate and deploy changes in code to another target location (a server, an application for example.)
 
 ## So how does it work?
 

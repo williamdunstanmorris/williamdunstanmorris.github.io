@@ -17,8 +17,8 @@ Hey! I'm Will! 29, from England. I'm a musician and engineer, based in Kreuzberg
 **Computer Science** (MSc), University of York, 2016 - 2017
 
 Exposed to a wide-range of computer science disciplines:
-* Software Engineering
-* Advanced Programming Concepts
+* Software Engineering (I really like old-school UML)
+* OO Programming Concepts
 * Computer Architecture
 * High-distributed Performance Computing
 * Software Testing
@@ -33,7 +33,7 @@ Exposed to a wide-range of computer science disciplines:
 Introduced to programming with Supercollider, a C-style syntax, and produced algorithmic compositions and my own virtual software instrument as part of the course project. See my website for more on this. Continue to pursue composition and production as a passion.
 
 
-# current experience
+# relevant experience
 
 ---
 
@@ -59,7 +59,7 @@ The same place I am now, just a little older, and a little wiser. I would move i
 
 ---
 
-Before the pandemic, I made the most of my opportunities to give talks and demo on a series of topics. Below are some nice summaries of things I spoke about. 
+Before the pandemic, I made the most of my opportunities to give some talks and demos on a series of topics, ranging from tech to audio. Below are some nice summaries of things I spoke about. 
 
 **2018, Continuous Integration Practices**
 Rising from my project work on developing a CI pipeline for a C++ framework using CMake, I gave a
@@ -81,14 +81,14 @@ https://williamdunstanmorris.github.io//gitflow-techniques.html
 
 ---
 
-* I prefer the Macbook trackpads and screen resolution, but I spend a lot of time on Linux. So I use both.
 * I got into programming through [Max/MSP](https://cycling74.com/products/max) and [SuperCollider](https://supercollider.github.io/)
-* I prefer [zsh](https://ohmyz.sh/) over fish.
 * I really love [Terraform](https://www.terraform.io/). I've written tonnes of it to provision resources in AWS. It has made AWS so much less overwhelming.
 * Written small scripts and sysops tasks with Python
 * Written and collaborated on software with C++ and Java
+* I prefer [zsh](https://ohmyz.sh/) over fish.
 * I'm learning [Golang](https://go.dev/)! Specifically, microservices with Golang. I've found it hard to find a language that I really liked, but I think that this is the language I really want to master eventually.
-* I tried some wordpress development with PHP for Wordpress too. That was actually pretty fun. OO is nice.  
+* I tried some wordpress development with PHP for Wordpress too. That was actually pretty fun. 
+* I prefer the Macbook trackpads and screen resolution, but I spend a lot of time on Linux. So I use both.
 
 
 # skills, buzz-words and the tool soup
@@ -96,15 +96,15 @@ https://williamdunstanmorris.github.io//gitflow-techniques.html
 ------
 
 **Communication & leadership**
-• Helping build a North * Engineering based on SOLID and observable 12-factor
-• Comprehension of low level tasks management performance KIs (key insights)
-• I believe in diplomacy as an engineer
-• i believe successful engineering projects are constructed via well documented approaches that address the core objective and key insights from the top down.
+* Helping build a North * Engineering based on SOLID and observable 12-factor
+* Comprehension of low level tasks management performance KIs (key insights)
+* I believe in diplomacy as an engineer
+* i believe successful engineering projects are constructed via well documented approaches that address the core objective and key insights from the top down.
 
 **SysOps and Site Reliability**
-• Experience building SEV-1 response protocols
-• Experience responding to SEV-1 response protocols (on call experience)
-• Deployed and maintained (Ansible) 3+ EC2 VM agents for CI/CD.
+* Experience building SEV-1 response protocols
+* Experience responding to SEV-1 response protocols (on call experience)
+* Deployed and maintained (Ansible) 3+ EC2 VM agents for CI/CD.
 
 **Cloud (AWS)**
 I have a huge amount of hands on experience working with AWS. It would take a long time to describe how I came into contact with every single one of these services, but in a nutshell:
