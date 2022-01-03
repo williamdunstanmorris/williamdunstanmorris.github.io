@@ -3,7 +3,7 @@ layout: navbar-post-centered
 title:  Explainer - Git is like taking a flight. Sort of.
 date:   2018-02-07 12:31:01 +0000
 cover: assets/img/git-airport-cover.jpg
-published: true
+published: false
 categories: speak
 author: "William Morris"
 tags:
