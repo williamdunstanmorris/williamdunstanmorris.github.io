@@ -2,9 +2,6 @@
 title:  Git is sort of like being at an airport. 🛬
 date:   2018-02-07 12:31:01 +0000
 published: true
-tags:
-- git
-- philosophy
 ---
 
 **COV19 EDIT**: Because of the pandemic, Git is now nothing like taking a flight or being at an airport.

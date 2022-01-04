@@ -2,8 +2,8 @@
 title:  "My first ever software - a Supercollider Standalone"
 cover: assets/img/supercollider-vst.png
 date:   2018-02-07 12:31:01 +0000
-categories: speak
 published: true
+pin: true
 tags: audio
 ---
 

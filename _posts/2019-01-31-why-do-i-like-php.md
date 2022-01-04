@@ -2,7 +2,6 @@
 title:  "Please don't hate on PHP."
 date:   2018-02-07 09:31:01 +0000
 published: false   
-tags: philosophy php
 ---
 
 

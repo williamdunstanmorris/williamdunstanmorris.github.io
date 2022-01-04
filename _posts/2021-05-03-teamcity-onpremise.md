@@ -3,10 +3,8 @@ title: Please stop using Jenkins in 2020. Use TeamCity.
 author: William Morris
 name: William Morris
 date: 2020-05-03 20:55:00 +0800
-categories: [Engineering]
 pin: true
 published: false
-tags: [CI/CD]
 ---
 
 I deployed, maintained and own an entire on-premise CI server (TeamCity). I used Terraform to create additional VM agents, and Ansible to provision them with the frameworks like correct Android SDK, and docker-compose to support pipeline portability across multiple agents. Docker was great for this, and it meant that we continuously create a stable and efficient delivery pipelines that ensure both high performance and portability, especially during SEV-1 incident hot-fixes.
