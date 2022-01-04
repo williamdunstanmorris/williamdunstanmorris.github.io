@@ -4,7 +4,6 @@ cover: assets/img/supercollider-vst.png
 date:   2018-02-07 12:31:01 +0000
 published: true
 pin: true
-tags: audio
 ---
 
 The SuperCollider is a music-based language that combines the object oriented structure of Smalltalk and features from functional programming languages with a C family syntax.
